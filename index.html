@@ -4,10 +4,80 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>TechnoPort</title>
   </head>
   <body>
-    <div id="app">text</div>
-    <script type="module" src="./src/pages/main.js"></script>
+    <header class="header">
+      <div class="header-contact">
+        <div class="header-contact__block">
+          <div class="header-contact__location">
+            <img src="/images/header/mapPin.svg" alt="Иконка местоположения" class="header-contact__image">
+            <select name="city" id="city-selector" class="header-contact__cities" data-header-selector-city="">
+              <option value="Екатеринбург" class="header-contact__city-option">Екатеринбург</option>
+              <option value="Москва" class="header-contact__city-option">Москва</option>
+              <option value="Санкт-Петербург" class="header-contact__city-option">Санкт-Петербург</option>
+              <option value="Воронеж" class="header-contact__city-option">Воронеж</option>
+            </select>
+          </div>
+
+          <div class="header-contact__phone">
+            <img src="/images/header/phone.svg" alt="Иконка телефона" class="header-contact__image">
+            <a href="tel:+79991234567" class="header-contact__link" title="Позвонить">+7 (999) 123 45-67</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-nav">
+        <div class="header-nav__block">
+          <div class="header-nav__info">
+            <h1 class="header-nav__title">TechnoPort</h1>
+            <button type="button" class="header-nav__catalog" aria-label="открыть каталог" data-header-catalog-button="">Каталог</button>
+          </div>
+
+          <div class="header-nav__search">
+            <input type="search" name="search" id="input-search" placeholder="Поиск..." class="header-nav__field" data-header-search-input="">
+            <button type="button" class="header-nav__quest" aria-label="Поиск" data-header-search-button="">
+              <img src="/images/header/search.svg" alt="Иконка поиска" class="header-nav__image">
+            </button>
+          </div>
+
+          <nav class="header-nav__nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a href="#" class="header-nav__link">
+                  <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--">
+                  Войти
+                </a>
+              </li>
+              <li class="header-nav__item">
+                <a href="#" class="header-nav__link">
+                  <img src="/images/header/heart.svg" alt="Иконка избранного" class="header-nav__image header-nav__image--">
+                  Избранное
+                </a>
+              </li>
+              <li class="header-nav__item">
+                <a href="#" class="header-nav__link">
+                  <img src="/images/header/shoppingCart.svg" alt="Иконка корзины" class="header-nav__image header-nav__image--">
+                  Корзина
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+
+    <main class="main">
+
+    </main>
+
+
+
+    <footer class="footer">
+
+    </footer>
+    <script type="module" src="./src/page-scripts/main.js"></script>
   </body>
 </html>

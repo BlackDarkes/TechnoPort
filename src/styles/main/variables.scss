@@ -1,0 +1,32 @@
+:root {
+    /*Font*/
+
+    //family
+    --fontGupter: "Gupter";
+    --fontIBM: "IBM Plex Sans"
+
+    //weight
+    --regular: 400;
+    --medium: 500;
+    --bold: 700;
+
+
+    /*Color*/
+
+    --black: #000000;
+    --white: #FFFFFF;
+    --redTittle: #8E1212;
+    --lightGray: #DDDDDD;
+    --darkGray: #373737;
+    --blue: #305AB4;
+    --redButton: #C00000B3;
+
+    //Color category 
+
+    --stocks: #28A7454D;
+    --popular: #007BFF4D;
+    --craftPC: #0000004D;
+    --computer: #FF00004D;
+    --outher: #C0C0C04D;
+    --accessories: #8B45134D;
+}
