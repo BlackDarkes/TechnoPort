@@ -3,7 +3,7 @@
 
     //family
     --fontGupter: "Gupter";
-    --fontIBM: "IBM Plex Sans"
+    --fontIBM: "IBM Plex Sans";
 
     //weight
     --regular: 400;
@@ -19,6 +19,9 @@
     --lightGray: #DDDDDD;
     --darkGray: #373737;
     --blue: #305AB4;
+    --catalogButton: #BE1212;
+    --catalogButtonOpacity: #BE1212A6;
+    --blackOpacity: #000000CC;
     --redButton: #C00000B3;
 
     //Color category 
@@ -29,4 +32,9 @@
     --computer: #FF00004D;
     --outher: #C0C0C04D;
     --accessories: #8B45134D;
+
+
+    /*Transition*/
+
+    --transition: 0.4s;
 }

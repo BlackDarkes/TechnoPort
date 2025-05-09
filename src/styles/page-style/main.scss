@@ -1,2 +1,3 @@
-@use "../main/index.scss";
+@use "../main/index.scss" as main;
+@use "../helpers/index.scss";
 @use "../blocks/header/header.scss";

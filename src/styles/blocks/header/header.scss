@@ -1,0 +1,162 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.header {
+    position: fixed;
+    width: 100vw;
+    
+    &-contact {
+        background-color: var(--darkGray);
+        color: var(--white);
+    
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            margin-inline: auto;
+            padding-block: rem(10);
+            max-width: rem(1440);
+            width: calc(100% - rem(40));
+        }
+
+        &__location {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+        }
+
+        &__image {
+            transition: var(--transition);
+        }
+
+        &__cities {
+            background-color: transparent;
+            color: inherit;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+
+        &__city-option {
+            background-color: black;
+        }
+        
+
+        &__phone {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+
+            &:hover {
+                color: #cacaca;
+            }
+        }
+
+        &__link {
+            transition: var(--transition);
+        }
+    }
+
+
+    &-nav {
+        color: var(--black);
+        border-bottom: 1px solid var(--lightGray);
+
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-inline: auto;
+            padding-block: 27px;
+            width: rem(1440);
+            max-width: calc(100% - rem(40));
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+            column-gap: rem(15);
+        }
+
+        &__title {
+            font-size: rem(40);
+            color: var(--redTittle);
+        }
+
+        &__catalog {
+            padding: rem(12) rem(32);
+            background-color: var(--catalogButton);
+            color: var(--white);
+            border: 1px solid var(--catalogButton);
+            border-radius: rem(8);
+            transition: var(--transition);
+
+            &:active {
+                transform: translateY(1px);
+            }
+
+            @include hover {
+                border-radius: 11px;
+                background-color: var(--catalogButtonOpacity);
+            }
+        }
+
+
+        &__search {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(25);
+            padding: rem(3) rem(5);
+            border: 1px solid var(--black);
+            border-radius: rem(8);
+            width: rem(700);
+            max-width: calc(100% - rem(40));
+            height: rem(46);
+        }
+
+        &__field {
+            width: 100%;
+            font-size: rem(22);
+            border-radius: rem(10);
+        }
+
+        &__quest {
+            padding: rem(5);
+            border-radius: rem(10);
+            background-color: var(--black);
+            transition: var(--transition);
+
+            @include hover {
+                border-radius: rem(11);
+                background-color: var(--blackOpacity);
+            }
+        }
+
+
+        &__list {
+            display: flex;
+            column-gap: rem(50);
+        }
+
+        &__item {
+            height: rem(54);
+        }
+
+        &__link {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: inherit;
+            transition: var(--transition);
+            border-radius: rem(8);
+            font-size: rem(13);
+
+            @include hover {
+                background-color: var(--outher);
+            }
+        }
+
+        &__image {
+            margin-inline: auto;
+        }
+    }
+}
