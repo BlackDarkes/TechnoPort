@@ -102,11 +102,55 @@
 
     <main class="main">
       <section class="main-catalog">
-
+        <div class="main-catalog__block">
+          <ul class="main-catalog__list">
+            <li class="main-catalog__item main-catalog__item--stocks">
+              <a href="" class="main-catalog__link">
+                <h2 class="main-catalog__name">Акции</h2>
+                <p class="main-catalog__about">Скидки и акции</p>
+              </a>
+            </li>
+            <li class="main-catalog__item main-catalog__item--popular">
+              <a href="" class="main-catalog__link ">
+                <h2 class="main-catalog__name">Популярное</h2>
+                <p class="main-catalog__about">Самые популярные товары</p>
+              </a>
+            </li>
+            <li class="main-catalog__item main-catalog__item--craft">
+              <a href="" class="main-catalog__link ">
+                <h2 class="main-catalog__name">Сборка ПК</h2>
+                <p class="main-catalog__about">Собери мощный компьютер</p>
+              </a>
+            </li>
+            <li class="main-catalog__item main-catalog__item--components">
+              <a href="" class="main-catalog__link">
+                <h2 class="main-catalog__name">Запчасти ПК</h2>
+                <p class="main-catalog__about">Процесоры, ssd и другое...</p>
+              </a>
+            </li>
+            <li class="main-catalog__item main-catalog__item--other">
+              <a href="" class="main-catalog__link">
+                <h2 class="main-catalog__name">Другая техника</h2>
+                <p class="main-catalog__about">Ноутбуки, принтеры и другое...</p>
+              </a>
+            </li>
+            <li class="main-catalog__item main-catalog__item--accessories">
+              <a href="" class="main-catalog__link">
+                <h2 class="main-catalog__name">Аксессуары</h2>
+                <p class="main-catalog__about">Клавиатуры мышки и другое...</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="main-popular">
-
+        <div class="main-popular__block">
+          <h1 class="main-popular__title">Популярные товары</h1>
+          <ul class="main-popular__list" data-popular-list="">
+            
+          </ul>
+        </div>
       </section>
 
       <section class="viewed">
@@ -120,5 +164,29 @@
 
     </footer>
     <script type="module" src="./src/page-scripts/main.js"></script>
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const button = document.querySelector(".popular-product__buy");
+            const link = document.querySelector(".main-popular__link");
+
+            // Проверяем, существует ли кнопка
+            if (button) {
+                button.addEventListener("click", function(e) {
+                    e.stopPropagation(); // Останавливаем всплытие
+                    e.preventDefault(); // Предотвращаем действие по умолчанию для ссылки
+                    localStorage.setItem("YES", 'yes');
+                    console.log('Кнопка "Купить" нажата, значение сохранено в localStorage');
+                    alert('Кнопка "Купить" нажата!'); // Для визуальной проверки
+                });
+            } else {
+                console.error('Кнопка не найдена');
+            }
+
+            // Предотвращаем переход по ссылке, если кликнули на ссылку
+            link.addEventListener("click", function(e) {
+                e.preventDefault(); // Предотвращаем переход по ссылке
+            });
+        });
+    </script>
   </body>
 </html>

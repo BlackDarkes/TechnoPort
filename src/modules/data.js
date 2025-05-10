@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        category: "Accessories",
+        category: "accessories",
         name: "Logitech G435",
         price: 7999,
         discount: null,
@@ -20,7 +20,7 @@ const data = [
     },
     {
         id: 2,
-        category: "Accessories",
+        category: "accessories",
         name: "Razer BlackShark V2 X",
         price: 7199,
         discount: 4999,
@@ -43,7 +43,7 @@ const data = [
         name: "МФУ струйное Brother DCP-T520W InkBenefit Plus",
         price: 28399,
         discount: null,
-        feedback: 4.8,
+        feedback: 4.9,
         mainImage: "https://c.dns-shop.ru/thumb/st4/fit/500/500/bfaf6d7ac0f6f603d18a0ae6dace37f9/a4c727d94c1a8ad11215dbc5e97bfa5111387670ff5f58103d87b065960329ec.jpg.webp",
         images: [
             "https://c.dns-shop.ru/thumb/st4/fit/500/500/bfaf6d7ac0f6f603d18a0ae6dace37f9/a4c727d94c1a8ad11215dbc5e97bfa5111387670ff5f58103d87b065960329ec.jpg.webp",
@@ -77,7 +77,7 @@ const data = [
     },
     {
         id: 5,
-        category: "computer",
+        category: "components",
         name: "Видеокарта GIGABYTE AMD Radeon 9070 GAMING OC",
         price: 77999,
         discount: null,
@@ -95,7 +95,7 @@ const data = [
     },
     {
         id: 6,
-        category: "computer",
+        category: "components",
         name: "Процессор AMD Ryzen 5 7500F OEM",
         price: 14299,
         description: null,
