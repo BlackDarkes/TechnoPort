@@ -2,7 +2,7 @@
 
 @function rem($pixels) {
     @if math.is-unitless($pixels) {
-        @return math.div($pixels, 16) + rem;
+        @return math.div($pixels, 16) * 1rem;
     } @else {
         @error 'Не используйте единицы измерения при работе с функцией rem()! Передавайте аргументом только числа.'
     }
@@ -20,8 +20,8 @@
     $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
     $yAxisIntersection: -$minWidth * $slope + $minSize;
 
-    @return clamp (
-        #{$minSeze * 1rem},
+    @return clamp(
+        #{$minSize * 1rem},
         #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
         #{$maxSize * 1rem},
     )

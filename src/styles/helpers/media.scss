@@ -1,9 +1,9 @@
-@use "./function.scss";
+@use "function.scss" as *;
 
-$laptop: 1440.98;
+$laptop: 1440.98px;
 $tablet: 1023.98;
-$mobile: 767.98;
-$mobile-s: 480.98;
+$mobile: 767.98px;
+$mobile-s: 480.98px;
 
 @mixin laptop-above {
     @media (width > rem($laptop)) {

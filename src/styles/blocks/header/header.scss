@@ -21,19 +21,11 @@
         &__location {
             display: flex;
             align-items: center;
-            column-gap: rem(10);
+            column-gap: rem(5);
         }
 
         &__image {
             transition: var(--transition);
-        }
-
-        &__cities {
-            background-color: transparent;
-            color: inherit;
-            border: 0;
-            outline: 0;
-            cursor: pointer;
         }
 
         &__city-option {
@@ -44,7 +36,7 @@
         &__phone {
             display: flex;
             align-items: center;
-            column-gap: rem(10);
+            column-gap: rem(5);
 
             &:hover {
                 color: #cacaca;
@@ -53,6 +45,10 @@
 
         &__link {
             transition: var(--transition);
+        }
+
+        @include tablet {
+            @include visually-hidden
         }
     }
 
@@ -65,6 +61,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            column-gap: 40px;
             margin-inline: auto;
             padding-block: 27px;
             width: rem(1440);
@@ -157,6 +154,62 @@
 
         &__image {
             margin-inline: auto;
+        }
+
+        @include tablet {
+            @include visually-hidden
+        }
+    }
+
+    &-mobile {
+        color: var(--black);
+        border-bottom: 1px solid var(--lightGray);
+        
+        &__block {
+            margin-inline: auto;
+            width: rem(1440);
+            max-width: calc(100% - rem(40));
+        }
+
+        &__contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-block: rem(19) rem(13); 
+        }
+
+        &__title {
+            @include fluid-text(40, 28);
+            color: var(--redTittle);
+        }
+
+        &__location {
+            @include fluid-text(16, 13);
+            display: flex;
+            align-items: center;
+            column-gap: rem(5);
+        }
+
+
+        &__search {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(15);
+            padding: rem(7) rem(5);
+            margin-block: rem(13);
+            width: 100%;
+            height: rem(45);
+            border: 1px solid var(--black);
+            border-radius: rem(12);
+        }
+
+        &__field {
+            @include fluid-text(22, 18);
+            width: 100%;
+        }
+
+        @include tablet-above {
+            @include visually-hidden;
         }
     }
 }

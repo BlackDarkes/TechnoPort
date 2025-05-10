@@ -38,3 +38,11 @@ h5,
 h6 {
     font-family: var(--fontGupter);
 }
+
+select {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
