@@ -4,6 +4,7 @@
 .header {
     position: fixed;
     width: 100vw;
+    z-index: var(--300);
     
     &-contact {
         background-color: var(--darkGray);

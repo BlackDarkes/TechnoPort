@@ -1,4 +1,6 @@
-class CatalogManager {
+import heart from "/images/header/heart.svg";
+
+class ProductManager {
     createLink(href, id, className) {
         const alink = document.createElement("a");
         alink.href = href + `?id=${id}`;
@@ -31,7 +33,7 @@ class CatalogManager {
         return h2;
     }
 
-    createFeedback(feedback, classNameText, classNameFeedbakc) {
+    createFeedback(feedback, classNameText, classNameFeedback) {
         const p = document.createElement("p");
         const span = document.createElement("span");
 
@@ -39,7 +41,7 @@ class CatalogManager {
         span.textContent = feedback;
 
         p.classList.add(classNameText);
-        span.classList.add(classNameFeedbakc);
+        span.classList.add(classNameFeedback);
 
         p.appendChild(span);
 
@@ -59,22 +61,34 @@ class CatalogManager {
         const buttonBuy = document.createElement("button");
         const buttonfFavorit = document.createElement("button");
         const imageBuy = document.createElement("img");
-        const imageFavorit = document.createElement("img")
 
         div.classList.add(blockName);
         buttonBuy.classList.add(buyName);
         buttonfFavorit.classList.add(favoritName);
 
         imageBuy.src = "/images/category/shoppingCartWhite.svg";
-        imageFavorit.src = "/images/header/heart.svg";
+        this.#loadSvg(heart).then(svgElement => {
+            svgElement.classList.add("viewed-product__svg")
+            buttonfFavorit.appendChild(svgElement);
+        });
 
         buttonBuy.appendChild(imageBuy);
-        buttonfFavorit.appendChild(imageFavorit);
         div.appendChild(buttonBuy);
         div.appendChild(buttonfFavorit);
 
         return div;
     }
+
+    async #loadSvg(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Ошибка загрузки SVG: ' + response.status);
+        }
+        const svgText = await response.text();
+        const div = document.createElement('div');
+        div.innerHTML = svgText; 
+        return div.firstChild;
+    }
 }
 
-export default CatalogManager;
+export default ProductManager;

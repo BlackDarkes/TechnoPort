@@ -1,5 +1,8 @@
 @use "../main/index.scss" as main;
 @use "../helpers/index.scss";
+
+/*Блоки*/
 @use "../blocks/header/header.scss";
-@use "../blocks/main/catalog.scss";
-@use "../blocks/main/popularProduct.scss"
+@use "../blocks/main/catalogProducts.scss";
+@use "../blocks/main/popularProducts.scss";
+@use "../blocks/main/viewedProducts.scss"
