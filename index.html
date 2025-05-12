@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechnoPort</title>
   </head>
   <body>
@@ -47,19 +47,19 @@
             <ul class="header-nav__list">
               <li class="header-nav__item">
                 <a href="#" class="header-nav__link">
-                  <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--">
+                  <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--accaunt">
                   Войти
                 </a>
               </li>
               <li class="header-nav__item">
                 <a href="#" class="header-nav__link">
-                  <img src="/images/header/heart.svg" alt="Иконка избранного" class="header-nav__image header-nav__image--">
+                  <img src="/images/header/heart.svg" alt="Иконка избранного" class="header-nav__image header-nav__image--heart">
                   Избранное
                 </a>
               </li>
               <li class="header-nav__item">
                 <a href="#" class="header-nav__link">
-                  <img src="/images/header/shoppingCart.svg" alt="Иконка корзины" class="header-nav__image header-nav__image--">
+                  <img src="/images/header/shoppingCart.svg" alt="Иконка корзины" class="header-nav__image header-nav__image--shoping">
                   Корзина
                 </a>
               </li>
@@ -88,7 +88,7 @@
 
           <div class="header-mobile__search">
             <input type="search" name="search-mobile" id="search-mobile" class="header-mobile__field" placeholder="Поиск..." >
-            <button type="button" class="header-mobile__quest">
+            <button type="button" aria-label="Кнопка поиска" class="header-mobile__quest">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-mobile__image header-mobile__image--search">
                 <path d="M26.25 26.25L20.8125 20.8125M23.75 13.75C23.75 19.2728 19.2728 23.75 13.75 23.75C8.22715 23.75 3.75 19.2728 3.75 13.75C3.75 8.22715 8.22715 3.75 13.75 3.75C19.2728 3.75 23.75 8.22715 23.75 13.75Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>                
@@ -162,7 +162,29 @@
 
 
     <footer class="footer">
+      <div class="footer__block">
+        <h2 class="footer__title">TechnoPort</h2>
+        <div class="footer__lists">
+          <div class="footer__company">
+            <ul class="footer__list footer__list--company">
+              <li class="footer__item"><h3 class="footer__heading footer__heading--company">Компания:</h3></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--company">О компании</a></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--company">Новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__clients">
+            <ul class="footer__list footer__list--clients">
+              <li class="footer__item"><h3 class="footer__heading footer__heading--company">Покупателям:</h3></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--clients">Как офрмить заказ</a></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--clients">Способы оплаты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
+      <div class="footer__security">
+        <p class="footer__text">&copy; 2025–2025 Компания TechnoPort</p>
+      </div>
     </footer>
     <script type="module" src="./src/page-scripts/main.js"></script>
   </body>

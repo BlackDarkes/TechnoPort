@@ -1,0 +1,75 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.footer {
+    margin-top: rem(120);
+    width: 100vw;
+    border-top: 1px solid var(--lightGray);
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        width: min(100% - rem(40), rem(1440));
+        margin: rem(40) auto rem(97);
+
+        @include tablet() {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        @include fluid-text(40, 32);
+        color: var(--redTittle);
+        width: 50%;
+
+        @include tablet() {
+            margin-bottom: rem(30);
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+
+        @include tablet() {
+            width: 100%;
+        }
+
+        @include mobile-s() {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(50);
+        }
+    }
+
+    &__list {
+        width: rem(160);
+    }
+
+    &__heading {
+        font-size: rem(24);
+        font-family: var(--fontIBM);
+        font-weight: 500;
+    }
+
+    &__link  {
+        display: block;
+        margin-top: rem(15);
+
+        &--company {
+            margin-top: rem(25);
+        }
+    }
+
+    &__security {
+        background-color: var(--darkGray);
+        color: var(--white);
+    }
+
+    &__text {
+        text-align: center;
+    }
+}
