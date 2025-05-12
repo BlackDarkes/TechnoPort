@@ -29,7 +29,7 @@
         }
 
         &__city-option {
-            background-color: black;
+            background-color: var(--black);
         }
         
 
@@ -76,6 +76,7 @@
 
         &__title {
             font-size: rem(40);
+            font-family: var(--fontGupter);
             color: var(--redTittle);
         }
 
@@ -139,7 +140,7 @@
             transition: var(--transition);
 
             @include hover() {
-                border-color: var(--lightGray);
+                border-color: var(--border);
                 border-radius: rem(8);
             }
         }

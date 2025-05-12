@@ -1,0 +1,13 @@
+@use "../../styles/main/index.scss" as main;
+@use "../../styles/helpers/index.scss";
+
+/*Блоки*/
+//Header
+@use "../blocks/header/header.scss";
+@use "../blocks/header/mobileHeader.scss";
+
+//Body
+@use "../blocks/main/favouritesProducts.scss";
+
+//Footer
+@use "../blocks/footer/footer.scss";

@@ -50,3 +50,13 @@ select {
 html {
     overflow-x: hidden;
 }
+
+button,
+img,
+select {
+    user-select: none;
+}
+
+main[class] {
+    margin-top: rem(160);
+}

@@ -1,0 +1,89 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.main-favourites {
+    width: 100vw;
+
+    &__block {
+        margin-inline: auto;
+        padding-top: rem(50);
+        width: min(100% - rem(40), rem(1440));
+
+        @include tablet() {
+            padding-top: rem(30);
+        };
+    }
+
+    &__title {
+        @include fluid-text(36, 32);
+        margin-bottom: rem(30);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+    }
+
+    &__item {
+        padding: rem(10);
+        border: 1px solid var(--border);
+        border-radius: rem(10);
+        transition: var(--transition);
+
+        @include hover() {
+            border-radius: rem(15);
+            border-color: var(--black);
+        }
+    }
+
+    &__link {
+        display: flex;
+        column-gap: rem(20);
+    }
+
+    .favourites-info {
+        display: flex;
+        column-gap: rem(40);
+        width: 100%;
+
+        &__image {
+            width: rem(200);
+            height: rem(200);
+        }
+
+        &__texts {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    .favourites-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: rem(150);
+
+        &__price {
+            font-size: rem(32);
+            font-weight: 700;
+        }
+
+        &__buy {
+            display: flex;
+            justify-content: center;
+            padding: rem(8) rem(48);
+            background-color: var(--componentsHover);
+            color: var(--white);
+            border-radius: rem(8);
+            transition: var(--transition);
+
+            @include hover {
+                background-color: var(--redButton);
+            }
+        }
+    }
+}

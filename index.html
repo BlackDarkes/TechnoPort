@@ -45,19 +45,19 @@
           <nav class="header-nav__nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
-                <a href="#" class="header-nav__link">
+                <a href="#" class="header-nav__link" data-header-login="">
                   <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--accaunt">
                   Войти
                 </a>
               </li>
               <li class="header-nav__item">
-                <a href="#" class="header-nav__link">
+                <a href="./pages/favourites.html" class="header-nav__link">
                   <img src="/images/header/heart.svg" alt="Иконка избранного" class="header-nav__image header-nav__image--heart">
                   Избранное
                 </a>
               </li>
               <li class="header-nav__item">
-                <a href="#" class="header-nav__link">
+                <a href="./pages/basket.html" class="header-nav__link">
                   <img src="/images/header/shoppingCart.svg" alt="Иконка корзины" class="header-nav__image header-nav__image--shoping">
                   Корзина
                 </a>
@@ -86,8 +86,8 @@
           </div>
 
           <div class="header-mobile__search">
-            <input type="search" name="search-mobile" id="search-mobile" class="header-mobile__field" placeholder="Поиск..." >
-            <button type="button" aria-label="Кнопка поиска" class="header-mobile__quest">
+            <input type="search" name="search-mobile" id="search-mobile" class="header-mobile__field" placeholder="Поиск..." data-header-search="">
+            <button type="button" aria-label="Кнопка поиска" class="header-mobile__quest" data-header-mobile-button-search="">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-mobile__image header-mobile__image--search">
                 <path d="M26.25 26.25L20.8125 20.8125M23.75 13.75C23.75 19.2728 19.2728 23.75 13.75 23.75C8.22715 23.75 3.75 19.2728 3.75 13.75C3.75 8.22715 8.22715 3.75 13.75 3.75C19.2728 3.75 23.75 8.22715 23.75 13.75Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>                
@@ -135,37 +135,37 @@
         <div class="main-catalog__block">
           <ul class="main-catalog__list">
             <li class="main-catalog__item main-catalog__item--stocks">
-              <a href="" class="main-catalog__link">
+              <a href="./pages/catalog.html?type=stocks" class="main-catalog__link">
                 <h2 class="main-catalog__name">Акции</h2>
                 <p class="main-catalog__about">Скидки и акции</p>
               </a>
             </li>
             <li class="main-catalog__item main-catalog__item--popular">
-              <a href="" class="main-catalog__link ">
+              <a href="./pages/catalog.html?type=popular" class="main-catalog__link">
                 <h2 class="main-catalog__name">Популярное</h2>
                 <p class="main-catalog__about">Самые популярные товары</p>
               </a>
             </li>
             <li class="main-catalog__item main-catalog__item--craft">
-              <a href="" class="main-catalog__link ">
+              <a href="" class="main-catalog__link">
                 <h2 class="main-catalog__name">Сборка ПК</h2>
                 <p class="main-catalog__about">Собери мощный компьютер</p>
               </a>
             </li>
             <li class="main-catalog__item main-catalog__item--components">
-              <a href="" class="main-catalog__link">
+              <a href="./pages/catalog.html?type=components" class="main-catalog__link">
                 <h2 class="main-catalog__name">Запчасти ПК</h2>
                 <p class="main-catalog__about">Процесоры, ssd и другое...</p>
               </a>
             </li>
             <li class="main-catalog__item main-catalog__item--other">
-              <a href="" class="main-catalog__link">
+              <a href="./pages/catalog.html?type=other" class="main-catalog__link">
                 <h2 class="main-catalog__name">Другая техника</h2>
                 <p class="main-catalog__about">Ноутбуки, принтеры и другое...</p>
               </a>
             </li>
             <li class="main-catalog__item main-catalog__item--accessories">
-              <a href="" class="main-catalog__link">
+              <a href="./pages/catalog.html?type=accessories" class="main-catalog__link">
                 <h2 class="main-catalog__name">Аксессуары</h2>
                 <p class="main-catalog__about">Клавиатуры мышки и другое...</p>
               </a>
@@ -217,5 +217,24 @@
       </div>
     </footer>
     <script type="module" src="./src/page-scripts/main.js"></script>
+    <script>
+      const buttonMobileElement = document.querySelector("[data-header-mobile-button-search]");
+      const inputMobileElement = document.querySelector("[data-header-search]");
+      
+      buttonMobileElement.addEventListener("click", () => {
+        const inputText = String(inputMobileElement.value).toLocaleLowerCase();
+
+        window.location.href = `./pages/catalog.html?type=search?search=${inputText}`;
+      })
+
+      const buttonElement = document.querySelector("[data-header-search-button]");
+      const inputElement = document.querySelector("[data-header-search-input]");
+
+      buttonElement.addEventListener("click", () => {
+        const inputText = String(inputElement.value).toLocaleLowerCase();
+
+        window.location.href = `./pages/catalog.html?type=search?search=${inputText}`;
+      })
+    </script>
   </body>
 </html>

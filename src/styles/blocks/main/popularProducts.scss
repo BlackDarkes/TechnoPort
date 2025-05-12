@@ -31,7 +31,7 @@
         transition: var(--transition);
 
         @include hover() {
-            border-color: var(--lightGray);
+            border-color: var(--border);
             border-radius: rem(10);
         }
     }
