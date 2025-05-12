@@ -33,7 +33,7 @@ class Viewed {
         const id = product.id;
 
         const li = document.createElement("li");
-        const aLink = this.productManager.createLink("/pages/product.html", id, "viewed__link");
+        const aLink = this.productManager.createLink("/pages/product.html", id, "main-viewed__link");
         const productElement = this.productManager.createDiv("viewed-product");
         const image = this.productManager.createImage(product.mainImage, "viewed-product__image");
         const name = this.productManager.createName(product.name, "viewed-product__name");
@@ -42,7 +42,7 @@ class Viewed {
         const buttons = this.productManager.createButtonsBlock("viewed-product__buttons", "viewed-product__buy", "viewed-product__favorit");
 
         li.setAttribute("data-viewed-item-id", id);
-        li.classList.add("viewed__item");
+        li.classList.add("main-viewed__item");
 
         aLink.append(productElement);
         aLink.append(image);

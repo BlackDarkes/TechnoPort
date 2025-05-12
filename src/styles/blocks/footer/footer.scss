@@ -72,4 +72,8 @@
     &__text {
         text-align: center;
     }
+
+    @include mobile-s() {
+        margin-bottom: rem(71);
+    }
 }

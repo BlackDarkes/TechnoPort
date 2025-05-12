@@ -2,8 +2,14 @@
 @use "../helpers/index.scss";
 
 /*Блоки*/
+//Header
 @use "../blocks/header/header.scss";
+@use "../blocks/header/mobileHeader.scss";
+
+//Main
 @use "../blocks/main/catalogProducts.scss";
 @use "../blocks/main/popularProducts.scss";
 @use "../blocks/main/viewedProducts.scss";
+
+//Footer
 @use "../blocks/footer/footer.scss";

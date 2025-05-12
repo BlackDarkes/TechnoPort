@@ -134,7 +134,19 @@
         }
 
         &__item {
-            height: rem(54);
+            padding: rem(3);
+            border: 1px solid transparent;
+            transition: var(--transition);
+
+            @include hover() {
+                border-color: var(--lightGray);
+                border-radius: rem(8);
+            }
+        }
+
+        &__image {
+            width: rem(25);
+            height: rem(25);
         }
 
         &__link {
@@ -157,58 +169,6 @@
 
         @include tablet {
             @include visually-hidden
-        }
-    }
-
-    &-mobile {
-        color: var(--black);
-        border-bottom: 1px solid var(--lightGray);
-        background-color: var(--white);
-        
-        &__block {
-            margin-inline: auto;
-            width: min(100% - rem(40), rem(1440));
-        }
-
-        &__contact {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-block: rem(19) rem(13); 
-        }
-
-        &__title {
-            @include fluid-text(40, 28);
-            color: var(--redTittle);
-        }
-
-        &__location {
-            @include fluid-text(16, 13);
-            display: flex;
-            align-items: center;
-            column-gap: rem(5);
-        }
-
-
-        &__search {
-            display: flex;
-            justify-content: space-between;
-            column-gap: rem(15);
-            padding: rem(7) rem(5);
-            margin-block: rem(13);
-            width: 100%;
-            height: rem(45);
-            border: 1px solid var(--black);
-            border-radius: rem(12);
-        }
-
-        &__field {
-            @include fluid-text(22, 18);
-            width: 100%;
-        }
-
-        @include tablet-above {
-            @include visually-hidden;
         }
     }
 }

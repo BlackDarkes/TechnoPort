@@ -27,6 +27,7 @@ export default defineConfig({
                 basket: resolve(__dirname, "./pages/basket.html"),
                 catalog: resolve(__dirname, "./pages/catalog.html"),
                 favourites: resolve(__dirname, "./pages/favourites.html"),
+                product: resolve(__dirname, "./pages/product.html"),
             }
         }
     }

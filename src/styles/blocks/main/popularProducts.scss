@@ -10,7 +10,7 @@
     }
 
     &__title {
-        @include fluid-text(36, 32);
+        @include fluid-text(36, 26);
         margin-bottom: rem(30);
         font-family: var(--fontIBM);
     }
@@ -19,13 +19,21 @@
         display: flex;
         column-gap: rem(60);
         padding-bottom: rem(15);
-        width: inherit;
+        width: 100%;
         overflow: auto;
     }
 
     &__item {
         flex-shrink: 0;
-        width: rem(200);
+        width: rem(220);
+        padding: rem(10);
+        border: 1px solid transparent;
+        transition: var(--transition);
+
+        @include hover() {
+            border-color: var(--lightGray);
+            border-radius: rem(10);
+        }
     }
 
     .popular-product {
@@ -74,13 +82,21 @@
 
         &__buy {
             padding: rem(5) rem(37);
-            background-color: var(--redButton);
+            background-color: var(--componentsHover);
             color: var(--white);
             border-radius: rem(8);
             transition: var(--transition);
 
             @include hover {
-                background-color: var(--catalogButtonOpacity);
+                background-color: var(--redButton);
+            }
+        }
+
+        &__favorit {
+            transition: var(--transition);
+
+            @include hover() {
+                color: var(--redButton);
             }
         }
     }
