@@ -131,35 +131,14 @@
 
     <main class="main-catalog">
         <div class="main-catalog__block">
-            <h2 class="main-catalog__title">Название каталога</h2>
+            <h2 class="main-catalog__title" data-catalog-name=""></h2>
             <select name="filter" id="filter" class="main-catalog__filter" data-catalog-select="">
                 <option value="popular" class="main-catalog__option">С наибольшим рейтингом</option>
                 <option value="low-price" class="main-catalog__option">Сначала недорогие</option>
                 <option value="more-price" class="main-catalog__option">Сначала дорогие</option>
             </select>
             <div class="main-products">
-                <ul class="main-products__list">
-                    <li class="main-products__item">
-                        <a href="" class="main-products__link">
-                            <div class="main-products__info">
-                                <img src="https://c.dns-shop.ru/thumb/st4/fit/500/500/2b4e93c24b2b4eb9b871627fdeda311e/8fc96f00e5a61e5496ec61a22e6d62474c8ea2fea99b3fb7b340a58982603461.jpg.webp" alt="Картинка товара" class="main-products__image">
-                                <div class="main-products__texts">
-                                    <h2 class="main-products__title">Наименнование товара, которое может быть любой наилюбейшей длинны, не только коротким, но и длинным</h2>
-                                    <p class="main-products__feedback">Отзывы 4.9</p>
-                                </div>
-                            </div>
-                            <div class="main-products__price">
-                                <p class="main-products__cost">12999 P</p>
-                                <button type="button" class="main-products__buy">
-                                    <img src="/images/category/shoppingCartWhite.svg" class="main-products__shop" alt="">
-                                </button>
-                                <button type="button" class="main-products__favorit">
-                                    <img src="/images/header/heart.svg" alt="">
-                                </button>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <ul class="main-products__list" data-catalog-list=""></ul>
             </div>
         </div>
     </main>
