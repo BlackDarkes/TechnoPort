@@ -33,14 +33,16 @@ class Favourites {
         const id = product.id;
 
         const li = document.createElement("li");
-        const aLink = this.productHorizontalManager.createLink("main-favourites__link", `../../pages/product.html?id=${id}`);
         const infoBlockElement = this.productHorizontalManager.createBlock("favourites-info");
-        const imageElement = this.productHorizontalManager.createImage(product.mainImage, "favourites-info__image");
         const blockTexts = this.productHorizontalManager.createBlock("favourites-info__texts");
+        const priceBlockElement = this.productHorizontalManager.createBlock("favourites-price");
+        const aLink = this.productHorizontalManager.createLink("main-favourites__link", `../../pages/product.html?id=${id}`);
+        const imageElement = this.productHorizontalManager.createImage(product.mainImage, "favourites-info__image");
         const nameProduct = this.productHorizontalManager.createTitle(product.name, "favourites-info__title");
         const feedbackElement = this.productHorizontalManager.createText(`Отзывы ${product.feedback}`, "favourites-info__feedback")
-        const priceBlockElement = this.productHorizontalManager.createBlock("favourites-price");
         const priceElement = this.productHorizontalManager.createPrice(product.price, "favourites-price__price");
+        const buttonBuy = this.productHorizontalManager.createBuyButton("", "favourites-price__buy");
+        const buttonFavourites = this.productHorizontalManager.createFavoritButton("", "favourites-price__favorit");
 
 
         li.setAttribute("data-favourites-id", id);
@@ -52,7 +54,9 @@ class Favourites {
         infoBlockElement.appendChild(imageElement);
         infoBlockElement.appendChild(blockTexts);
 
-        priceBlockElement.appendChild(priceElement)
+        priceBlockElement.appendChild(priceElement);
+        priceBlockElement.appendChild(buttonBuy);
+        priceBlockElement.appendChild(buttonFavourites);
 
         aLink.appendChild(infoBlockElement);
         aLink.appendChild(priceBlockElement);

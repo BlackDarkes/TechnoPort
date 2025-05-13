@@ -1,55 +1,70 @@
-import ProductManager from "./productManager";
 import Helpers from "./helpers";
 
 class Catalog {
-    #parent = "[data-popular-list]";
     #data;
+    #selector = "[data-catalog-select]";
+    #url = new URL(window.location.href);
+    #type;
+    #search;
+    #option;
 
     constructor() {
-        this.productManager = new ProductManager();
         this.helpers = new Helpers();
-        this.parantElement = document.querySelector(this.#parent);
+        this.selectorElement = document.querySelector(this.#selector);
         this.init();
+        
     }
 
     async init() {
         this.#data = await this.helpers.getData();
-        this.getProductPopular();
+        this.handleUrlParams();
+        
+        this.getSelectedOption();
+        console.log(this.#option);
+        this.addEventListener();
     }
 
-    getProductPopular() {
-        this.#data.forEach((product) => {
-            if (product.feedback >= 4.9) {
-                const li = this.#createProductListItem(product);
-                this.parantElement.appendChild(li);
-            }
+    getSelectedOption() {
+        this.#option = this.selectorElement.value;
+    }
+    
+    addEventListener() {
+        this.selectorElement.addEventListener("change", () => {
+            this.getSelectedOption();
+            this.getCatalogProduct();
         })
     }
 
-    #createProductListItem(product) {
-        const id = product.id;
+    getCatalogProduct() {
+        this.#data.forEach((product) => {
+            
+        })
+    }
 
-        const li = document.createElement("li");
-        const aLink = this.productManager.createLink("/pages/product.html", id, "main-popular__link");
-        const productElement = this.productManager.createDiv("popular-product");
-        const image = this.productManager.createImage(product.mainImage, "popular-product__image");
-        const name = this.productManager.createName(product.name, "popular-product__name");
-        const feedback = this.productManager.createFeedback(product.feedback, "popular-product__feedback", "popular-product__stars");
-        const price = this.productManager.createPrice(product.price, "popular-product__price");
-        const buttons = this.productManager.createButtonsBlock("popular-product__buttons", "popular-product__buy", "popular-product__favorit");
+    handleUrlParams() {
+        const type = this.#url.searchParams.get("type");
+        const search = this.#url.searchParams.get("search");
 
-        li.setAttribute("data-popular-item-id", id);
-        li.classList.add("main-popular__item");
+        if (type) {
+            this.#type = type;
+            this.getCatalogProduct();
+        }
 
-        aLink.append(productElement);
-        aLink.append(image);
-        aLink.append(name);
-        aLink.append(feedback);
-        aLink.append(price);
-        aLink.append(buttons);
-        li.appendChild(aLink);
+        if (search) {
+            this.#search = search;
+        }
+    }
 
-        return li;
+    getTypeParamUrl() {
+        return this.#url.searchParams.get("type");
+    }
+
+    getSerchParam() {
+        return this.#url.searchParams.get("search") || null;
+    }
+
+    #createCatalogProduct(type) {
+
     }
 }
 

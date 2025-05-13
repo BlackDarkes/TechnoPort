@@ -1,3 +1,5 @@
+import redHeart from "/images/favourites/redHeart.svg";
+
 class ProductHorizontalManager {
     createBlock(className) {
         const div = document.createElement("div");
@@ -43,6 +45,32 @@ class ProductHorizontalManager {
         p.textContent += " ₽";
 
         return p
+    }
+
+    createBuyButton(text, className) {
+        const button = this.#createButton(text, className);
+        const imageElement = this.createImage("/images/category/shoppingCartWhite.svg", "favourites-price__shop");
+        button.appendChild(imageElement);
+
+        return button;
+    }
+
+    createFavoritButton(text, className) {
+        const button = this.#createButton(text, className);
+        const imageElement = this.createImage("/images/favourites/redHeart.svg");
+        button.appendChild(imageElement);
+
+        return button;
+    }
+
+    
+
+    #createButton(text, className) {
+        const button = document.createElement("button");
+        button.textContent = text;
+        button.classList.add(className);
+
+        return button;
     }
 }
 

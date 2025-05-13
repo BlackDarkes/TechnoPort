@@ -100,19 +100,19 @@
         <div class="header-mobile__block">
           <ul class="header-mobile__list">
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="../index.html" class="header-mobile__link">
                 <img src="/images/header/home.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Главная</p>
               </a>
             </li>
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="./favourites.html" class="header-mobile__link">
                 <img src="/images/header/heart.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Избранное</p>
               </a>
             </li>
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="./basket.html" class="header-mobile__link">
                 <img src="/images/header/shoppingCart.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Корзина</p>
               </a>
@@ -133,31 +133,37 @@
     <main class="main-favourites">
       <div class="main-favourites__block">
         <h2 class="main-favourites__title">Избранное</h2>
-        <ul class="main-favourites__list" data-favourites-list="">
-          <li class="main-favourites__item">
-            <a href="#" class="main-favourites__link">
-              <div class="favourites-info">
-                <img src="https://c.dns-shop.ru/thumb/st4/fit/500/500/2b4e93c24b2b4eb9b871627fdeda311e/8fc96f00e5a61e5496ec61a22e6d62474c8ea2fea99b3fb7b340a58982603461.jpg.webp" alt="Картинка товара" class="favourites-info__image">
-                <div class="favourites-info__texts">
-                  <h2 class="favourites-info__title">Наименнование товара, которое может быть любой наилюбейшей длинны, не только коротким, но и длинным</h2>
-                  <p class="favourites-info__feedback">Отзывы 4.9</p>
-                </div>
-              </div>
-              <div class="favourites-price">
-                <p class="favourites-price__price">12999 P</p>
-                <button type="button" class="favourites-price__buy">
-                  <img src="/images/category/shoppingCartWhite.svg" class="favourites-price__shop" alt="">
-                </button>
-                <button type="button" class="favourites-price__favorit">
-                  <img src="/images/favourites/redHeart.svg" alt="">
-                </button>
-              </div>
-            </a>
-          </li>
-        </ul>
+        <ul class="main-favourites__list" data-favourites-list=""></ul>
       </div>
     </main>
 
+
+
+    <footer class="footer">
+      <div class="footer__block">
+        <h2 class="footer__title">TechnoPort</h2>
+        <div class="footer__lists">
+          <div class="footer__company">
+            <ul class="footer__list footer__list--company">
+              <li class="footer__item"><h3 class="footer__heading footer__heading--company">Компания:</h3></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--company">О компании</a></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--company">Новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__clients">
+            <ul class="footer__list footer__list--clients">
+              <li class="footer__item"><h3 class="footer__heading footer__heading--company">Покупателям:</h3></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--clients">Как офрмить заказ</a></li>
+              <li class="footer__item"><a href="" class="footer__link footer__link--clients">Способы оплаты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__security">
+        <p class="footer__text">&copy; 2025–2025 Компания TechnoPort</p>
+      </div>
+    </footer>
     <script type="module" src="../src/page-scripts/favourites.js"></script>
 </body>
 </html>

@@ -100,19 +100,19 @@
         <div class="header-mobile__block">
           <ul class="header-mobile__list">
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="/" class="header-mobile__link">
                 <img src="/images/header/home.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Главная</p>
               </a>
             </li>
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="./pages/favourites.html" class="header-mobile__link">
                 <img src="/images/header/heart.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Избранное</p>
               </a>
             </li>
             <li class="header-mobile__item">
-              <a href="" class="header-mobile__link">
+              <a href="./pages/basket.html" class="header-mobile__link">
                 <img src="/images/header/shoppingCart.svg" alt="" class="header-mobile__icon">
                 <p class="header-mobile__text">Корзина</p>
               </a>
@@ -233,7 +233,7 @@
       buttonElement.addEventListener("click", () => {
         const inputText = String(inputElement.value).toLocaleLowerCase();
 
-        window.location.href = `./pages/catalog.html?type=search?search=${inputText}`;
+        window.location.href = `./pages/catalog.html?type=search&search=${inputText}`;
       })
     </script>
   </body>

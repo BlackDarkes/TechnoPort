@@ -1,6 +1,6 @@
 import "../styles/page-style/main.scss";
-import Catalog from "../modules/catalog";
 import Viewed from "../modules/viewed";
+import CatalogSlider from "../modules/catalogSlider";
 
-new Catalog();
+new CatalogSlider();
 new Viewed();

@@ -60,3 +60,7 @@ select {
 main[class] {
     margin-top: rem(160);
 }
+
+main {
+    min-height: calc(100vh - rem(160));
+}

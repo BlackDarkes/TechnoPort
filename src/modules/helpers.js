@@ -15,6 +15,21 @@ class Helpers {
             return [];
         }
     }
+
+    async loadSvg(url) {
+        const res = await fetch(url);
+
+        if (!res.ok) {
+            throw new Error("Не удалось загрузить SVG");
+        }
+
+        const svgText = await res.text();
+        const div = document.createElement("div");
+
+        div.innerHTML = svgText;
+
+        return div.firstChild;
+    }
 }
 
 export default Helpers;

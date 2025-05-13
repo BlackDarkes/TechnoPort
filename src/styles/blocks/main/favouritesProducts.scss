@@ -17,6 +17,7 @@
     &__title {
         @include fluid-text(36, 32);
         margin-bottom: rem(30);
+        font-family: var(--fontIBM);
     }
 
     &__list {
@@ -26,7 +27,6 @@
     }
 
     &__item {
-        padding: rem(10);
         border: 1px solid var(--border);
         border-radius: rem(10);
         transition: var(--transition);
@@ -40,6 +40,7 @@
     &__link {
         display: flex;
         column-gap: rem(20);
+        padding: rem(10);
     }
 
     .favourites-info {
@@ -56,6 +57,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        &__title {
+            font-family: var(--fontIBM);
         }
     }
 
