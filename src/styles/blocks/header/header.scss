@@ -136,12 +136,12 @@
 
         &__item {
             padding: rem(3);
-            border: 1px solid transparent;
+            // border: 1px solid transparent;
             transition: var(--transition);
 
             @include hover() {
-                border-color: var(--border);
                 border-radius: rem(8);
+                background-color: var(--dimGray);
             }
         }
 

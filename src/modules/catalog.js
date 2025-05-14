@@ -53,7 +53,23 @@ class Catalog {
     }
 
     getCatalogProduct() {
-        this.#data.forEach((product) => {
+        this.parentElement.innerHTML = "";
+
+        let filterProducts = this.#data;
+
+        filterProducts = filterProducts.sort((a, b) => b.feedback - a.feedback);
+
+        if (this.#option === "popular") {
+            filterProducts = filterProducts.sort((a, b) => b.feedback - a.feedback);
+        }
+
+        if (this.#option === "low-price") {
+            filterProducts = filterProducts.sort((a, b) => a.price - b.price);
+        } else if (this.#option === "more-price") {
+            filterProducts = filterProducts.sort((a, b) => b.price - a.price);
+        }
+
+        filterProducts.forEach((product) => {
             if (this.#type === "search") {
                 product.tags.forEach((tag) => {
                     if (tag === this.#search) {
@@ -78,9 +94,9 @@ class Catalog {
                 const li = this.#createCatalogProduct(product);
                 this.parentElement.appendChild(li)
             }
-
-            this.titleElement.textContent = this.#nameCatalog[this.#type] || this.getSearchTitle();
         })
+
+        this.titleElement.textContent = this.#nameCatalog[this.#type] || this.getSearchTitle();
     }
 
     getSearchTitle() {

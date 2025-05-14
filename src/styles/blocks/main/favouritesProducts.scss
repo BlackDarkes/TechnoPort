@@ -41,6 +41,10 @@
         display: flex;
         column-gap: rem(20);
         padding: rem(10);
+
+        @include mobile() {
+                flex-direction: column;
+        }
     }
 
     .favourites-info {
@@ -51,6 +55,11 @@
         &__image {
             width: rem(200);
             height: rem(200);
+
+            @include mobile() {
+                height: rem(120);
+                width: rem(120);
+            }
         }
 
         &__texts {
@@ -60,7 +69,12 @@
         }
 
         &__title {
+            @include fluid-text(24, 16);
             font-family: var(--fontIBM);
+        }
+
+        @include mobile() {
+                column-gap: rem(20);
         }
     }
 
@@ -73,7 +87,7 @@
         width: rem(150);
 
         &__price {
-            font-size: rem(32);
+            @include fluid-text(32, 26);
             font-weight: 700;
         }
 
@@ -89,6 +103,14 @@
             @include hover {
                 background-color: var(--redButton);
             }
+        }
+
+        @include mobile() {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: rem(25);
+            width: 100%;
         }
     }
 }

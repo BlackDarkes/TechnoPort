@@ -8,6 +8,10 @@
         width: min(100% - rem(40), rem(1440));
         padding-top: rem(50);
         margin-inline: auto;
+
+        @include tablet() {
+            padding-top: rem(30);
+        };
     }
 
     &__title {
@@ -44,17 +48,30 @@
             display: flex;
             column-gap: rem(20);
             padding: rem(10);
+
+            @include mobile() {
+                flex-direction: column;
+            }
         }
 
         &__info {
             display: flex;
             column-gap: rem(40);
             width: 100%;
+
+            @include mobile() {
+                column-gap: rem(20);
+            }
         }
 
         &__image {
             width: rem(200);
             height: rem(200);
+
+            @include mobile() {
+                height: rem(120);
+                width: rem(120);
+            }
         }
 
         &__texts {
@@ -64,6 +81,7 @@
         }
 
         &__title {
+            @include fluid-text(24, 16);
             font-family: var(--fontIBM);
         }
 
@@ -74,10 +92,18 @@
             align-items: center;
             text-align: center;
             width: rem(150);
+
+            @include mobile() {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: rem(25);
+                width: 100%;
+            }
         }
 
         &__cost {
-            font-size: rem(32);
+            @include fluid-text(32, 26);
             font-weight: 700;
         }
 
