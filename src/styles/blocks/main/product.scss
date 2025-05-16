@@ -18,6 +18,15 @@
 
     &__breadcrumbs {
         display: flex;
+        padding-bottom: rem(5);
+        width: min(100%, rem(1440));
+        text-wrap: nowrap;
+        font-size: rem(14);
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+            height: 0;
+        }
     }
 
     &__item {
@@ -42,16 +51,20 @@
         &__images {
             display: flex;
             column-gap: rem(30);
+
+            @include tablet() {
+                display: none;
+            }
         }
 
         &__image-slider {
             display: flex;
             flex-direction: column;
             row-gap: rem(15);
-            z-index: var(--100);
             padding-inline: rem(7) rem(3);
-            overflow-y: auto;
             max-height: rem(500);
+            min-width: rem(60);
+            overflow-y: auto;
 
             &::-webkit-scrollbar {
                 width: rem(3);
@@ -63,6 +76,10 @@
 
             &::-webkit-scrollbar-thumb {
                 background-color: var(--border);
+            }
+
+            @include tablet() {
+                display: none;
             }
         }
 
@@ -81,13 +98,37 @@
                     width: rem(3);
                     border-radius: rem(3);
                     background-color: var(--border);
-                    z-index: var(--200);
                 }
+            }
+        }
+
+        &__mainImage {
+            width: 100%;
+            height: 100%;
+
+            @include laptop() {
+                width: rem(350);
+                height: rem(350);
+            }
+        }
+
+        &__mobile-slider {
+            display: none;
+            width: rem(300);
+            margin-inline: auto;
+            overflow-x: auto;
+
+            @include tablet() {
+                display: flex;
             }
         }
 
         &__info {
             width: min(100%, rem(516));
+
+            @include tablet() {
+                width: 100%;
+            }
         }
 
         &__feedback {
@@ -97,6 +138,7 @@
         &__buttons {
             display: flex;
             justify-content: space-between;
+            column-gap: rem(20);
         }
 
         &__price {
@@ -126,6 +168,10 @@
             @include hover {
                 background-color: var(--redButton);
             }
+        }
+
+        @include tablet() {
+            flex-direction: column;
         }
     }
 

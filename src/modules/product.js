@@ -13,6 +13,7 @@ class Product {
         productFeedback: "[data-prodcut-feedback]",
         productPrice: "[data-product-price]",
         productDescription: "[data-product-description]",
+        productMobileSlider: "[data-product-mobile-slider-images]",
     }
 
     constructor() {
@@ -36,6 +37,7 @@ class Product {
         this.ui.getFeedback(product);
         this.ui.getPrice(product);
         this.ui.getDescription(product);
+        this.ui.getMobileSlider(product);
     }
 
     svitchImages() {

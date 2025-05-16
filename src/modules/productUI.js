@@ -7,6 +7,7 @@ class ProductUI {
         this.productFeedbackElement = document.querySelector(selectors.productFeedback);
         this.productPriceElement = document.querySelector(selectors.productPrice);
         this.productDescriptionElement = document.querySelector(selectors.productDescription);
+        this.productMobileSliderElement = document.querySelector(selectors.productMobileSlider);
     }
 
     getName(product) {
@@ -54,11 +55,28 @@ class ProductUI {
         return this.productDescriptionElement.textContent = product.description;
     }
 
+    getMobileSlider(prodcut) {
+        const images = prodcut.images;
+
+        images.forEach((image) => {
+            this.productMobileSliderElement.appendChild(this.#createImage(image))
+        })
+
+        return this.productMobileSliderElement;
+    }
+
     #createButton(className) {
         const button = document.createElement("button");
         button.classList.add(className);
 
         return button;
+    }
+
+    #createImage(src) {
+        const img = document.createElement("img");
+        img.src = src;
+
+        return img;
     }
 }
 
