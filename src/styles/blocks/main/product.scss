@@ -1,0 +1,137 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.main-product {
+    width: 100vw;
+
+    &__block {
+        margin-inline: auto;
+        padding-top: rem(50);
+        width: min(100% - rem(40), rem(1440));
+    }
+
+    &__name {
+        @include fluid-text(36, 26);
+        margin-bottom: rem(20);
+        font-family: var(--fontIBM);
+    }
+
+    &__breadcrumbs {
+        display: flex;
+    }
+
+    &__item {
+        &--name {
+            color: var(--border);
+        }
+    }
+
+    &__item:not(:first-child)::before {
+        content: ">";
+        padding-inline: rem(7);
+        color: var(--black);
+    }
+
+    .main-item {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(40);
+        padding: rem(20);
+        border-radius: rem(12);
+
+        &__images {
+            display: flex;
+            column-gap: rem(30);
+        }
+
+        &__image-slider {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+            z-index: var(--100);
+            padding-inline: rem(7) rem(3);
+            overflow-y: auto;
+            max-height: rem(500);
+
+            &::-webkit-scrollbar {
+                width: rem(3);
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: var(--other);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--border);
+            }
+        }
+
+        &__image {
+            position: relative;
+            height: rem(40);
+            width: rem(40);
+
+            &.active {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: rem(-7);
+                    height: 100%;
+                    width: rem(3);
+                    border-radius: rem(3);
+                    background-color: var(--border);
+                    z-index: var(--200);
+                }
+            }
+        }
+
+        &__info {
+            width: min(100%, rem(516));
+        }
+
+        &__feedback {
+            margin-block: rem(50) rem(30);
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__price {
+            padding-left: rem(10);
+            width: min(100%, rem(314));
+            background-color: var(--other);
+            border-radius: rem(8);
+            font-size: rem(32);
+            font-weight: 700;
+        }
+
+        &__favorit {
+            transition: var(--transition);
+
+            @include hover() {
+                color: var(--redButton);
+            }
+        }
+
+        &__buy {
+            padding: rem(5) rem(47);
+            background-color: var(--componentsHover);
+            color: var(--white);
+            border-radius: rem(8);
+            transition: var(--transition);
+
+            @include hover {
+                background-color: var(--redButton);
+            }
+        }
+    }
+
+    &__description {
+        margin-top: rem(60);
+        padding-inline: rem(20);
+        text-align: justify;
+    }
+}
