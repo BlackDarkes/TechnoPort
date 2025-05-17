@@ -1,5 +1,5 @@
 class ProductUI {
-    constructor(selectors) {
+    constructor(selectors, selectorsMobile) {
         this.productNameElement = document.querySelector(selectors.productName);
         this.productImagesSliderElement = document.querySelector(selectors.productImagesSlider);
         this.productMainImageElement = document.querySelector(selectors.productMainImage);
@@ -7,15 +7,17 @@ class ProductUI {
         this.productFeedbackElement = document.querySelector(selectors.productFeedback);
         this.productPriceElement = document.querySelector(selectors.productPrice);
         this.productDescriptionElement = document.querySelector(selectors.productDescription);
-        this.productMobileSliderElement = document.querySelector(selectors.productMobileSlider);
+        
+        this.productMobileSliderElement = document.querySelector(selectorsMobile.productMobileSlider);
+        this.productMobileLeftButtonElement = document.querySelector(selectorsMobile.productMobileLeftButton);
+        this.productMobileRightButtonElement = document.querySelector(selectorsMobile.productMobileRightButton);
     }
 
-    getName(product) {
-        return this.productNameElement.textContent = product.name;
+    getName(name) {
+        return this.productNameElement.textContent = name;
     }
 
-    getImagesSlider(product) {
-        const images = product.images;
+    getImagesSlider(images) {
         let button;
 
         images.forEach((src, index) => {
@@ -35,29 +37,27 @@ class ProductUI {
         return button;
     }
 
-    getMainImage(product) {
-        return this.productMainImageElement.src = product.mainImage;
+    getMainImage(mainImage) {
+        return this.productMainImageElement.src = mainImage;
     }
 
-    getAbout(product) {
-        return this.productAboutElement.textContent = product.about;
+    getAbout(about) {
+        return this.productAboutElement.textContent = about;
     }
 
-    getFeedback(product) {
-        return this.productFeedbackElement.textContent = product.feedback;
+    getFeedback(feedback) {
+        return this.productFeedbackElement.textContent = feedback;
     }
 
-    getPrice(product) {
-        return this.productPriceElement.textContent = product.price + " ₽";
+    getPrice(price) {
+        return this.productPriceElement.textContent = price + " ₽";
     }
 
-    getDescription(product) {
-        return this.productDescriptionElement.textContent = product.description;
+    getDescription(description) {
+        return this.productDescriptionElement.textContent = description;
     }
 
-    getMobileSlider(prodcut) {
-        const images = prodcut.images;
-
+    getMobileSlider(images) {
         images.forEach((image) => {
             this.productMobileSliderElement.appendChild(this.#createImage(image))
         })
