@@ -65,6 +65,22 @@ class ProductUI {
         return this.productMobileSliderElement;
     }
 
+    switchImages() {
+        const listImages = this.productImagesSliderElement;
+        const buttons = listImages.querySelectorAll("button");
+        const images = listImages.querySelectorAll("img");
+
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                buttons.forEach((btn) => btn.classList.remove("active"));
+
+                button.classList.toggle("active");
+
+                this.ui.productMainImageElement.src = images[index].src;
+            })
+        })
+    }
+
     #createButton(className) {
         const button = document.createElement("button");
         button.classList.add(className);

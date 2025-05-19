@@ -1,4 +1,4 @@
-class BreadcrumbsManager {
+class BreadcrumbsView {
     constructor(selectors) {
         this.breadcrumbsCategoryElement = document.querySelector(selectors.breadcrumbsCategory);
         this.breadcrumbsTypeElement = document.querySelector(selectors.breadcrumbsType);
@@ -36,4 +36,4 @@ class BreadcrumbsManager {
     }
 }
 
-export default BreadcrumbsManager;
+export default BreadcrumbsView;

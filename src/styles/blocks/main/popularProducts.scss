@@ -23,6 +23,11 @@
         overflow: auto;
     }
 
+    &__link {
+        position: relative;
+        z-index: var(--100);
+    }
+
     &__item {
         flex-shrink: 0;
         width: rem(220);
@@ -81,11 +86,13 @@
         }
 
         &__buy {
+            position: relative;
             padding: rem(5) rem(37);
             background-color: var(--componentsHover);
             color: var(--white);
             border-radius: rem(8);
             transition: var(--transition);
+            z-index: var(--200);
 
             @include hover {
                 background-color: var(--redButton);

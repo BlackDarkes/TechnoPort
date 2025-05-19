@@ -32,7 +32,7 @@ class Product {
     async init() {
         this.#data = await this.helpers.getData();
         this.getProduct();
-        this.switchImages();
+        this.ui.switchImages();
         this.addEventListenersToMobileButtons();
     }
 
@@ -47,22 +47,6 @@ class Product {
         this.ui.getPrice(price);
         this.ui.getDescription(description);
         this.ui.getMobileSlider(images);
-    }
-
-    switchImages() {
-        const listImages = this.ui.productImagesSliderElement;
-        const buttons = listImages.querySelectorAll("button");
-        const images = listImages.querySelectorAll("img");
-
-        buttons.forEach((button, index) => {
-            button.addEventListener("click", () => {
-                buttons.forEach((btn) => btn.classList.remove("active"));
-
-                button.classList.toggle("active");
-
-                this.ui.productMainImageElement.src = images[index].src;
-            })
-        })
     }
 
     addEventListenersToMobileButtons() {

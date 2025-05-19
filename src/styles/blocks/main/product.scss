@@ -176,16 +176,20 @@
         &__buttons {
             display: flex;
             justify-content: space-between;
-            column-gap: rem(20);
+            column-gap: rem(10);
         }
 
         &__price {
+            @include fluid-text(32, 28);
             padding-left: rem(10);
             width: min(100%, rem(314));
             background-color: var(--other);
             border-radius: rem(8);
-            font-size: rem(32);
             font-weight: 700;
+
+            @include mobile-s() {
+                padding: 0;
+            }
         }
 
         &__favorit {

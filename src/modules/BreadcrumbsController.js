@@ -1,7 +1,7 @@
-import BreadcrumbsManager from "./breadcrumbsManager";
+import BreadcrumbsView from "./BreadcrumbsView";
 import Helpers from "./helpers";
 
-class Breadcrumbs {
+class BreadcrumbsController {
     #data;
     #url = new URLSearchParams(document.location.search);
     #id = this.#url.get("id");
@@ -13,7 +13,7 @@ class Breadcrumbs {
 
     constructor() {
         this.helpers = new Helpers();
-        this.breadcrumbsManager = new BreadcrumbsManager(this.#selectors);
+        this.breadcrumbsView = new BreadcrumbsView(this.#selectors);
         this.init();
     }
 
@@ -25,10 +25,10 @@ class Breadcrumbs {
     getBreadcrumbs() {
         const product = this.#data.find((product => product.id == this.#id));
 
-        this.breadcrumbsManager.getCategory(product);
-        this.breadcrumbsManager.getType(product);
-        this.breadcrumbsManager.getName(product);
+        this.breadcrumbsView.getCategory(product);
+        this.breadcrumbsView.getType(product);
+        this.breadcrumbsView.getName(product);
     }
 }
 
-export default Breadcrumbs;
+export default BreadcrumbsController;

@@ -56,7 +56,7 @@ class ProductManager {
         return p;
     }
 
-    createButtonsBlock(blockName, buyName, favoritName) {
+    createButtonsBlock(blockName, buyName, favoritName, id) {
         const div = document.createElement("div");
         const buttonBuy = document.createElement("button");
         const buttonfFavorit = document.createElement("button");
@@ -65,6 +65,8 @@ class ProductManager {
         div.classList.add(blockName);
         buttonBuy.classList.add(buyName);
         buttonfFavorit.classList.add(favoritName);
+
+        buttonBuy.setAttribute("data-popular-buy-button", id);
 
         imageBuy.src = "/images/category/shoppingCartWhite.svg";
         this.#loadSvg(heart).then(svgElement => {

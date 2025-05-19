@@ -88,6 +88,10 @@
             border-radius: rem(8);
             transition: var(--transition);
 
+            &.buy {
+                background-color: var(--redButton);
+            }
+
             @include hover {
                 background-color: var(--redButton);
             }

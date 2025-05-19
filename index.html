@@ -87,7 +87,7 @@
           </div>
 
           <div class="header-mobile__search">
-            <input type="search" name="search-mobile" id="search-mobile" class="header-mobile__field" placeholder="Поиск..." data-header-search="">
+            <input type="search" name="search-mobile" id="search-mobile" class="header-mobile__field" placeholder="Поиск..." data-header-search-input-mobile="">
             <button type="button" aria-label="Кнопка поиска" class="header-mobile__quest" data-header-mobile-button-search="">
               <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="header-mobile__image header-mobile__image--search">
                 <path d="M26.25 26.25L20.8125 20.8125M23.75 13.75C23.75 19.2728 19.2728 23.75 13.75 23.75C8.22715 23.75 3.75 19.2728 3.75 13.75C3.75 8.22715 8.22715 3.75 13.75 3.75C19.2728 3.75 23.75 8.22715 23.75 13.75Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -219,24 +219,5 @@
     </footer>
 
     <script type="module" src="./src/page-scripts/main.js"></script>
-    <script>
-      const buttonMobileElement = document.querySelector("[data-header-mobile-button-search]");
-      const inputMobileElement = document.querySelector("[data-header-search]");
-      
-      buttonMobileElement.addEventListener("click", () => {
-        const inputText = String(inputMobileElement.value).toLocaleLowerCase();
-
-        window.location.href = `./pages/catalog.html?type=search&search=${inputText}`;
-      })
-
-      const buttonElement = document.querySelector("[data-header-search-button]");
-      const inputElement = document.querySelector("[data-header-search-input]");
-
-      buttonElement.addEventListener("click", () => {
-        const inputText = String(inputElement.value).toLocaleLowerCase();
-
-        window.location.href = `./pages/catalog.html?type=search&search=${inputText}`;
-      })
-    </script>
   </body>
 </html>
