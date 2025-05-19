@@ -46,7 +46,6 @@
         justify-content: space-between;
         column-gap: rem(40);
         padding: rem(20);
-        border-radius: rem(12);
 
         &__images {
             display: flex;
@@ -222,8 +221,8 @@
     }
 
     &__description {
-        margin-top: rem(60);
-        padding-inline: rem(20);
+        display: block;
+        padding: rem(60) rem(30) 0;
         text-align: justify;
 
         @include mobile-s() {

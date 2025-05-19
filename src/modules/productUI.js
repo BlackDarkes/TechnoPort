@@ -76,9 +76,18 @@ class ProductUI {
 
                 button.classList.toggle("active");
 
-                this.ui.productMainImageElement.src = images[index].src;
+                this.productMainImageElement.src = images[index].src;
             })
         })
+    }
+
+    addToVisited(id) {
+        const visiteItems = this.#getVisitedItemsFromStorage();
+
+        if (!visiteItems.includes(Number(id))) {
+            visiteItems.push(Number(id));
+            localStorage.setItem("visited", JSON.stringify(visiteItems));
+        }
     }
 
     #createButton(className) {
@@ -93,6 +102,23 @@ class ProductUI {
         img.src = src;
 
         return img;
+    }
+
+    #getVisitedItemsFromStorage() {
+        let visitedItems = [];
+
+        if (localStorage.getItem("visited")) {
+            try {
+                visitedItems = JSON.parse(localStorage.getItem("visited"));
+                if (!Array.isArray(visitedItems)) {
+                    visitedItems = [];
+                }
+            } catch(e) {
+                visitedItems = [];
+            }
+        }
+
+        return visitedItems;
     }
 }
 

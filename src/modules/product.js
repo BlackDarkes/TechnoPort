@@ -34,6 +34,7 @@ class Product {
         this.getProduct();
         this.ui.switchImages();
         this.addEventListenersToMobileButtons();
+        this.ui.addToVisited(this.#id);
     }
 
     getProduct() {

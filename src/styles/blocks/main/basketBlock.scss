@@ -1,0 +1,132 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.main-basket {
+    width: 100vw;
+
+    &__block {
+        padding-top: rem(50);
+        margin-inline: auto;
+        width: min(100% - rem(40), rem(1440));
+        height: rem(480);
+    }
+
+    &__title {
+        @include fluid-text(36, 32);
+        margin-bottom: rem(10);
+        font-family: var(--fontIBM);
+        margin-bottom: rem(40);
+    }
+
+    .product {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart-items {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(80);
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+        
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(120);
+            padding: rem(10);
+            border: 1px solid var(--border);
+            border-radius: rem(10);
+            transition: var(--transition);
+
+            @include hover() {
+                border-radius: rem(15);
+                border-color: var(--black);
+            }
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(40);
+        }
+
+        &__image {
+            width: rem(150);
+            height: rem(150);
+        }
+
+        &__title {
+            @include fluid-text(24, 16);
+            display: block;
+            margin-bottom: rem(30);
+            font-family: var(--fontIBM);
+            font-weight: 700;
+        }
+
+        &__count {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+            margin-bottom: rem(10);
+        }
+
+        &__price {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: space-between;
+            column-gap: rem(30);
+        }
+
+        &__cost {
+            @include fluid-text(24, 16);
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+
+    .order-summary {
+        padding: rem(20);
+        border: 1px solid var(--border);
+        border-radius: rem(10);
+
+        &__title {
+            @include fluid-text(24, 16);
+            margin-bottom: rem(20);
+            font-family: var(--fontIBM);
+            text-align: center;
+        }
+
+        &__count {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__totalPrice {
+            font-size: rem(18);
+            font-weight: 700;
+            margin-bottom: rem(40);
+        }
+
+        &__order {
+            padding: rem(12) rem(38);
+            background-color: var(--componentsHover);
+            color: var(--white);
+            border-radius: rem(8);
+            transition: var(--transition);
+
+            @include hover {
+                background-color: var(--redButton);
+            }
+        }
+    }
+}
