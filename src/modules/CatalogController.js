@@ -1,7 +1,7 @@
 import Helpers from "./helpers";
-import ProductHorizontalManager from "./productHorizontalManager";
+import HtmlBuilderView from "./HtmlBuilderView";
 
-class Catalog {
+class CatalogController {
     #data;
     #selectors = {
         selector: "[data-catalog-select]",
@@ -22,7 +22,7 @@ class Catalog {
 
     constructor() {
         this.helpers = new Helpers();
-        this.productHorizontalManager = new ProductHorizontalManager();
+        this.htmlBuilder = new HtmlBuilderView();
         this.selectorElement = document.querySelector(this.#selectors.selector);
         this.parentElement = document.querySelector(this.#selectors.parent);
         this.titleElement = document.querySelector(this.#selectors.title);
@@ -131,21 +131,17 @@ class Catalog {
     #createCatalogProduct(product) {
         const id = product.id;
 
-        const li = document.createElement("li");
-        const aLink = this.productHorizontalManager.createLink("main-products__link", `../../pages/product.html?id=${id}`);
-        const infoBlockElement = this.productHorizontalManager.createBlock("main-products__info");
-        const imageElement = this.productHorizontalManager.createImage(product.mainImage, "main-products__image");
-        const blockTexts = this.productHorizontalManager.createBlock("main-products__texts");
-        const nameProduct = this.productHorizontalManager.createTitle(product.name, "main-products__title");
-        const feedbackElement = this.productHorizontalManager.createText(`Отзывы ${product.feedback}`, "main-products__feedback");
-        const priceBlockElement = this.productHorizontalManager.createBlock("main-products__price");
-        const priceElement = this.productHorizontalManager.createPrice(product.price, "main-products__cost");
-        const buttonBuy = this.productHorizontalManager.createBuyButton("", "main-products__buy");
-        const buttonFavourites = this.productHorizontalManager.createFavoritButton("", "main-products__favorit");
-
-
-        li.setAttribute("data-catalog-id", id);
-        li.classList.add("main-products__item");
+        const li = this.htmlBuilder.createListItem("main-products__item", "data-catalog-id", id);
+        const aLink = this.htmlBuilder.createLinkBlock(`../../pages/product.html?id=${id}`, "main-products__link");
+        const infoBlockElement = this.htmlBuilder.createBlock("main-products__info");
+        const imageElement = this.htmlBuilder.createImage(product.mainImage, "main-products__image");
+        const blockTexts = this.htmlBuilder.createBlock("main-products__texts");
+        const nameProduct = this.htmlBuilder.createNameProduct(product.name, "main-products__title");
+        const feedbackElement = this.htmlBuilder.createFeedback(product.feedback, "main-products__feedback");
+        const priceBlockElement = this.htmlBuilder.createBlock("main-products__price");
+        const priceElement = this.htmlBuilder.createPrice(product.price, "main-products__cost");
+        const buttonBuy = this.htmlBuilder.createBuyButton("main-products__buy");
+        const buttonFavourites = this.htmlBuilder.createFavoritButton("/images/header/heart.svg", "main-products__favorit");
 
         blockTexts.appendChild(nameProduct);
         blockTexts.appendChild(feedbackElement);
@@ -165,4 +161,4 @@ class Catalog {
     }
 }
 
-export default Catalog;
+export default CatalogController;

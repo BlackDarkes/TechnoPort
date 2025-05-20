@@ -1,8 +1,8 @@
 import "../styles/page-style/product.scss";
-import Product from "../modules/product";
+import ProductController from "../modules/ProductController";
 import BreadcrumbsController from "../modules/BreadcrumbsController";
 import SearchController from "../modules/SearchController";
 
-new Product();
+new ProductController();
 new BreadcrumbsController();
 new SearchController();

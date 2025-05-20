@@ -1,7 +1,7 @@
 import Helpers from "./helpers";
-import ProductUI from "./productUI";
+import ProductView from "./ProductView";
 
-class Product {
+class ProductController {
     #data;
     #url = new URLSearchParams(document.location.search);
     #id = this.#url.get("id");
@@ -25,41 +25,41 @@ class Product {
 
     constructor() {
         this.helpers = new Helpers();
-        this.ui = new ProductUI(this.#selectors, this.#selectorsMobile);
+        this.view = new ProductView(this.#selectors, this.#selectorsMobile);
         this.init();
     }
 
     async init() {
         this.#data = await this.helpers.getData();
         this.getProduct();
-        this.ui.switchImages();
+        this.view.switchImages();
         this.addEventListenersToMobileButtons();
-        this.ui.addToVisited(this.#id);
+        this.view.addToVisited(this.#id);
     }
 
     getProduct() {
         const product = this.#data.find((product) => product.id == this.#id);
         const { name, images, mainImage, about, feedback, price, description } = product
-        this.ui.getName(name);
-        this.ui.getImagesSlider(images);
-        this.ui.getMainImage(mainImage);
-        this.ui.getAbout(about);
-        this.ui.getFeedback(feedback);
-        this.ui.getPrice(price);
-        this.ui.getDescription(description);
-        this.ui.getMobileSlider(images);
+        this.view.getName(name);
+        this.view.getImagesSlider(images);
+        this.view.getMainImage(mainImage);
+        this.view.getAbout(about);
+        this.view.getFeedback(feedback);
+        this.view.getPrice(price);
+        this.view.getDescription(description);
+        this.view.getMobileSlider(images);
     }
 
     addEventListenersToMobileButtons() {
-        const slider = this.ui.productMobileSliderElement;
+        const slider = this.view.productMobileSliderElement;
         const totalSlides = slider.querySelectorAll("img").length;
 
-        this.ui.productMobileLeftButtonElement.addEventListener("click", () => {
+        this.view.productMobileLeftButtonElement.addEventListener("click", () => {
             this.#currentSlide = Math.max(0, this.#currentSlide - 1);
             this.#scrollToSlide();
         })
 
-        this.ui.productMobileRightButtonElement.addEventListener("click", () => {
+        this.view.productMobileRightButtonElement.addEventListener("click", () => {
             this.#currentSlide = Math.min(totalSlides - 1, this.#currentSlide + 1);
             this.#scrollToSlide();
         })
@@ -71,7 +71,7 @@ class Product {
     }
 
     #scrollToSlide() {
-        const slider = this.ui.productMobileSliderElement;
+        const slider = this.view.productMobileSliderElement;
         const slides = slider.querySelectorAll("img");
 
         if (slider.length === 0) return;
@@ -86,4 +86,4 @@ class Product {
     }
 }
 
-export default Product;
+export default ProductController;

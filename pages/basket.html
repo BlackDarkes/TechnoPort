@@ -133,45 +133,16 @@
         <h2 class="main-basket__title">Корзина</h2>
         <div class="main-basket__empty" data-basket-not-purchases="">Корзина пока пуста</div>
 
-        <div class="product">
+        <div class="product" data-busket-products="">
           <div class="cart-items">
-            <ul class="cart-items__list">
-              <li class="cart-items__item">
-                <div class="cart-items__info">
-                  <img src="https://c.dns-shop.ru/thumb/st1/fit/500/500/1eb89c0a9e4b12a5a8ae7996387e2c4d/67327fae123a23de5ebf63d6403c7a7436c7275514aa5a8b5a1dc4efcecaf398.jpg.webp" class="cart-items__image">
-                  
-                  <div class="cart-items__texts">
-                    <a href="" class="cart-items__title">Видеокарта GIGABYTE AMD Radeon 9070 GAMING OC</a>
-                    <div class="cart-items__count">
-                      <button class="cart-items__mines">-</button>
-                      <p class="cart-items__counter">1</p>
-                      <button class="cart-items__add">+</button>
-                    </div>
-                    <p class="cart-items__mainPrice"><span data-basket-mainPrice="">77999</span> ₽ / шт</p>
-                  </div>
-                </div>
-
-                <div class="cart-items__price">
-                  <p class="cart-items__cost"><span data-basket-price-product="">77999</span> ₽</p>
-
-                  <div class="cart-items__buttons">
-                    <button class="cart-items__button cart-items__button--favorit">
-                      <img src="/images/header/heart.svg" alt="">
-                    </button>
-                    <button class="cart-items__button cart-items__button--delete">
-                      <img src="/images/basket/Trash.png" alt="">
-                    </button>
-                  </div>
-                </div>
-              </li>
-            </ul>
+            <ul class="cart-items__list" data-basket-product-list=""></ul>
           </div>
 
           <div class="order-summary">
             <h3 class="order-summary__title">Условия заказа</h3>
             <div class="order-summary__count">
-              <p class="order-summary__text"><span data-basket-count="">1</span> Товар</p>
-              <p class="order-summary__totalPrice" data-basket-totalPrice="">77999 ₽</p>
+              <p class="order-summary__text">Всего <span data-basket-count=""></span></p>
+              <p class="order-summary__totalPrice" data-basket-totalPrice=""></p>
             </div>
             <button class="order-summary__order">Оформить заказ</button>
           </div>

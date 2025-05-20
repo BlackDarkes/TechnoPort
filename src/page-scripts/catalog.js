@@ -1,6 +1,6 @@
 import "../styles/page-style/catalog.scss";
-import Catalog from "../modules/catalog";
+import CatalogController from "../modules/CatalogController";
 import SearchController from "../modules/SearchController";
 
-new Catalog();
+new CatalogController();
 new SearchController();

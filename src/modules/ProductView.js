@@ -1,4 +1,6 @@
-class ProductUI {
+import HtmlBuilderView from "./HtmlBuilderView";
+
+class ProductView {
     constructor(selectors, selectorsMobile) {
         this.productNameElement = document.querySelector(selectors.productName);
         this.productImagesSliderElement = document.querySelector(selectors.productImagesSlider);
@@ -11,6 +13,8 @@ class ProductUI {
         this.productMobileSliderElement = document.querySelector(selectorsMobile.productMobileSlider);
         this.productMobileLeftButtonElement = document.querySelector(selectorsMobile.productMobileLeftButton);
         this.productMobileRightButtonElement = document.querySelector(selectorsMobile.productMobileRightButton);
+
+        this.htmlBuilder = new HtmlBuilderView();
     }
 
     getName(name) {
@@ -21,14 +25,13 @@ class ProductUI {
         let button;
 
         images.forEach((src, index) => {
-            button = this.#createButton("main-item__image");
-            const img = document.createElement("img");
+            button = this.htmlBuilder.createButton("", "main-item__image");
 
             if (index === 0) {
                 button.classList.add("active")
             } 
 
-            img.src = src;
+            const img = this.htmlBuilder.createImage(src);
 
             button.appendChild(img);
             this.productImagesSliderElement.appendChild(button);
@@ -59,7 +62,7 @@ class ProductUI {
 
     getMobileSlider(images) {
         images.forEach((image) => {
-            this.productMobileSliderElement.appendChild(this.#createImage(image))
+            this.productMobileSliderElement.appendChild(this.htmlBuilder.createImage(image));
         })
 
         return this.productMobileSliderElement;
@@ -90,20 +93,6 @@ class ProductUI {
         }
     }
 
-    #createButton(className) {
-        const button = document.createElement("button");
-        button.classList.add(className);
-
-        return button;
-    }
-
-    #createImage(src) {
-        const img = document.createElement("img");
-        img.src = src;
-
-        return img;
-    }
-
     #getVisitedItemsFromStorage() {
         let visitedItems = [];
 
@@ -122,4 +111,4 @@ class ProductUI {
     }
 }
 
-export default ProductUI;
+export default ProductView;
