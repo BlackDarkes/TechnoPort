@@ -94,6 +94,10 @@
             transition: var(--transition);
             z-index: var(--200);
 
+            &.buy {
+                background-color: var(--redButton);
+            }
+
             @include hover {
                 background-color: var(--redButton);
             }

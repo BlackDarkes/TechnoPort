@@ -1,5 +1,6 @@
 import ProductManager from "./productManager";
 import Helpers from "./helpers";
+import Viewed from "./viewed";
 
 class CatalogSlider {
     #parent = "[data-popular-list]";
@@ -15,6 +16,7 @@ class CatalogSlider {
     async init() {
         this.#data = await this.helpers.getData();
         this.getProductPopular();
+        this.addEventListenerToBuyButton();
     }
 
     getProductPopular() {
@@ -24,6 +26,67 @@ class CatalogSlider {
                 this.parantElement.appendChild(li);
             }
         })
+    }
+
+    buttonBuyStopPropagation() {
+        const buttonBuyElements = document.querySelectorAll("[data-popular-buy-button]");
+
+        buttonBuyElements.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            })
+        })
+    }
+
+    addEventListenerToBuyButton() {
+        const buttonBuyElements = document.querySelectorAll(".popular-product__buy buy");
+
+        this.#restoreBuyButtonsState(buttonBuyElements);
+
+        buttonBuyElements.forEach((button) => {
+            const id = Number(button.dataset.popularBuyButton);
+
+            button.addEventListener("click", () => {
+                let buyItems = this.#getBuyItemsFromStorage();
+
+                if (!buyItems.includes(id)) {
+                    buyItems.push(id);
+                    localStorage.setItem("buy", JSON.stringify(buyItems));
+                    button.classList.add("buy");
+                } else {
+                    alert("Данный товар уже находится в корзине!");
+                }
+            });
+        });
+    }
+
+    #restoreBuyButtonsState(buttonBuyElements) {
+        const buyItems = this.#getBuyItemsFromStorage();
+
+        buttonBuyElements.forEach((button) => {
+            const id = Number(button.dataset.popularBuyButton);
+            if (buyItems.includes(id)) {
+                button.classList.add("buy");
+            }
+        });
+    }
+
+    #getBuyItemsFromStorage() {
+        let buyItems = [];
+    
+        if (localStorage.getItem("buy")) {
+            try {
+                buyItems = JSON.parse(localStorage.getItem("buy"));
+                if (!Array.isArray(buyItems)) {
+                    buyItems = [];
+                }
+            } catch(error) {
+                buyItems = [];
+            }
+        }
+        
+        return buyItems;
     }
 
     #createProductListItem(product) {
@@ -36,7 +99,7 @@ class CatalogSlider {
         const name = this.productManager.createName(product.name, "popular-product__name");
         const feedback = this.productManager.createFeedback(product.feedback, "popular-product__feedback", "popular-product__stars");
         const price = this.productManager.createPrice(product.price, "popular-product__price");
-        const buttons = this.productManager.createButtonsBlock("popular-product__buttons", "popular-product__buy", "popular-product__favorit");
+        const buttons = this.productManager.createButtonsBlock("popular-product__buttons", "popular-product__buy", "popular-product__favorit", id);
 
         li.setAttribute("data-popular-item-id", id);
         li.classList.add("main-popular__item");

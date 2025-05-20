@@ -2,7 +2,9 @@
 @use "../../helpers/index.scss" as *;
 
 .footer {
-    margin-top: rem(120);
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100vw;
     border-top: 1px solid var(--lightGray);
 

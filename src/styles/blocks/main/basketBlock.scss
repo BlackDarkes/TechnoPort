@@ -22,6 +22,12 @@
         display: flex;
         justify-content: space-between;
         column-gap: rem(120);
+
+        @include laptop() {
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(60);
+        }
     }
 
     .cart-items {
@@ -46,17 +52,30 @@
                 border-radius: rem(15);
                 border-color: var(--black);
             }
+
+            @include mobile() {
+                flex-direction: column;
+            }
         }
 
         &__info {
             display: flex;
             justify-content: space-between;
             column-gap: rem(40);
+
+            @include mobile() {
+                column-gap: rem(15);
+            }
         }
 
         &__image {
             width: rem(150);
             height: rem(150);
+
+            @include mobile() {
+                width: rem(120);
+                height: rem(120);
+            }
         }
 
         &__title {
@@ -78,6 +97,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
+            @include mobile() {
+                row-gap: rem(40);
+                margin-top: rem(40);
+            }
+
+            @include mobile() {
+                flex-direction: row;
+            }
         }
 
         &__buttons {
@@ -86,10 +114,19 @@
             column-gap: rem(30);
         }
 
+        &__button {
+            width: rem(25);
+            height: rem(25);
+        }
+
         &__cost {
-            @include fluid-text(24, 16);
             text-align: center;
+            font-size: rem(24);
             font-weight: 700;
+
+            @include mobile() {
+                text-align: left;
+            }
         }
     }
 
@@ -119,7 +156,9 @@
         }
 
         &__order {
+            display: block;
             padding: rem(12) rem(38);
+            margin-inline: auto;
             background-color: var(--componentsHover);
             color: var(--white);
             border-radius: rem(8);
