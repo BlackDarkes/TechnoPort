@@ -10,6 +10,14 @@ class MainView {
             })
         }
     }
+
+    createBuy() {
+        if (localStorage.getItem("buy")) {
+            return;
+        } else {
+            localStorage.setItem("buy", JSON.stringify([]));
+        }
+    }
 }
 
 export default MainView;

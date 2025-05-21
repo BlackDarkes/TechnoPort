@@ -9,6 +9,8 @@ class AccountController {
         listBuy: "[data-account-list]",
         profileBlock: "[data-account-profile-block]",
         profileList: "[data-account-profile-list]",
+        logoutButton: "[data-accaunt-profile-logout]",
+        notorder: "[data-accaunt-profile-notorder]",
     };
     #data;
 
@@ -23,6 +25,8 @@ class AccountController {
         this.addEventListenerToLogin();
         this.view.hideUserLogin();
         this.view.generateOrder(this.#data);
+        this.view.logout();
+        this.view.canselOrder();
     }
 
     addEventListenerToLogin() {

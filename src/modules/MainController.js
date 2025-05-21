@@ -8,6 +8,7 @@ class MainController {
     constructor() {
         this.view = new MainView(this.#mainSelectors);
         this.view.renameButton();
+        this.view.createBuy();
     }
 }
 

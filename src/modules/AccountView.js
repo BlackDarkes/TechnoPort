@@ -1,6 +1,8 @@
 import HtmlBuilderView from "./HtmlBuilderView";
 
 class AccountView {
+    #PRODUCT_URL = "/pages/product.html?id=";
+
     constructor(selectors) {
         this.loginBlockElement = document.querySelector(selectors.loginBlock);
         this.inputLoginElement = document.querySelector(selectors.inputLogin);
@@ -8,6 +10,8 @@ class AccountView {
         this.listBuyElement = document.querySelector(selectors.listBuy);
         this.profileBlockElement = document.querySelector(selectors.profileBlock);
         this.profileListElement = document.querySelector(selectors.profileList);
+        this.logoutButtonElement = document.querySelector(selectors.logoutButton);
+        this.notorderElement = document.querySelector(selectors.notorder);
 
         this.htmlBuilder = new HtmlBuilderView();
     }
@@ -28,36 +32,100 @@ class AccountView {
         }
     }
 
+    logout() {
+        this.logoutButtonElement.addEventListener("click", () => {
+            const logout = confirm("Вы точно хотите выйти?");
+
+            if (logout) {
+                localStorage.removeItem("login");
+                location.reload();
+            }
+        })
+    }
+
     generateOrder(data) {
         const ordersArray = JSON.parse(localStorage.getItem("orders"));
         
-        ordersArray.forEach((order) => {
-            const idProduct = order[0];
-            const totalPrice = order[1];
-            const count = order[2];
-            const li = this.htmlBuilder.createListItem("main-account__order-item", "", "");
-            const button = this.htmlBuilder.createButton("Отмена", "main-account__cancel");
+        if (ordersArray && ordersArray.length) {
+            this.notorderElement.style.display = "none";
 
-            let textOrder = `Вы купили: `;
+            const tableContainer = this.htmlBuilder.createListItem("main-account__orders-table", "", "");
+            
+            const tableHeader = this.htmlBuilder.createBlock("main-account__orders-header");
+            tableHeader.innerHTML = `
+                <div class="main-account__orders-cell">Наименование товаров</div>
+                <div class="main-account__orders-cell">Общая цена</div>
+                <div class="main-account__orders-cell">Количество</div>
+                <div class="main-account__orders-cell">Действие</div>
+            `;
+            tableContainer.appendChild(tableHeader);
 
-            idProduct.forEach((id, index) => {
-                const product = data.find((product) => product.id == id);
-                button.setAttribute("data-account-profile-button-id", id);
+            ordersArray.forEach((order) => {
+                const idProduct = order[0];
+                const totalPrice = order[1];
+                const count = order[2];
+                let buttonId;
+                
+                const row = this.htmlBuilder.createBlock("main-account__orders-row");
+                
+                const productsCell = this.htmlBuilder.createBlock("main-account__orders-cell");
+                const productsList = this.htmlBuilder.createBlock("main-account__products-list");
+                
+                idProduct.forEach((id, index) => {
+                    const product = data.find((product) => product.id == id);
+                    if (product) {
+                        const productLink = this.htmlBuilder.createNameLinkProduct(
+                            `${this.#PRODUCT_URL}${id}`,
+                            product.name,
+                            "main-account__product"
+                        );
+                        productsList.appendChild(productLink);
+                        if (index !== idProduct.length - 1) {
+                            productsList.appendChild(document.createTextNode(' '));
+                        }
+                    }
+                });
+                
+                productsCell.appendChild(productsList);
+                row.appendChild(productsCell);
+                
+                const priceCell = this.htmlBuilder.createBlock("main-account__orders-cell");
+                priceCell.textContent = `${totalPrice}₽`;
+                row.appendChild(priceCell);
+                
+                const countCell = this.htmlBuilder.createBlock("main-account__orders-cell");
+                countCell.textContent = count;
+                row.appendChild(countCell);
+                
+                const actionCell = this.htmlBuilder.createBlock("main-account__orders-cell");
+                const button = this.htmlBuilder.createButton("Отмена", "main-account__cancel");
 
-                if (index === idProduct.length - 1) {
-                    textOrder += product.name + ". ";
-                } else {
-                    textOrder += product.name + ", ";
-                }
+                button.setAttribute('data-order-id', JSON.stringify(idProduct));
+                actionCell.appendChild(button);
+                row.appendChild(actionCell);
+                
+                tableContainer.appendChild(row);
+            });
+
+            this.profileListElement.innerHTML = '';
+            this.profileListElement.appendChild(tableContainer);
+        }
+    }
+
+    canselOrder() {
+        const canselButton = document.querySelectorAll(".main-account__cancel");
+
+        canselButton.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                const orderArray = JSON.parse(localStorage.getItem("orders"));
+                orderArray.splice(index, 1);
+
+                console.log(orderArray);
+
+                localStorage.setItem("orders", JSON.stringify(orderArray));
+
+                location.reload();
             })
-
-            textOrder += `Итоговая сумма составила:  ${totalPrice}₽. `;
-            textOrder += `Всего товаров: ${count}.`
-
-            li.innerHTML = textOrder;
-            li.appendChild(button);
-
-            this.profileListElement.appendChild(li)
         })
     }
 
