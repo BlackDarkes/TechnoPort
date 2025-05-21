@@ -1,3 +1,5 @@
+import HtmlBuilderView from "./HtmlBuilderView";
+
 class BasketView {
     constructor(selectors) {
         this.notPurchasesElement = document.querySelector(selectors.notPurchases);
@@ -5,6 +7,9 @@ class BasketView {
         this.productListElement = document.querySelector(selectors.productList);
         this.totalPriceElement = document.querySelector(selectors.totalPrice);
         this.countProductElement = document.querySelector(selectors.countProduct);
+        this.createOrderElement = document.querySelector(selectors.createOrder);
+
+        this.htmlBuilder = new HtmlBuilderView();
     }
 
     hidePurchases(buy) {
@@ -16,6 +21,10 @@ class BasketView {
     }
 
     getTotalPrice(data, buy) {
+        this.totalPriceElement.textContent = this.totalPrice(data, buy) + " ₽";
+    }
+
+    totalPrice(data, buy) {
         let totalPrice = 0;
 
         const counters = document.querySelectorAll(".cart-items__counter");
@@ -30,7 +39,7 @@ class BasketView {
             }
         });
 
-        this.totalPriceElement.textContent = totalPrice + " ₽";
+        return totalPrice;
     }
 
     updateTotalPrice(data, buy) {
@@ -44,6 +53,10 @@ class BasketView {
     }
 
     getCountProducts() {
+        this.countProductElement.textContent = this.countProduct();
+    }
+
+    countProduct() {
         const counterElements = document.querySelectorAll(".cart-items__counter");
         let count = 0;
 
@@ -51,7 +64,7 @@ class BasketView {
             count = count + parseInt(counter.textContent);
         })
 
-        this.countProductElement.textContent = count;
+        return count;
     }
 
     deleteProductFromStorage(id) {
@@ -61,6 +74,31 @@ class BasketView {
         localStorage.setItem("buy", JSON.stringify(buyItems));
 
         location.reload();
+    }
+
+    createOrder(data, buy) {
+        this.createOrderElement.addEventListener("click", () => {
+            if (localStorage.getItem("login")) {
+                let orderStorage = localStorage.getItem("orders");
+                const order = [buy, this.totalPrice(data, buy), this.countProduct()];
+
+                if (orderStorage) {
+                    const orderArray = JSON.parse(orderStorage);
+                    orderArray.push(order)
+
+                    localStorage.setItem("orders", JSON.stringify(orderArray))
+                } else {
+                    localStorage.setItem("orders", JSON.stringify([order]));
+                }
+
+                alert("Ваш заказ вы можете увидеть у себя в аккаунте!")
+                localStorage.setItem("buy", JSON.stringify([]));
+                console.log(this.productListElement);
+                location.reload();
+            } else {
+                alert("Сначало авторизуйтесь, чтобы оформить заказ!")
+            }
+        })
     }
 }
 

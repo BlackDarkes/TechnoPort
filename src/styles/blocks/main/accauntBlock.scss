@@ -46,4 +46,36 @@
     &__profile {
         display: none;
     }
+
+    &__orders {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+        margin-block: rem(40);
+    }
+
+    &__cancel {
+        padding: rem(4) rem(28);
+        margin-left: rem(20);
+        background-color: var(--componentsHover);
+        color: var(--white);
+        border-radius: rem(8);
+        transition: var(--transition);
+
+        @include hover {
+            background-color: var(--redButton);
+        }
+    }
+
+    &__exit {
+        padding: rem(8) rem(48);
+        background-color: var(--redButton);
+        color: var(--white);
+        border-radius: rem(8);
+        transition: var(--transition);
+
+        @include hover {
+            background-color: var(--componentsHover);
+        }
+    }
 }

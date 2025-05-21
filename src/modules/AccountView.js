@@ -1,3 +1,5 @@
+import HtmlBuilderView from "./HtmlBuilderView";
+
 class AccountView {
     constructor(selectors) {
         this.loginBlockElement = document.querySelector(selectors.loginBlock);
@@ -6,6 +8,8 @@ class AccountView {
         this.listBuyElement = document.querySelector(selectors.listBuy);
         this.profileBlockElement = document.querySelector(selectors.profileBlock);
         this.profileListElement = document.querySelector(selectors.profileList);
+
+        this.htmlBuilder = new HtmlBuilderView();
     }
 
     loginUser() {
@@ -22,6 +26,39 @@ class AccountView {
             this.profileBlockElement.style.display = "block";
             this.loginBlockElement.style.display = "none";
         }
+    }
+
+    generateOrder(data) {
+        const ordersArray = JSON.parse(localStorage.getItem("orders"));
+        
+        ordersArray.forEach((order) => {
+            const idProduct = order[0];
+            const totalPrice = order[1];
+            const count = order[2];
+            const li = this.htmlBuilder.createListItem("main-account__order-item", "", "");
+            const button = this.htmlBuilder.createButton("Отмена", "main-account__cancel");
+
+            let textOrder = `Вы купили: `;
+
+            idProduct.forEach((id, index) => {
+                const product = data.find((product) => product.id == id);
+                button.setAttribute("data-account-profile-button-id", id);
+
+                if (index === idProduct.length - 1) {
+                    textOrder += product.name + ". ";
+                } else {
+                    textOrder += product.name + ", ";
+                }
+            })
+
+            textOrder += `Итоговая сумма составила:  ${totalPrice}₽. `;
+            textOrder += `Всего товаров: ${count}.`
+
+            li.innerHTML = textOrder;
+            li.appendChild(button);
+
+            this.profileListElement.appendChild(li)
+        })
     }
 
     #validatePhone(phone) {
