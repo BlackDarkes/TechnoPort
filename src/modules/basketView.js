@@ -43,8 +43,15 @@ class BasketView {
         return price * count.textContent + " ₽";
     }
 
-    getCountProducts(buy) {
-        this.countProductElement.textContent = buy.length;
+    getCountProducts() {
+        const counterElements = document.querySelectorAll(".cart-items__counter");
+        let count = 0;
+
+        counterElements.forEach((counter) => {
+            count = count + parseInt(counter.textContent);
+        })
+
+        this.countProductElement.textContent = count;
     }
 
     deleteProductFromStorage(id) {

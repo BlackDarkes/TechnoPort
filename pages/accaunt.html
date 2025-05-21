@@ -45,7 +45,7 @@
           <nav class="header-nav__nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
-               <a href="/pages/accaunt.html" class="header-nav__link" data-header-login="">
+                <a href="/pages/accaunt.html" class="header-nav__link" data-header-login="">
                   <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--accaunt">
                   <span data-header-login-name="">Войти</span>
                 </a>
@@ -118,7 +118,7 @@
               </a>
             </li>
             <li class="header-mobile__item">
-              <a href="/pages/accaunt.html" class="header-mobile__link">
+              <a href="/pages/accaunt.html" class="header-mobile__link active">
                 <img src="/images/header/accaunt.svg" alt="" class="header-mobile__icon">
                 <span class="header-mobile__text" data-header-login-name="">Войти</span>
               </a>
@@ -128,21 +128,24 @@
       </div>
     </header>
 
-
-    <main class="main-catalog">
-        <div class="main-catalog__block">
-            <h2 class="main-catalog__title" data-catalog-name=""></h2>
-            <select name="filter" id="filter" class="main-catalog__filter" data-catalog-select="">
-                <option value="popular" selected class="main-catalog__option">С наибольшим рейтингом</option>
-                <option value="low-price" class="main-catalog__option">Сначала недорогие</option>
-                <option value="more-price" class="main-catalog__option">Сначала дорогие</option>
-            </select>
-            <div class="main-products">
-                <ul class="main-products__list" data-catalog-list=""></ul>
-            </div>
+    <main class="main-account">
+      <div class="main-account__block">
+        <div class="main-account__login" data-account-login-block="">
+          <h3 class="main-account__subtitle">Войти</h3>
+          <input type="tel" name="" id="" class="main-account__input" value="+7" placeholder="Введите номер телефона..." data-account-login-input="">
+          <button type="button" class="main-account__button" data-account-login-button>Войти</button>
         </div>
-    </main>
 
+        <div class="main-account__profile" data-account-profile-block="">
+          <h3 class="main-account__subtitle">Ваши заказы</h3>
+          <ul class="main-account__orders" data-account-profile-list="">
+            <li class="main-account__order-item">
+              Вы купили: процессор, видеокарта. Итоговая сумма (92298 Р). Колличествой товаров (2)
+            </li>
+            </ul>
+        </div>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="footer__block">
@@ -170,6 +173,6 @@
       </div>
     </footer>
 
-    <script type="module" src="../src/page-scripts/catalog.js"></script>
+    <script type="module" src="../src/page-scripts/accaunt.js"></script>
 </body>
 </html>

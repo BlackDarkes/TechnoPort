@@ -29,6 +29,7 @@ export default defineConfig({
                 favourites: resolve(__dirname, "./pages/favourites.html"),
                 product: resolve(__dirname, "./pages/product.html"),
                 pageNotFound: resolve(__dirname, "./pages/pageNotFound.html"),
+                accaunt: resolve(__dirname, "./pages/accaunt.html"),
             }
         }
     }

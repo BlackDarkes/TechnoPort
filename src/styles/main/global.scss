@@ -60,7 +60,7 @@ select {
 
 main[class] {
     margin-top: rem(160);
-    margin-block: rem(160) rem(450);
+    margin-block: rem(160) rem(400);
 
     @include tablet() {
         margin-block: rem(146) rem(790);

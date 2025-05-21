@@ -12,7 +12,7 @@
         display: flex;
         justify-content: space-between;
         width: min(100% - rem(40), rem(1440));
-        margin: rem(40) auto rem(97);
+        margin: rem(40) auto rem(105);
 
         @include tablet() {
             flex-direction: column;

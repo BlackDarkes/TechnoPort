@@ -1,4 +1,4 @@
-import BasketView from "./BasketView";
+import BasketView from "./basketView";
 import Helpers from "./helpers";
 import HtmlBuilderView from "./HtmlBuilderView";
 
@@ -26,7 +26,7 @@ class BasketController {
         this.view.hidePurchases(this.#buy);
         this.getProductsInBusket();
         this.view.getTotalPrice(this.#data, this.#buy);
-        this.view.getCountProducts(this.#buy);
+        this.view.getCountProducts();
     }
 
     getProductsInBusket() {
@@ -67,6 +67,7 @@ class BasketController {
             counter.textContent = currentCount + 1;
             this.view.getTotalPrice(this.#data, this.#buy);
             cost.textContent = this.view.getPrice(product.price);
+            this.view.getCountProducts();
         })
 
 
@@ -80,6 +81,7 @@ class BasketController {
             counter.textContent = currentCount - 1;
             this.view.getTotalPrice(this.#data, this.#buy);
             cost.textContent = this.view.getPrice(product.price);
+            this.view.getCountProducts();
         })
         
         buyButton.classList.add("cart-items__button--favorit");

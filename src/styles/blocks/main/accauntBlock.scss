@@ -1,0 +1,49 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.main-account {
+    width: 100vw;
+
+    &__block {
+        margin-inline: auto;
+        padding-top: rem(50);
+        width: min(100% - rem(40), rem(1440));
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: rem(40);
+        width: min(100%, rem(400))
+    }
+
+    &__subtitle {
+        @include fluid-text(36, 32);
+        margin-bottom: rem(10);
+        font-family: var(--fontIBM);
+    }
+
+    &__input {
+        padding: rem(5);
+        border: 1px solid var(--black);
+        width: 100%;
+        border-radius: rem(6);
+    }
+
+    &__button {
+        padding: rem(8) rem(48);
+        background-color: var(--componentsHover);
+        color: var(--white);
+        border-radius: rem(8);
+        transition: var(--transition);
+
+        @include hover {
+            background-color: var(--redButton);
+        }
+    }
+
+    &__profile {
+        display: none;
+    }
+}

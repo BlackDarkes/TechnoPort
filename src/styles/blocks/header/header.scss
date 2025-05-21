@@ -134,14 +134,48 @@
             column-gap: rem(50);
         }
 
-        &__item {
-            padding: rem(3);
-            // border: 1px solid transparent;
-            transition: var(--transition);
+        &__item:first-child {
+            position: relative;
+        }
 
-            @include hover() {
+        .login-field {
+            @include abs-center();
+            top: rem(130);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: rem(10);
+            border: 1px solid var(--border);
+            border-radius: rem(8);
+            background-color: var(--white);
+            transition: var(--transition);
+            @include hide();
+
+            &.active {
+                @include show();
+            }
+
+            &__title {
+                margin-bottom: rem(15);
+            }
+
+            &__input {
+                padding: rem(5);
+                margin-bottom: rem(20);
+                border: 1px solid var(--black);
+                border-radius: rem(5);
+            }
+
+            &__button {
+                padding: rem(5) rem(37);
+                background-color: var(--componentsHover);
+                color: var(--white);
                 border-radius: rem(8);
-                background-color: var(--dimGray);
+                transition: var(--transition);
+
+                @include hover {
+                    background-color: var(--redButton);
+                }
             }
         }
 
@@ -154,13 +188,15 @@
             display: inline-flex;
             flex-direction: column;
             justify-content: space-between;
+            padding: rem(3);
             height: inherit;
-            transition: var(--transition);
             border-radius: rem(8);
             font-size: rem(13);
+            transition: var(--transition);
 
-            @include hover {
-                background-color: var(--outher);
+            @include hover() {
+                border-radius: rem(8);
+                background-color: var(--dimGray);
             }
         }
 
