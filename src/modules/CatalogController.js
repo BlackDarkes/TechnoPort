@@ -11,7 +11,7 @@ class CatalogController {
     #nameCatalog = {
         stocks: "Акции",
         popular: "Популярное",
-        components: "Запчасти ПК",
+        components: "Компоненты ПК",
         other: "Другая техника",
         accessories: "Аксессуары"
     }

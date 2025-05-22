@@ -30,6 +30,7 @@ export default defineConfig({
                 product: resolve(__dirname, "./pages/product.html"),
                 pageNotFound: resolve(__dirname, "./pages/pageNotFound.html"),
                 accaunt: resolve(__dirname, "./pages/accaunt.html"),
+                createComputer: resolve(__dirname, "./pages/createComputer.html"),
             }
         }
     }
