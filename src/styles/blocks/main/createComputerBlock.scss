@@ -1,0 +1,55 @@
+@use "../../main/variables.scss";
+@use "../../helpers/index.scss" as *;
+
+.createComputer {
+    width: 100vw;
+
+    &__container {
+        margin-inline: auto;
+        padding-top: rem(50);
+        width: min(100% - rem(40), rem(1440));
+    }
+
+    &__title {
+        @include fluid-text(36, 32);
+        margin-bottom: rem(40);
+        font-family: var(--fontIBM);
+    }
+
+    &__components {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+        margin-bottom: rem(40);
+    }
+
+    &__field {
+        display: inline-flex;
+        align-items: center;
+        padding-inline: rem(5);
+        border: 1px solid var(--border);
+        border-radius: rem(5);
+    }
+
+    &__name {
+        margin-right: rem(20);
+        cursor: pointer;
+    }
+
+    &__errorMessage {
+        color: var(--redTittle);
+        margin-bottom: rem(20);
+    }
+
+    &__buy {
+        padding: rem(8) rem(48);
+        background-color: var(--componentsHover);
+        color: var(--white);
+        border-radius: rem(8);
+        transition: var(--transition);
+
+        @include hover {
+            background-color: var(--redButton);
+        }
+    }
+}

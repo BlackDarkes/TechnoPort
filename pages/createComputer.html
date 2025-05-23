@@ -131,72 +131,68 @@
     <main class="createComputer">
         <div class="createComputer__container">
             <h2 class="createComputer__title">Конфигуратор ПК</h2>
+
             <ul class="createComputer__components">
                 <li class="createComputer__component">
-                    <label for="processorInp">Процессор</label>
-                    <input list="processor" name="processorInp" id="processorInp">
-                    <datalist id="processor">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="processorInp" class="createComputer__name">Процессор</label>
+                    <div class="createComputer__field">
+                      <input list="processor" name="processorInp" id="processorInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="processor" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="motherboardInp">Материнская плата</label>
-                    <input list="motherboard" name="motherboardInp" id="motherboardInp">
-                    <datalist id="motherboard">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="motherboardInp" class="createComputer__name">Материнская плата</label>
+                    <div class="createComputer__field">
+                      <input list="motherboard" name="motherboardInp" id="motherboardInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="motherboard" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="powerInp">Блок питания</label>
-                    <input list="power" name="powerInp" id="powerInp">
-                    <datalist id="power">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="powerInp" class="createComputer__name">Блок питания</label>
+                    <div class="createComputer__field">
+                      <input list="power" name="powerInp" id="powerInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="power" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="corpusInp">Корпус</label>
-                    <input list="corpus" name="corpusInp" id="corpusInp">
-                    <datalist id="corpus">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="corpusInp" class="createComputer__name">Корпус</label>
+                    <div class="createComputer__field">
+                      <input list="corpus" name="corpusInp" id="corpusInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="corpus" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="cardInp">Видеокарта</label>
-                    <input list="card" name="cardInp" id="cardInp">
-                    <datalist id="card">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="cardInp" class="createComputer__name">Видеокарта</label>
+                    <div class="createComputer__field">
+                      <input list="card" name="cardInp" id="cardInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="card" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="coolingInp">Охлаждение</label>
-                    <input list="cooling" name="coolingInp" id="coolingInp">
-                    <datalist id="cooling">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="coolingInp" class="createComputer__name">Охлаждение</label>
+                    <div class="createComputer__field">
+                      <input list="cooling" name="coolingInp" id="coolingInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="cooling" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="ramInp">Оперативная память</label>
-                    <input list="ram" name="ramInp" id="ramInp">
-                    <datalist id="ram">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="ramInp" class="createComputer__name">Оперативная память</label>
+                    <div class="createComputer__field">
+                      <input list="ram" name="ramInp" id="ramInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="ram" data-create-components-list=""></datalist>
+                    </div>
                 </li>
                 <li class="createComputer__component">
-                    <label for="storageInp">Накопители</label>
-                    <input list="storage" name="storageInp" id="storageInp">
-                    <datalist id="storage">
-                        <option value="intel">intel</option>
-                        <option value="amd">amd</option>
-                    </datalist>
+                    <label for="storageInp" class="createComputer__name">Накопители</label>
+                    <div class="createComputer__field">
+                      <input list="storage" name="storageInp" id="storageInp" placeholder="Название..." class="createComputer__input">
+                      <datalist id="storage" data-create-components-list=""></datalist>
+                    </div>
                 </li>
             </ul>
+            <p class="createComputer__errorMessage">Не все компоненты выбраны</p>
+
+            <button type="button" class="createComputer__buy">Купить</button>
         </div>
     </main>
 

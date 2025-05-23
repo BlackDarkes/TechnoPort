@@ -84,6 +84,13 @@ class HtmlBuilderView {
 
         return button;
     }
+
+    createOption(text) {
+        const option = document.createElement("option");
+        option.value = text;
+
+        return option;
+    }
 }
 
 export default HtmlBuilderView;

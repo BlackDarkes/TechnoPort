@@ -104,5 +104,129 @@
         "about": "AM5, 6 x 3.7 ГГц, L2 - 6 МБ, L3 - 32 МБ, 2 х DDR5-5200 МГц, TDP 65 Вт",
         "description": "Процессор AMD Ryzen 5 7500F – модель с 6 производительными ядрами и трехуровневым кэшем. Чипсет способен одновременно обрабатывать до 12 вычислительных потоков информации, благодаря чему система сможет справиться с одновременным запуском нескольких ресурсоемких программ. Функционирование с тактовой частотой 3.7 ГГц и поддержка оперативной памяти DDR5 с объемом до 128 ГБ позволит компьютерной сборке стабильно работать в многозадачном режиме. Процессор AMD Ryzen 5 7500F имеет свободный множитель для ручного разгона тактовой частоты без изменения частоты системной шины, что позволит добиться увеличения производительности системы. Поддержка режима ECC позволит использовать устройство в составе сервера вместе с модулями оперативной памяти с технологией коррекции ошибок. В модели отсутствует интегрированное графическое ядро, чтобы вы могли оснастить сборку видеокартой с нужными характеристиками.",
         "tags": ["процессор", "amd", "AMD Ryzen 5 7500F", "ryzen 5 7500f"]
+    },
+    {
+        "id": 7,
+        "category": "components",
+        "name":" Материнская плата MSI B650 GAMING PLUS WIFI",
+        "price": 16999,
+        "discount": null,
+        "feedback": 4.6,
+        "mainImage": "https://c.dns-shop.ru/thumb/st4/fit/500/500/6b635893ba702e821f3d51d092f79025/f3465b1dd9af53fe73dc06da168b9d1a42ea0530c467065cb097a541a07d152e.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/6b635893ba702e821f3d51d092f79025/f3465b1dd9af53fe73dc06da168b9d1a42ea0530c467065cb097a541a07d152e.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/01c1105db1ecc8b19535bf98af009453/0b37925844bea2c4af04e81bac052f628a7d24e5208d523a993312ec02b697fc.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/8caaa489550f86270ec89872d66a4609/02b8c3a452fa83a4d2de2984210be1bb96070af4ace0d8e47c5a573e1288a13f.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/61c8624e16bc5ae7c39cdbec734489bf/5399a9b4d173d72283ea16a245cd00c4d210341dfadc9c47ac5f3397e9c234ff.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/b9b118fe61a0c372b82e0c20fea6bca2/db29d000395567a53d6eed426090c1a62a8ec65b1961b34b54a58daaa4fbce92.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/731f8e418f5748f7565d3327795fef83/beff0cbe41da4937fdc3b9455c6d59de3a2c6f84fa8201adc448c7fdba6d323b.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/c12352cc37f50cd59ce36344041869c4/25bd9b2cc8b4c6a84565d8bac769a76f74bc46c330daae854c0767eb205ac3ae.jpg.webp"
+        ],
+        "about": "AM5, AMD B650, 4xDDR5-4800 МГц, 2xPCI-Ex16, 2xM.2, Standard-ATX",
+        "description": "Материнская плата MSI B650 GAMING PLUS WIFI нацелена на геймеров, которые стремятся к достижению высокой производительности и стабильности компьютера. Она ориентирована на совместное функционирование с процессором AMD в исполнении AM5. Под установку модулей оперативной памяти стандарта DDR5 предлагается 4 слота. Дискретную графическую систем можно задействовать при помощи слотов расширения PCI-E x16 и PCI-E x1. Для создания вместительного хранилища есть 2 разъема M.2 и 4 порта SATA.Конектор LAN 2.5 Гбит/с и модуль беспроводной связи (поддержка стандартов WI-FI 6E и Bluetooth 5.2) гарантируют стабильное соединение с Интернетом и совместимыми устройствами. Охлаждающие радиаторы увеличенного размера отводят тепло от чипсета, системы питания, твердотельного накопителя. Аудиосистема Audio Boost обеспечивает чистый и насыщенный звук для погружения в игровую атмосферу. Протестированные компоненты и 6-слойная печатная плата с повышенным содержанием меди гарантируют стабильную работу MSI B650 GAMING PLUS WIFI.",
+        "tags": ["материнская плата", "msi", "MSI B650 GAMING PLUS WIFI", "msi b650 gaming plus wifi"]
+    },
+    {
+        "id": 8,
+        "category": "components",
+        "name": "Блок питания DEEPCOOL PQ1000M [R-PQA00M-FA0B-EU]",
+        "price": 16999,
+        "feedback": 4.9,
+        "mainImage": "https://c.dns-shop.ru/thumb/st4/fit/500/500/0860e5041ab80bf03babfff0b9fc31ac/a67f3ad16868770ed35341e3877c9b6241cc07bddfe64226a3c0fc4f06bf3ba1.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/0860e5041ab80bf03babfff0b9fc31ac/a67f3ad16868770ed35341e3877c9b6241cc07bddfe64226a3c0fc4f06bf3ba1.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/e00ea505fc006eed86270271f87afed0/b7c0ffb1c30e0c3ea70382c0238c8c3e9f27db174f2adcf49ef8d41e8cf49001.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/b5e290ee358b15e9e9b958971395bc34/998e5f4968913e24cc01b07d12394c6599dbdece9a4daf3d957ac264b329fecc.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/30d7be60bcc99f46c74c4daf365d2e7c/ac5a5398a90e908da310ddcb2e91a233eca74122dbd95fc108d01f64a2b4dab6.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/34827fe7183dff621a96416d2b6fb9e1/1f409721c898e81a19b4fc9098e7a49976ccf5711642cf68e7ec355cb6cbf8c7.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/4feda62d2eed6763552a177edbc9c31a/ecd070f2944db8756ab368b53e27c5b5601c5b21add5d5e20afb3f8debf87e6f.jpg.webp"
+        ],
+        "about": "1000 Вт, 80+ Gold, APFC, 20+4 pin, 2 x 4+4 pin CPU, 10 SATA, 3 x 6+2 pin PCI-E",
+        "description": "Блок питания DEEPCOOL PQ1000M [R-PQA00M-FA0B-EU] мощностью 1000 Вт обеспечит бесперебойную работу даже мощной игровой системе, которую вы собирали для своих киберспортивных поединков. При этом устройство соответствует сертификату 80 PLUS Gold и обладает полным набором технологий защиты (OCP, OPP, OTP, OVP, SCP). Это значит, что оно имеет высокий КПД и не выйдет из строя из-за перегрузки. В конфигурации блока питания DEEPCOOL PQ1000M [R-PQA00M-FA0B-EU] предусмотрена полупассивная система охлаждения, количество оборотов которой регулируется до полной остановки.",
+        "tags": ["питание", "deepcool", "DEEPCOOL PQ1000M"]
+    },
+    {
+        "id": 9,
+        "category": "components",
+        "name": "Корпус Cougar FV150 RGB [FV150 RGB White] белый",
+        "price": 8699,
+        "discount": null,
+        "feedback": 4.8,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/a5db6073f8c36f4c06dd13e6b74b7737/9314c7a1c61849e5cdecc7dd17d98295a191bd8e43bf4e0386c5d6916197200e.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/a5db6073f8c36f4c06dd13e6b74b7737/9314c7a1c61849e5cdecc7dd17d98295a191bd8e43bf4e0386c5d6916197200e.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/022de74f8c81d53165eed7bc79649368/c9e31e737bf94c842633ea93f14b7f17fc3ef4e5958e9a2124ac530395f3dcdf.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/48619d4b21a663b5d289b1738b520cc5/fc14ed9ac6e78882e8e841c3917e6dd073640e484048c66d3067c9eabab241f7.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/464dcef6f288106f1190eb77a616fe4c/90142f213c7dcc19ed578ab75271fa683508d0a07184c69976c7352e592b634f.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/4f547781564c3b8be43ad4e1fc8e2ea5/f6caef3cf64696b753bd6779280f61c10ee4ed47d47b1c9987772a23988cb635.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/f5cd031d79d6cfc928b624880cec5315/bba87a02f625c1ab2f4990f220c04ddb8d44ee12e2204fc4c56d34c63448a479.jpg.webp"
+        ],
+        "about": "Mid-Tower, Micro-ATX, Mini-ITX, Standard-ATX, USB 3.2 Gen 1 Type-A, USB 3.2 Gen 2 Type-C, ARGB вентиляторы, 4 x 120 мм",
+        "description": "Корпус Cougar FV150 RGB представлен в белом цвете в форм-факторе Mid-Tower и рассчитан на сборку игрового ПК. Он оснащен 4 вентиляторами диаметром 120 мм с RGB-подсветкой, поддерживающей световые эффекты. Они управляются через контроллеры материнской платы. Она фиксируется внутри корпуса горизонтально. Для дополнительного охлаждения можно установить вентиляторы размером 120 мм и 140 мм, а также систему жидкостного охлаждения. Это решит проблему перегрева компонентов при высоких нагрузках. Для демонстрации внутренних компонентов верхняя, боковая и передняя панели Cougar FV150 RGB выполнены из закаленного стекла. Отверстия на задней панели и одной из боковых сторон позволяют воздуху свободно циркулировать внутри воздуха, обеспечивают отвод горячего воздуха. Поддержка видеокарта размером до 330 мм дает возможность работать в графических программах и побеждать в играх с плавной частотой кадров. Корпус позволяет устанавливать накопители 2.5' и 3.5': для каждого из них выполнены 2 слота.",
+        "tags": ["корпус", "cougar", "Cougar FV150 RGB", "Cougar FV150 RGB"]
+    },
+    {
+        "id": 10,
+        "category": "components",
+        "name": "Кулер для процессора DEEPCOOL AG620 [R-AG620-BKNNMN-G-1]",
+        "price": 5199,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/c60fbf60ef7c962a6fc401a85db2aea2/bb35692bfce22ed015adc3d5d2ae1d069400f7568928c9932a48c348b0023449.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/c60fbf60ef7c962a6fc401a85db2aea2/bb35692bfce22ed015adc3d5d2ae1d069400f7568928c9932a48c348b0023449.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/bae3b89e99a9024b7ce73651369cbd8e/fd7e73b8b8d9e1c6a790947a46c391a09c9de5ad34032985df665ad1d647365d.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/6a2575efca6c88aeed24c3f36112665a/a58870b8445b3bebb7fda7105b19dd1e112e17f4d274510fe06739622bfbda29.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/15320a4291cb0b502069a7237fc1244f/b36f02c8c1ba9a066561104fb8fb303dddfd7153e88fe5df727ada669d7c2342.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/57b8ed96c547dddce8afa3fd1e145409/e76a2a4d8d8313f90c01da157dc35bb1efbdc5f1b6ac34309e7c1f7ecdb58b26.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/1f12740d074c4ef84a84034162c14b5f/0b32a80f44163e4397c80d84f386a67168cdf2add169ea63672d7ce3312384df.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/363d3a407edbbb73ed1ec7b637ef3ee7/cc2ed5253e4fc7646b1c2329417e5c7cd33094f896ed515bfd438f16c83b2113.jpg.webp"
+        ],
+        "about": "основание - медь, 1850 об/мин, 29.4 дБ, 4 pin, 260 Вт",
+        "description": "Кулер DEEPCOOL AG620 может рассеивать до 260 Вт тепловой мощности, выделяемой ЦПУ, и является подходящим вариантом для теплонагруженной игровой сборки. Контактная площадка, которая непосредственно контактирует с крышкой центрального процессора и забирает выделенное ею тепло, в этой модели произведена из теплоемкой меди. Посредством 6 тепловых трубок тепло передается к алюминиевому радиатору, с поверхности которого рассеивается вентиляторами. Для более продуктивного отбора тепла у ЦПУ основание кулера башенного типа покрывается термопастой. За рассеивание тепла в кулере DEEPCOOL AG620 отвечают два вентилятора размером 120x120 мм с автоматической регулировкой оборотов. В процессе работы вентиляторы с подключением к разъему 4-pin могут вращаться со скоростью 300-1850 об/мин. Шумность системы охлаждения при максимальных оборотах кулеров – 29.4 дБ.",
+        "tags": ["кулер", "deepcool", "DEEPCOOL AG620", "deepcool ag620"]
+    },
+    {
+        "id": 11,
+        "category": "components",
+        "name": "Оперативная память Kingston FURY Beast Black [KF556C36BBEK2-32] 32 ГБ",
+        "price": 8599,
+        "discount": null,
+        "feedback": 4.9,
+        "mainImage": "https://c.dns-shop.ru/thumb/st4/fit/500/500/77c70577b3b98802e69b804cd9a2d42b/4e836d64618e0ce56357a6a571fa4d0f644a5600fe297db94f2fc97216c46992.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/77c70577b3b98802e69b804cd9a2d42b/4e836d64618e0ce56357a6a571fa4d0f644a5600fe297db94f2fc97216c46992.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/ddcf7dd777dabcfaaea9f22557329d18/d17e5013935dc294d2c04fd488fda3bd94fad2c73a6a9746c367e9ae48d25e40.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/ae43e017d846f760f81c91eb961a231e/01c85687cd1b7e79e58df7e5fa192b3c81908655e4e626e47e99e4455468e2d0.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/23bef1cf6dbd047bace3740a0410a69e/49ef916d46890901a40bc71c0e7479a27bab676231676510beb10cddac9d7ac9.jpg.webp"
+        ],
+        "abiut": "DDR5, 16 ГБx2 шт, 5600 МГц, 36(CL)-38-38",
+        "description": "Оперативная память Kingston FURY Beast Black поколения DDR5 – это высокопроизводительное решение для геймерских и ресурсоемких ПК. Она представлена комплектом из двух модулей суммарным объемом 32 ГБ и тактовой частотой 5600 МГц. Поддержка Intel (XMP) 2.0 позволяет с удобством выполнять разгон. Алюминиевый ребристый радиатор способствует быстрому отведению тепла и помогает предотвратить перегрев чипов памяти. Интегрированная схема управления питанием гарантируют повышенную стабильность в эксплуатации оперативной памяти Kingston FURY Beast.",
+        "tags": ["оперативная память", "kingston", "Kingston FURY Beast", "kingston fury beast"]
+    },
+    {
+        "id": 12,
+        "category": "components",
+        "name": " 1000 ГБ M.2 NVMe накопитель ADATA XPG GAMMIX S11 Pro [AGAMMIXS11P-1TT-C]",
+        "price": 5799,
+        "discount": null,
+        "feedback": 4.8,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/60bb9a7675605645887f9da2d3094df2/874d063c58a210e52ded7e4c0703d31017a46beeefee0f9bb2d518dfceeb1879.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/60bb9a7675605645887f9da2d3094df2/874d063c58a210e52ded7e4c0703d31017a46beeefee0f9bb2d518dfceeb1879.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/785ea4a83b318e97fc514bbf4bb6b6ac/f43e2ace7f4c00e94e01d919dd32dfdea17a7f6aacc38bdf02cca4f940731295.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/fff490ea24524fdf93d158e8c0f8199a/59b2ee70ee8db98f00b46526214c1e6766eab9d95dea4af75c772847477d4a30.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/83a25d521cf82149835445adebae14ae/54ed9d5c7e959620530c6c8fdcbb27d428bf4d8182db820bb50ab8a79de82a58.jpg.webp"
+        ],
+        "about": "M.2 NVMe, 1000 ГБ, чтение - 3500 МБ/с, запись - 3000 МБ/с, 3D NAND",
+        "description": "1024 ГБ SSD M.2 накопитель A-Data XPG GAMMIX S11 Pro [AGAMMIXS11P-1TT-C] станет отличным выбором для значительного повышения быстродействия вашего компьютера при выполнении самых разнообразных задач — будь то запуск игр, работа с файлами или монтаж видео. Благодаря используемым чипам памяти NAND с 3D-структурой и контроллеру Silicon Motion SM2262EN обработка файлов происходит со скоростью до 3500 МБ/с при чтении и 3000 МБ/с при записи, что обеспечит выдающуюся производительность и комфорт при работе. Также данная модель отличается длительным ресурсом, достигающим 640 TBW. SSD M.2 накопитель A-Data XPG GAMMIX S11 Pro выполнен в форм-факторе 2280, где 22 мм — это ширина, 80 мм — длина модуля. Модель отличается двусторонней компоновкой чипов памяти и имеет толщину 6.1 мм. Подключение осуществляется посредством интерфейса PCI-e 3.0 x4. Энергопотребление накопителя не превышает 0.33 Вт.",
+        "tags": [
+            "накопитель",
+            "ssd",
+            "adata",
+            "XPG GAMMIX S11 Pro",
+            "nvme",
+            "m.2"
+        ]
     }
 ]
