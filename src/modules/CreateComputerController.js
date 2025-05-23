@@ -18,6 +18,7 @@ class CreateComputerController {
     async init() {
         this.#data = await this.helpers.getData();
         this.addOptionToList();
+        this.view.addToBuy(this.#data);
     }
 
     addOptionToList() {
@@ -25,42 +26,42 @@ class CreateComputerController {
             this.#data.forEach((product) => {
                 switch(component.id) {
                     case("processor"): {
-                        this.setOption(product, component, "процессор", "процессор");
+                        this.setOption(product, component, "процессор");
 
                         break;
                     }
                     case ("motherboard"): {
-                        this.setOption(product, component, "материнская плата", "материнская плата");
+                        this.setOption(product, component, "материнская плата");
 
                         break;
                     }
                     case("power"): {
-                        this.setOption(product, component, "питание", "блок питания");
+                        this.setOption(product, component, "питание");
 
                         break;
                     }
                     case("corpus"): {
-                        this.setOption(product, component, "корпус", "корпус");
+                        this.setOption(product, component, "корпус");
 
                         break;
                     }
                     case("card"): {
-                        this.setOption(product, component, "видеокарта", "видеокарта");
+                        this.setOption(product, component, "видеокарта");
 
                         break;
                     }
                     case("cooling"): {
-                        this.setOption(product, component, "кулер", "Кулер для процессора");
+                        this.setOption(product, component, "кулер");
 
                         break;
                     }
                     case("ram"): {
-                        this.setOption(product, component, "оперативная память", "оперативная память");
+                        this.setOption(product, component, "оперативная память");
 
                         break;
                     }
                     case("storage"): {
-                        this.setOption(product, component, "накопитель", "");
+                        this.setOption(product, component, "накопитель");
 
                         break;
                     }
@@ -69,9 +70,8 @@ class CreateComputerController {
         })
     }
 
-    setOption(product, component, type, text) {
+    setOption(product, component, type) {
         const name = product.tags[0] === type;
-        const length = text.split("").length + 1;
 
         if (name) {
             const productName = String(product.name);
