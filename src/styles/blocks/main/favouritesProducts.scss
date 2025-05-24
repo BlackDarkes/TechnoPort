@@ -70,7 +70,18 @@
 
         &__title {
             @include fluid-text(24, 16);
+            position: relative;
             font-family: var(--fontIBM);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: rem(-5);
+                width: 100%;
+                height: rem(20);
+                background: linear-gradient(180deg, transparent, #ffffff 50%);
+            }
         }
 
         @include mobile() {

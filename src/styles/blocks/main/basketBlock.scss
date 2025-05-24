@@ -15,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: rem(40);
         width: rem(1084);
 
         @include laptop() {
@@ -24,9 +25,7 @@
 
     &__title {
         @include fluid-text(36, 32);
-        margin-bottom: rem(10);
         font-family: var(--fontIBM);
-        margin-bottom: rem(40);
     }
 
     &__clearAll {
@@ -99,10 +98,25 @@
 
         &__title {
             @include fluid-text(24, 16);
+            position: relative;
             display: block;
             margin-bottom: rem(30);
             font-family: var(--fontIBM);
             font-weight: 700;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: rem(-5);
+                width: 100%;
+                height: rem(20);
+                background: linear-gradient(180deg, transparent, #ffffff 50%);
+            }
+        }
+
+        &__text {
+            width: 100%;
         }
 
         &__count {

@@ -59,12 +59,13 @@
         overflow-x: auto;
 
         &-table {
-            width: max(rem(900), 100%);
+            width: max(rem(700), 100%);
             
         }
     }
 
     &__orders-header {
+        @include fluid-text(16, 14);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin-bottom: rem(60);
@@ -73,6 +74,7 @@
     }
 
     &__orders-row {
+        @include fluid-text(16, 12);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin-bottom: rem(30);

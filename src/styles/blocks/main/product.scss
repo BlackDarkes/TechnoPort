@@ -12,6 +12,7 @@
 
     &__name {
         @include fluid-text(36, 26);
+        position: relative;
         margin-bottom: rem(20);
         font-family: var(--fontIBM);
     }

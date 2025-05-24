@@ -44,19 +44,14 @@ class Helpers {
 
     getCountBasket() {
         const basket = document.querySelector(".header-nav__link--basket");
+        const basketMobile = document.querySelector(".header-mobile__link--basket");
 
         const buyData = localStorage.getItem("buy");
         const arrayItems = buyData ? JSON.parse(buyData) : [];
         const length = arrayItems.length;
 
-        console.log(arrayItems)
-
         basket.style.setProperty("--count", `"${length}"`);
-
-        const computedStyle = getComputedStyle(document.documentElement);
-        const countValue = computedStyle.getPropertyValue("--count");
-
-        console.log(countValue)
+        basketMobile.style.setProperty("--count", `"${length}"`);
     }
 
     addEventListenerToBuyButton(itemsName, buttonName) {
@@ -86,9 +81,7 @@ class Helpers {
                         buttonImage.src = "/images/header/Check.svg";
                     }
 
-                    if (location.href.endsWith("/")) {
-                        location.reload();
-                    }
+                    location.reload();
                 } else {
                     alert("Данный товар уже находится в корзине!");
                 }
@@ -124,9 +117,6 @@ class Helpers {
             const button = item.querySelector(`.${buttonName}`);
             if (!button) return;
 
-            
-            
-            
             const id = Number(item.dataset.popularItemId ||
                 item.dataset.viewedItemId || 
                 item.dataset.catalogId || 
@@ -151,10 +141,8 @@ class Helpers {
                     favouriteItems = favouriteItems.filter((itemId) => itemId !== id);
                     button.classList.remove("favorit");
 
-                    this.loadSvg("/images/header/heart.svg").then((image) => {
-                        button.innerHTML = "";
-                        button.appendChild(image);
-                    })
+                    button.innerHTML = "";
+                    button.appendChild(image);
                 }
 
                 localStorage.setItem("favourites", JSON.stringify(favouriteItems));

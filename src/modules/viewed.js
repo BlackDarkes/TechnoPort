@@ -17,7 +17,7 @@ class Viewed {
         this.#data = await this.helpers.getData();
         this.getProductViewed();
         this.helpers.addEventListenerToBuyButton("main-viewed__item", "viewed-product__buy");
-        this.helpers.buttonStopPropagation("main-viewed__item");
+        this.helpers.buttonStopPropagation("viewed-product__buy");
         this.helpers.addEventListenerToFavoritesButton("main-viewed__item", "viewed-product__favorit");
         this.helpers.buttonStopPropagation("viewed-product__favorit");
     }
