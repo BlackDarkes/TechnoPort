@@ -56,6 +56,12 @@
         flex-direction: column;
         row-gap: rem(40);
         margin-block: rem(40);
+        overflow-x: auto;
+
+        &-table {
+            width: max(rem(900), 100%);
+            
+        }
     }
 
     &__orders-header {

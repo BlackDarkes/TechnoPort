@@ -1,3 +1,5 @@
+import heart from "/images/header/heart.svg";
+
 class HtmlBuilderView {
     createListItem(className, dataAttrName, dataAttrValue) {
         const li = document.createElement("li");
@@ -85,11 +87,48 @@ class HtmlBuilderView {
         return button;
     }
 
+    createButtonFavorit(className) {
+        const buttonfFavorit = this.createButton("", className);
+
+        this.#loadSvg(heart).then(svgElement => {
+            svgElement.classList.add("viewed-product__svg")
+            buttonfFavorit.appendChild(svgElement);
+        });
+
+        return buttonfFavorit;
+    }
+
     createOption(text) {
         const option = document.createElement("option");
         option.value = text;
 
         return option;
+    }
+
+    createButtonBlock(blockName, buyName, favoritName, dataAttr, id) {
+        const div = this.createBlock(blockName)
+        const buttonBuy = this.createButton("", buyName);
+        const buttonfFavorit = this.createButtonFavorit(favoritName);
+        const imageBuy = this.createImage("/images/category/shoppingCartWhite.svg");
+
+        buttonBuy.setAttribute(dataAttr, id);
+
+        buttonBuy.appendChild(imageBuy);
+        div.appendChild(buttonBuy);
+        div.appendChild(buttonfFavorit);
+
+        return div;
+    }
+
+    async #loadSvg(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Ошибка загрузки SVG: ' + response.status);
+        }
+        const svgText = await response.text();
+        const div = document.createElement('div');
+        div.innerHTML = svgText; 
+        return div.firstChild;
     }
 }
 

@@ -18,6 +18,10 @@ class MainView {
             localStorage.setItem("buy", JSON.stringify([]));
         }
     }
+
+    // createProductListItem() {
+
+    // }
 }
 
 export default MainView;

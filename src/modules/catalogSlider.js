@@ -1,6 +1,6 @@
 import ProductManager from "./productManager";
 import Helpers from "./helpers";
-import Viewed from "./viewed";
+import HtmlBuilderView from "./HtmlBuilderView";
 
 class CatalogSlider {
     #parent = "[data-popular-list]";
@@ -9,6 +9,7 @@ class CatalogSlider {
     constructor() {
         this.productManager = new ProductManager();
         this.helpers = new Helpers();
+        this.htmlBuilder = new HtmlBuilderView();
         this.parantElement = document.querySelector(this.#parent);
         this.init();
     }
@@ -17,6 +18,7 @@ class CatalogSlider {
         this.#data = await this.helpers.getData();
         this.getProductPopular();
         this.addEventListenerToBuyButton();
+        this.buttonBuyStopPropagation();
     }
 
     getProductPopular() {
@@ -40,20 +42,30 @@ class CatalogSlider {
     }
 
     addEventListenerToBuyButton() {
-        const buttonBuyElements = document.querySelectorAll(".popular-product__buy buy");
+        const listItemElements = document.querySelectorAll(".main-popular__item");
 
-        this.#restoreBuyButtonsState(buttonBuyElements);
+        this.#restoreBuyButtonsState(listItemElements);
 
-        buttonBuyElements.forEach((button) => {
-            const id = Number(button.dataset.popularBuyButton);
+        listItemElements.forEach((item) => {
+            let buyItems = this.#getBuyItemsFromStorage();
+
+            const button = item.querySelector(".popular-product__buy");
+            if (!button) return;
+
+            const id = Number(button.dataset.popularBuyButton || item.dataset.popularItemId);
+            if (isNaN(id)) return;
+
+            if (buyItems.includes(id)) {
+                this.#restoreBuyButtonsState(listItemElements);
+                return;
+            }
 
             button.addEventListener("click", () => {
-                let buyItems = this.#getBuyItemsFromStorage();
-
                 if (!buyItems.includes(id)) {
                     buyItems.push(id);
                     localStorage.setItem("buy", JSON.stringify(buyItems));
                     button.classList.add("buy");
+                    location.reload();
                 } else {
                     alert("Данный товар уже находится в корзине!");
                 }
@@ -61,13 +73,15 @@ class CatalogSlider {
         });
     }
 
-    #restoreBuyButtonsState(buttonBuyElements) {
+    #restoreBuyButtonsState(listItemElements) {
         const buyItems = this.#getBuyItemsFromStorage();
 
-        buttonBuyElements.forEach((button) => {
-            const id = Number(button.dataset.popularBuyButton);
-            if (buyItems.includes(id)) {
-                button.classList.add("buy");
+        listItemElements.forEach((item) => {
+            const button = item.querySelector(".popular-product__buy");
+            const id = Number(item.dataset.popularItemId || button?.dataset.popularBuyButton);
+            if (!isNaN(id) && buyItems.includes(id)) {
+                item.classList.add("buy");
+                button.classList.add("buy")
             }
         });
     }
@@ -92,17 +106,14 @@ class CatalogSlider {
     #createProductListItem(product) {
         const id = product.id;
 
-        const li = document.createElement("li");
-        const aLink = this.productManager.createLink("/pages/product.html", id, "main-popular__link");
-        const productElement = this.productManager.createDiv("popular-product");
-        const image = this.productManager.createImage(product.mainImage, "popular-product__image");
-        const name = this.productManager.createName(product.name, "popular-product__name");
-        const feedback = this.productManager.createFeedback(product.feedback, "popular-product__feedback", "popular-product__stars");
-        const price = this.productManager.createPrice(product.price, "popular-product__price");
-        const buttons = this.productManager.createButtonsBlock("popular-product__buttons", "popular-product__buy", "popular-product__favorit", id);
-
-        li.setAttribute("data-popular-item-id", id);
-        li.classList.add("main-popular__item");
+        const li = this.htmlBuilder.createListItem("main-popular__item", "data-popular-item-id", id)
+        const aLink = this.htmlBuilder.createNameLinkProduct(`/pages/product.html?id=${id}`, "", "main-popular__link");
+        const productElement = this.htmlBuilder.createBlock("popular-product");
+        const image = this.htmlBuilder.createImage(product.mainImage, "popular-product__image");
+        const name = this.htmlBuilder.createNameProduct(product.name, "popular-product__name");
+        const feedback = this.htmlBuilder.createFeedback(product.feedback, "popular-product__feedback");
+        const price = this.htmlBuilder.createPrice(product.price, "popular-product__price");
+        const buttons = this.htmlBuilder.createButtonBlock("popular-product__buttons", "popular-product__buy", "popular-product__favorit", "data-popular-buy-button", id);
 
         aLink.append(productElement);
         aLink.append(image);
