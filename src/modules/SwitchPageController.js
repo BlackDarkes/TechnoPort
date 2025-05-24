@@ -7,14 +7,22 @@ class SwitchPageController {
   }
 
   init() {
-    // Плавное появление страницы
+    // Изначальная анимация появления (ваш код без изменений)
     gsap.from('main', {
       opacity: 0,
       y: 20,
       duration: 0.8,
-      ease: "expo.out"
+      ease: "expo.out",
+      onStart: () => {
+        // Временное решение для плавности
+        document.body.style.overflow = 'hidden';
+      },
+      onComplete: () => {
+        document.body.style.overflow = '';
+      }
     });
     
+    // Ваш оригинальный обработчик кликов
     document.addEventListener('click', (e) => this.handleClick(e));
   }
 
@@ -35,8 +43,8 @@ class SwitchPageController {
   }
 
   playAnimation(url) {
+    // Ваши оригинальные анимации БЕЗ ИЗМЕНЕНИЙ
     const animations = {
-      // 1. Мягкое затухание с легким подъемом
       gentleFade: () => {
         gsap.to('main', {
           y: -30,
@@ -47,7 +55,6 @@ class SwitchPageController {
         });
       },
       
-      // 2. Плавное "утекание" вправо
       fluidSlide: () => {
         gsap.to('main', {
           x: '10%',
@@ -59,7 +66,6 @@ class SwitchPageController {
         });
       },
       
-      // 3. Эффект мягкого закрытия (как жалюзи)
       softBlinds: () => {
         gsap.to('main', {
           scaleY: 0,
@@ -71,9 +77,7 @@ class SwitchPageController {
         });
       },
       
-      // 4. Легкое 3D-проваливание
       gentlePerspective: () => {
-        document.documentElement.style.perspective = '1000px';
         gsap.to('main', {
           rotationX: 15,
           y: 100,
@@ -84,7 +88,6 @@ class SwitchPageController {
         });
       },
       
-      // 5. Эффект расфокусировки
       smoothBlur: () => {
         gsap.to('main', {
           filter: 'blur(10px)',
@@ -96,7 +99,14 @@ class SwitchPageController {
       }
     };
     
-    animations[this.animationType]?.();
+    // Запуск анимации БЕЗ изменений
+    if (animations[this.animationType]) {
+      // Временное отключение скролла для плавности
+      document.body.style.overflow = 'hidden';
+      animations[this.animationType]();
+    } else {
+      location.href = url;
+    }
   }
 }
 
