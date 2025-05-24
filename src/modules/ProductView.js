@@ -9,6 +9,7 @@ class ProductView {
         this.productFeedbackElement = document.querySelector(selectors.productFeedback);
         this.productPriceElement = document.querySelector(selectors.productPrice);
         this.productDescriptionElement = document.querySelector(selectors.productDescription);
+        this.productButtonsBlock = document.querySelector(selectors.buttonsBlock);
         
         this.productMobileSliderElement = document.querySelector(selectorsMobile.productMobileSlider);
         this.productMobileLeftButtonElement = document.querySelector(selectorsMobile.productMobileLeftButton);
@@ -91,6 +92,10 @@ class ProductView {
             visiteItems.push(Number(id));
             localStorage.setItem("visited", JSON.stringify(visiteItems));
         }
+    }
+
+    addToId(id) {
+        this.productButtonsBlock.setAttribute("data-product-id", id);
     }
 
     #getVisitedItemsFromStorage() {

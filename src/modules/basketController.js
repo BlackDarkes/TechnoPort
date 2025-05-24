@@ -11,6 +11,7 @@ class BasketController {
         totalPrice: "[data-basket-totalPrice]",
         countProduct: "[data-basket-count]",
         createOrder: "[data-basket-createOrder]",
+        clearAll: "[data-basket-clearAll]",
     }
     #buy = JSON.parse(localStorage.getItem("buy"));
     #data;
@@ -28,7 +29,8 @@ class BasketController {
         this.getProductsInBusket();
         this.view.getTotalPrice(this.#data, this.#buy);
         this.view.getCountProducts();
-        this.view.createOrder(this.#data, this.#buy, )
+        this.view.createOrder(this.#data, this.#buy);
+        this.view.clearAll();
     }
 
     getProductsInBusket() {

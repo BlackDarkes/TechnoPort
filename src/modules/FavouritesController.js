@@ -16,6 +16,8 @@ class FavouritesController {
     async init() {
         this.#data = await this.helpers.getData();
         this.getProductHorizontal();
+        this.helpers.addEventListenerToBuyButton("favourites-price", "favourites-price__buy");
+        this.helpers.buttonStopPropagation("favourites-price__buy");
     }
 
     getProductHorizontal() {
@@ -49,6 +51,8 @@ class FavouritesController {
         
         infoBlockElement.appendChild(imageElement);
         infoBlockElement.appendChild(blockTexts);
+
+        priceBlockElement.setAttribute("data-favourites-id", id);
 
         priceBlockElement.appendChild(priceElement);
         priceBlockElement.appendChild(buttonBuy);

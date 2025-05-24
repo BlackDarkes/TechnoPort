@@ -33,9 +33,10 @@ class CatalogController {
         this.#data = await this.helpers.getData();
         this.handleUrlParams();
         this.getCatalogProduct();
-        
         this.getSelectedOption();
         this.addEventListener();
+        this.helpers.buttonStopPropagation("main-products__buy");
+        this.helpers.addEventListenerToBuyButton("main-products__item", "main-products__buy")
     }
 
     getSelectedOption() {
@@ -141,7 +142,7 @@ class CatalogController {
         const priceBlockElement = this.htmlBuilder.createBlock("main-products__price");
         const priceElement = this.htmlBuilder.createPrice(product.price, "main-products__cost");
         const buttonBuy = this.htmlBuilder.createBuyButton("main-products__buy");
-        const buttonFavourites = this.htmlBuilder.createFavoritButton("/images/header/heart.svg", "main-products__favorit");
+        const buttonFavourites = this.htmlBuilder.createButtonFavorit("/images/header/heart.svg");
 
         blockTexts.appendChild(nameProduct);
         blockTexts.appendChild(feedbackElement);

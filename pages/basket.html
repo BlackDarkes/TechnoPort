@@ -12,7 +12,7 @@
         <div class="header-contact__block">
           <div class="header-contact__location">
             <img src="/images/header/mapPin.svg" alt="Метка карты" class="header-contact__image">
-            <select name="city" id="city-selector" class="header-contact__cities" data-header-selector-city="">
+            <select name="city" id="city-selector" class="header-contact__cities" data-header-selector-city="" title="Выбор города">
               <option value="Екатеринбург" class="header-contact__city-option">Екатеринбург</option>
               <option value="Москва" class="header-contact__city-option">Москва</option>
               <option value="Санкт-Петербург" class="header-contact__city-option">Санкт-Петербург</option>
@@ -37,7 +37,7 @@
 
           <div class="header-nav__search">
             <input type="search" name="search" id="input-search" placeholder="Поиск..." class="header-nav__field" data-header-search-input="">
-            <button type="button" class="header-nav__quest" aria-label="Поиск" data-header-search-button="">
+            <button type="button" class="header-nav__quest" aria-label="Поиск" data-header-search-button="" title="Поиск">
               <img src="/images/header/search.svg" alt="Иконка поиска" class="header-nav__image">
             </button>
           </div>
@@ -45,19 +45,19 @@
           <nav class="header-nav__nav">
             <ul class="header-nav__list">
               <li class="header-nav__item">
-                <a href="/pages/accaunt.html" class="header-nav__link" data-header-login="">
+                <a href="./pages/accaunt.html" class="header-nav__link" data-header-login="" title="Аккаунт">
                   <img src="/images/header/accaunt.svg" alt="Иконка аккаунта" class="header-nav__image header-nav__image--accaunt">
                   <span data-header-login-name="">Войти</span>
                 </a>
               </li>
               <li class="header-nav__item">
-                <a href="/pages/favourites.html" class="header-nav__link">
+                <a href="./pages/favourites.html" class="header-nav__link" title="Избранное">
                   <img src="/images/header/heart.svg" alt="Иконка избранного" class="header-nav__image header-nav__image--heart">
                   Избранное
                 </a>
               </li>
               <li class="header-nav__item">
-                <a href="/pages/basket.html" class="header-nav__link">
+                <a href="./pages/basket.html" class="header-nav__link" title="Корзина">
                   <img src="/images/header/shoppingCart.svg" alt="Иконка корзины" class="header-nav__image header-nav__image--shoping">
                   Корзина
                 </a>
@@ -130,7 +130,10 @@
 
     <main class="main-basket">
       <div class="main-basket__block">
-        <h2 class="main-basket__title">Корзина</h2>
+        <div class="main-basket__header">
+          <h2 class="main-basket__title">Корзина</h2>
+          <button type="button" class="main-basket__clearAll" data-basket-clearAll="">Очистить все</button>
+        </div>
         <div class="main-basket__empty" data-basket-not-purchases="">Корзина пока пуста</div>
 
         <div class="product" data-busket-products="">

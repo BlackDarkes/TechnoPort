@@ -8,6 +8,7 @@ class BasketView {
         this.totalPriceElement = document.querySelector(selectors.totalPrice);
         this.countProductElement = document.querySelector(selectors.countProduct);
         this.createOrderElement = document.querySelector(selectors.createOrder);
+        this.clearAllButtonElement = document.querySelector(selectors.clearAll);
 
         this.htmlBuilder = new HtmlBuilderView();
     }
@@ -98,6 +99,13 @@ class BasketView {
             } else {
                 alert("Сначало авторизуйтесь, чтобы оформить заказ!")
             }
+        })
+    }
+
+    clearAll() {
+        this.clearAllButtonElement.addEventListener("click", () => {
+            localStorage.setItem("buy", JSON.stringify([]));
+            location.reload(); 
         })
     }
 }

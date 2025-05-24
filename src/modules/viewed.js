@@ -1,5 +1,4 @@
 import Helpers from "./helpers";
-import ProductManager from "./productManager";
 import HtmlBuilderView from "./HtmlBuilderView";
 
 class Viewed {
@@ -9,7 +8,6 @@ class Viewed {
 
     constructor() {
         this.helpers = new Helpers();
-        this.productManager = new ProductManager();
         this.htmlBuilder = new HtmlBuilderView();
         this.parentElement = document.querySelector(this.#parent);
         this.init();
@@ -18,8 +16,8 @@ class Viewed {
     async init() {
         this.#data = await this.helpers.getData();
         this.getProductViewed();
-        this.buttonBuyStopPropagation()
-        this.addEventListenerToBuyButton();
+        this.helpers.addEventListenerToBuyButton("main-viewed__item", "viewed-product__buy")
+        this.helpers.buttonStopPropagation("main-viewed__item");
     }
 
     getProductViewed() {
@@ -33,79 +31,6 @@ class Viewed {
         })
     }
 
-    buttonBuyStopPropagation() {
-        const buttonBuyElements = document.querySelectorAll("[data-viewed-buy-button]");
-
-        buttonBuyElements.forEach((button) => {
-            button.addEventListener("click", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-            })
-        })
-    }
-
-    addEventListenerToBuyButton() {
-        const listItemElements = document.querySelectorAll(".main-viewed__item");
-
-        this.#restoreBuyButtonsState(listItemElements);
-
-        listItemElements.forEach((item) => {
-            let buyItems = this.#getBuyItemsFromStorage();
-
-            const button = item.querySelector(".viewed-product__buy");
-            if (!button) return;
-
-            const id = Number(button.dataset.viewedBuyButton || item.dataset.viewedItemId);
-            if (isNaN(id)) return;
-
-            if (buyItems.includes(id)) {
-                this.#restoreBuyButtonsState(listItemElements);
-                return;
-            }
-
-            button.addEventListener("click", () => {
-                if (!buyItems.includes(id)) {
-                    buyItems.push(id);
-                    localStorage.setItem("buy", JSON.stringify(buyItems));
-                    button.classList.add("buy");
-                    location.reload();
-                } else {
-                    alert("Данный товар уже находится в корзине!");
-                }
-            });
-        });
-    }
-
-    #restoreBuyButtonsState(listItemElements) {
-        const buyItems = this.#getBuyItemsFromStorage();
-
-        listItemElements.forEach((item) => {
-            const button = item.querySelector(".viewed-product__buy");
-            const id = Number(button.dataset.viewedBuyButton || item.dataset.viewedItemId);
-            if (!isNaN(id) && buyItems.includes(id)) {
-                item.classList.add("buy");
-                button.classList.add("buy");
-            }
-        });
-    }
-
-    #getBuyItemsFromStorage() {
-        let buyItems = [];
-    
-        if (localStorage.getItem("buy")) {
-            try {
-                buyItems = JSON.parse(localStorage.getItem("buy"));
-                if (!Array.isArray(buyItems)) {
-                    buyItems = [];
-                }
-            } catch(error) {
-                buyItems = [];
-            }
-        }
-        
-        return buyItems;
-    }
- 
     #createProductListItem(product) {
         const id = product.id;
 

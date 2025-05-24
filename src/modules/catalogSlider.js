@@ -1,4 +1,3 @@
-import ProductManager from "./productManager";
 import Helpers from "./helpers";
 import HtmlBuilderView from "./HtmlBuilderView";
 
@@ -7,7 +6,6 @@ class CatalogSlider {
     #data;
 
     constructor() {
-        this.productManager = new ProductManager();
         this.helpers = new Helpers();
         this.htmlBuilder = new HtmlBuilderView();
         this.parantElement = document.querySelector(this.#parent);
@@ -17,8 +15,8 @@ class CatalogSlider {
     async init() {
         this.#data = await this.helpers.getData();
         this.getProductPopular();
-        this.addEventListenerToBuyButton();
-        this.buttonBuyStopPropagation();
+        this.helpers.addEventListenerToBuyButton("main-popular__item", "popular-product__buy");
+        this.helpers.buttonStopPropagation("popular-product__buy");
     }
 
     getProductPopular() {
@@ -30,78 +28,7 @@ class CatalogSlider {
         })
     }
 
-    buttonBuyStopPropagation() {
-        const buttonBuyElements = document.querySelectorAll("[data-popular-buy-button]");
-
-        buttonBuyElements.forEach((button) => {
-            button.addEventListener("click", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-            })
-        })
-    }
-
-    addEventListenerToBuyButton() {
-        const listItemElements = document.querySelectorAll(".main-popular__item");
-
-        this.#restoreBuyButtonsState(listItemElements);
-
-        listItemElements.forEach((item) => {
-            let buyItems = this.#getBuyItemsFromStorage();
-
-            const button = item.querySelector(".popular-product__buy");
-            if (!button) return;
-
-            const id = Number(button.dataset.popularBuyButton || item.dataset.popularItemId);
-            if (isNaN(id)) return;
-
-            if (buyItems.includes(id)) {
-                this.#restoreBuyButtonsState(listItemElements);
-                return;
-            }
-
-            button.addEventListener("click", () => {
-                if (!buyItems.includes(id)) {
-                    buyItems.push(id);
-                    localStorage.setItem("buy", JSON.stringify(buyItems));
-                    button.classList.add("buy");
-                    location.reload();
-                } else {
-                    alert("Данный товар уже находится в корзине!");
-                }
-            });
-        });
-    }
-
-    #restoreBuyButtonsState(listItemElements) {
-        const buyItems = this.#getBuyItemsFromStorage();
-
-        listItemElements.forEach((item) => {
-            const button = item.querySelector(".popular-product__buy");
-            const id = Number(item.dataset.popularItemId || button?.dataset.popularBuyButton);
-            if (!isNaN(id) && buyItems.includes(id)) {
-                item.classList.add("buy");
-                button.classList.add("buy")
-            }
-        });
-    }
-
-    #getBuyItemsFromStorage() {
-        let buyItems = [];
     
-        if (localStorage.getItem("buy")) {
-            try {
-                buyItems = JSON.parse(localStorage.getItem("buy"));
-                if (!Array.isArray(buyItems)) {
-                    buyItems = [];
-                }
-            } catch(error) {
-                buyItems = [];
-            }
-        }
-        
-        return buyItems;
-    }
 
     #createProductListItem(product) {
         const id = product.id;

@@ -8,3 +8,4 @@ new ProductController();
 new BreadcrumbsController();
 new SearchController();
 new MainController();
+new SearchController();

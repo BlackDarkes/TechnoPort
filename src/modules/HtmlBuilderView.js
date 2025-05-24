@@ -1,6 +1,11 @@
+import Helpers from "./helpers";
 import heart from "/images/header/heart.svg";
 
 class HtmlBuilderView {
+    constructor() {
+        this.helper = new Helpers();
+    }
+
     createListItem(className, dataAttrName, dataAttrValue) {
         const li = document.createElement("li");
         li.classList.add(className);
@@ -81,6 +86,7 @@ class HtmlBuilderView {
     createButtonWithImage(src, className) {
         const button = this.createButton("", className);
         const img = this.createImage(src);
+        img.classList.add("image")
         
         button.appendChild(img);
 
@@ -90,7 +96,7 @@ class HtmlBuilderView {
     createButtonFavorit(className) {
         const buttonfFavorit = this.createButton("", className);
 
-        this.#loadSvg(heart).then(svgElement => {
+        this.helper.loadSvg(heart).then(svgElement => {
             svgElement.classList.add("viewed-product__svg")
             buttonfFavorit.appendChild(svgElement);
         });
@@ -109,7 +115,7 @@ class HtmlBuilderView {
         const div = this.createBlock(blockName)
         const buttonBuy = this.createButton("", buyName);
         const buttonfFavorit = this.createButtonFavorit(favoritName);
-        const imageBuy = this.createImage("/images/category/shoppingCartWhite.svg");
+        const imageBuy = this.createImage("/images/category/shoppingCartWhite.svg", "image");
 
         buttonBuy.setAttribute(dataAttr, id);
 
@@ -118,17 +124,6 @@ class HtmlBuilderView {
         div.appendChild(buttonfFavorit);
 
         return div;
-    }
-
-    async #loadSvg(url) {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Ошибка загрузки SVG: ' + response.status);
-        }
-        const svgText = await response.text();
-        const div = document.createElement('div');
-        div.innerHTML = svgText; 
-        return div.firstChild;
     }
 }
 

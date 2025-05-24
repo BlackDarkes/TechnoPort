@@ -11,11 +11,30 @@
         height: 100%;
     }
 
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: rem(1084);
+
+        @include laptop() {
+            width: 100%;
+        };
+    }
+
     &__title {
         @include fluid-text(36, 32);
         margin-bottom: rem(10);
         font-family: var(--fontIBM);
         margin-bottom: rem(40);
+    }
+
+    &__clearAll {
+        transition: var(--transition);
+
+        @include hover() {
+            color: var(--redButton);
+        }
     }
 
     .product {

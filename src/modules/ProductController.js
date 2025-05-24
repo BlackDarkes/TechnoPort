@@ -16,6 +16,7 @@ class ProductController {
         productFeedback: "[data-prodcut-feedback]",
         productPrice: "[data-product-price]",
         productDescription: "[data-product-description]",
+        buttonsBlock: ".main-item__buttons",
     };
     #selectorsMobile = {
         productMobileSlider: "[data-product-mobile-slider-images]",
@@ -35,6 +36,7 @@ class ProductController {
         this.view.switchImages();
         this.addEventListenersToMobileButtons();
         this.view.addToVisited(this.#id);
+        this.helpers.addEventListenerToBuyButton("main-item__buttons", "main-item__buy");
     }
 
     getProduct() {
@@ -48,6 +50,7 @@ class ProductController {
         this.view.getPrice(price);
         this.view.getDescription(description);
         this.view.getMobileSlider(images);
+        this.view.addToId(this.#id);
     }
 
     addEventListenersToMobileButtons() {

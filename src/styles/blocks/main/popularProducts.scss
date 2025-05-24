@@ -35,11 +35,6 @@
         border: 1px solid transparent;
         transition: var(--transition);
 
-        &.buy {
-            border-color: var(--border);
-            border-radius: rem(10);
-        }
-
         @include hover() {
             border-color: var(--border);
             border-radius: rem(10);
@@ -98,10 +93,6 @@
             border-radius: rem(8);
             transition: var(--transition);
             z-index: var(--200);
-
-            &.buy {
-                background-color: var(--redButton);
-            }
 
             @include hover {
                 background-color: var(--redButton);
