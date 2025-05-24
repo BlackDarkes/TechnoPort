@@ -18,6 +18,9 @@ class FavouritesController {
         this.getProductHorizontal();
         this.helpers.addEventListenerToBuyButton("favourites-price", "favourites-price__buy");
         this.helpers.buttonStopPropagation("favourites-price__buy");
+        this.helpers.addEventListenerToFavoritesButton("favourites-price", "favourites-price__favorit")
+        this.helpers.buttonStopPropagation("favourites-price__favorit");
+        this.helpers.getCountBasket()
     }
 
     getProductHorizontal() {
@@ -30,6 +33,8 @@ class FavouritesController {
             }
         })
     }
+
+
 
     #createProductHorizontal(product) {
         const id = product.id;

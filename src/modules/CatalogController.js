@@ -35,8 +35,11 @@ class CatalogController {
         this.getCatalogProduct();
         this.getSelectedOption();
         this.addEventListener();
-        this.helpers.buttonStopPropagation("main-products__buy");
         this.helpers.addEventListenerToBuyButton("main-products__item", "main-products__buy")
+        this.helpers.buttonStopPropagation("main-products__buy");
+        this.helpers.addEventListenerToFavoritesButton("main-products__item", "main-products__favorit")
+        this.helpers.buttonStopPropagation("main-products__favorit");
+        this.helpers.getCountBasket();
     }
 
     getSelectedOption() {
@@ -142,7 +145,7 @@ class CatalogController {
         const priceBlockElement = this.htmlBuilder.createBlock("main-products__price");
         const priceElement = this.htmlBuilder.createPrice(product.price, "main-products__cost");
         const buttonBuy = this.htmlBuilder.createBuyButton("main-products__buy");
-        const buttonFavourites = this.htmlBuilder.createButtonFavorit("/images/header/heart.svg");
+        const buttonFavourites = this.htmlBuilder.createButtonFavorit("main-products__favorit");
 
         blockTexts.appendChild(nameProduct);
         blockTexts.appendChild(feedbackElement);

@@ -37,6 +37,8 @@ class ProductController {
         this.addEventListenersToMobileButtons();
         this.view.addToVisited(this.#id);
         this.helpers.addEventListenerToBuyButton("main-item__buttons", "main-item__buy");
+        this.helpers.addEventListenerToFavoritesButton("main-item__buttons", "main-item__favorit");
+        this.helpers.getCountBasket()
     }
 
     getProduct() {

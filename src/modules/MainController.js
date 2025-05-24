@@ -1,3 +1,4 @@
+import Helpers from "./helpers";
 import MainView from "./MainView";
 
 class MainController {
@@ -7,8 +8,10 @@ class MainController {
 
     constructor() {
         this.view = new MainView(this.#mainSelectors);
+        this.helpers = new Helpers()
         this.view.renameButton();
         this.view.createBuy();
+        this.helpers.getCountBasket();
     }
 }
 

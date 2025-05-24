@@ -27,6 +27,7 @@ class AccountController {
         this.view.generateOrder(this.#data);
         this.view.logout();
         this.view.canselOrder();
+        this.helpers.getCountBasket()
     }
 
     addEventListenerToLogin() {

@@ -102,6 +102,10 @@
         &__favorit {
             transition: var(--transition);
 
+            &.favorit {
+                color: var(--redButton);
+            }
+
             @include hover() {
                 color: var(--redButton);
             }

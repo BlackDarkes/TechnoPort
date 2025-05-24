@@ -31,6 +31,9 @@ class BasketController {
         this.view.getCountProducts();
         this.view.createOrder(this.#data, this.#buy);
         this.view.clearAll();
+        this.helpers.buttonStopPropagation("cart-items__button");
+        this.helpers.addEventListenerToFavoritesButton("cart-items__buttons", "cart-items__button");
+        this.helpers.getCountBasket()
     }
 
     getProductsInBusket() {
@@ -57,7 +60,7 @@ class BasketController {
         const priceBlock = this.htmlBuilder.createBlock("cart-items__price");
         const cost = this.htmlBuilder.createPrice(product.price, "cart-items__cost");
         const buttonsBlock = this.htmlBuilder.createBlock("cart-items__buttons");
-        const buyButton = this.htmlBuilder.createFavoritButton("/images/header/heart.svg", "cart-items__button");
+        const buyButton = this.htmlBuilder.createButtonFavorit("/images/header/heart.svg");
         const deleteButton = this.htmlBuilder.createButtonWithImage("/images/basket/Trash.png", "cart-items__button");
 
         deleteButton.addEventListener("click", () => {
@@ -89,7 +92,10 @@ class BasketController {
         })
         
         buyButton.classList.add("cart-items__button--favorit");
+        buyButton.classList.add("cart-items__button");
         deleteButton.classList.add("cart-items__button--delete");
+
+        buttonsBlock.setAttribute("data-delete-id", id)
 
         buttonsBlock.appendChild(buyButton);
         buttonsBlock.appendChild(deleteButton);

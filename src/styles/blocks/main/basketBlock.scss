@@ -136,6 +136,18 @@
         &__button {
             width: rem(25);
             height: rem(25);
+
+            &--favorit {
+                transition: var(--transition);
+
+                &.favorit {
+                    color: var(--redButton);
+                }
+
+                @include hover() {
+                    color: var(--redButton);
+                }   
+            }   
         }
 
         &__cost {

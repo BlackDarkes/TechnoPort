@@ -17,6 +17,8 @@ class CatalogSlider {
         this.getProductPopular();
         this.helpers.addEventListenerToBuyButton("main-popular__item", "popular-product__buy");
         this.helpers.buttonStopPropagation("popular-product__buy");
+        this.helpers.addEventListenerToFavoritesButton("main-popular__item", "popular-product__favorit")
+        this.helpers.buttonStopPropagation("popular-product__favorit");
     }
 
     getProductPopular() {

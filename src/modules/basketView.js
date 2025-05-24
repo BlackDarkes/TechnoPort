@@ -16,8 +16,10 @@ class BasketView {
     hidePurchases(buy) {
         if (buy.length) {
             this.notPurchasesElement.style.display = "none";
+            this.clearAllButtonElement.style.display = "block"
         } else {
             this.productsElement.style.display = "none"
+            this.clearAllButtonElement.style.display = "none";
         }
     }
 

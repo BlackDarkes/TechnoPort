@@ -175,14 +175,12 @@
         &__buttons {
             display: flex;
             justify-content: space-between;
-            column-gap: rem(10);
+            align-items: center;
         }
 
         &__price {
             @include fluid-text(32, 28);
-            padding-left: rem(10);
-            width: min(100%, rem(314));
-            background-color: var(--other);
+            width: 50%;
             border-radius: rem(8);
             font-weight: 700;
 
@@ -193,6 +191,19 @@
 
         &__favorit {
             transition: var(--transition);
+            margin-right: rem(20);
+
+            @include hover() {
+                color: var(--redButton);
+            }
+        }
+
+        &__favorit {
+            transition: var(--transition);
+
+            &.favorit {
+                color: var(--redButton);
+            }
 
             @include hover() {
                 color: var(--redButton);
@@ -200,6 +211,7 @@
         }
 
         &__buy {
+            display: block;
             padding: rem(5) rem(47);
             background-color: var(--componentsHover);
             color: var(--white);

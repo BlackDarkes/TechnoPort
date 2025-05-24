@@ -91,6 +91,18 @@
             font-weight: 700;
         }
 
+        &__favorit {
+            transition: var(--transition);
+
+            &.favorit {
+                color: var(--redButton);
+            }
+
+            @include hover() {
+                color: var(--redButton);
+            }
+        }
+
         &__buy {
             display: flex;
             justify-content: center;

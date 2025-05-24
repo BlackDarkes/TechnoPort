@@ -19,6 +19,7 @@ class CreateComputerController {
         this.#data = await this.helpers.getData();
         this.addOptionToList();
         this.view.addToBuy(this.#data);
+        this.helpers.getCountBasket()
     }
 
     addOptionToList() {
