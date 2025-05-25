@@ -5,6 +5,8 @@ import Helpers from "./helpers";
 class CreateComputerController {
     #createSelectors = {
         componentsList: "[data-create-components-list]",
+        infoBlock: "[data-create-blockInfo]",
+        imageProduct: "[data-create-image]",
     };
     #data;
 

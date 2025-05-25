@@ -1,6 +1,11 @@
+import HtmlBuilderView from "./HtmlBuilderView";
+
 class CreateComputerView {
     constructor(selectors) {
         this.componentsListElement = document.querySelectorAll(selectors.componentsList);
+        this.infoBlockElement = document.querySelectorAll(selectors.infoBlock);
+
+        this.htmlBuilder = new HtmlBuilderView()
     }
 
     addToBuy(data) {
@@ -14,9 +19,16 @@ class CreateComputerView {
             input.addEventListener("change", () => {
                 if (input.value) {
                     buyIndex++;
+
+                    const inputText = input.value;
+                    const product = data.find((product) => product.name === inputText);
+
+                    this.addImage(product.mainImage, input)
+
                     console.log(buyIndex)
                 } else {
                     buyIndex--;
+                    this.addImage("", input)
                 }
             })
         })
@@ -39,6 +51,14 @@ class CreateComputerView {
                 }
             })
         })
+    }
+
+    addImage(src, input) {
+        const parentInput = input.parentElement;
+        const parentBlock = parentInput.parentElement;
+        const image = parentBlock.querySelector("img");
+
+        return image.src = src;
     }
 }
 
