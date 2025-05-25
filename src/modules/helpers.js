@@ -1,7 +1,7 @@
 class Helpers {
     async getData() {
         try {
-            const res = await fetch("/data/data.json");
+            const res = await fetch("/TechnoPort/data/data.json");
 
             if (!res.ok) {
                 throw new Error("Не удалось получить данные!");
@@ -78,7 +78,7 @@ class Helpers {
 
                     const buttonImage = button.querySelector(".image");
                     if (buttonImage) {
-                        buttonImage.src = "/images/header/Check.svg";
+                        buttonImage.src = "/TechnoPort/images/header/Check.svg";
                     }
 
                     location.reload();
@@ -101,7 +101,7 @@ class Helpers {
                 item.classList.add("buy");
                 button.classList.add("buy");
 
-                buttonImage.src = "/images/header/Check.svg"
+                buttonImage.src = "/TechnoPort/images/header/Check.svg"
             }
         });
     }
@@ -133,7 +133,7 @@ class Helpers {
                     favouriteItems.push(id);
                     button.classList.add("favorit");
 
-                    this.loadSvg("/images/favourites/redHeart.svg").then((image) => {
+                    this.loadSvg("/TechnoPort/images/favourites/redHeart.svg").then((image) => {
                         button.innerHTML = "";
                         button.appendChild(image);
                     })
@@ -141,7 +141,7 @@ class Helpers {
                     favouriteItems = favouriteItems.filter((itemId) => itemId !== id);
                     button.classList.remove("favorit");
 
-                    this.loadSvg("/images/header/heart.svg").then((image) => {
+                    this.loadSvg("/TechnoPort/images/header/heart.svg").then((image) => {
                         button.innerHTML = "";
                         button.appendChild(image);
                     })
@@ -149,7 +149,7 @@ class Helpers {
 
                 localStorage.setItem("favourites", JSON.stringify(favouriteItems));
 
-                if (location.href.endsWith("/") || location.href.endsWith("/favourites.html")) {
+                if (location.href.endsWith("/index.html") || location.href.endsWith("/favourites.html")) {
                     location.reload();
                 }
             });
@@ -170,7 +170,7 @@ class Helpers {
             if (!isNaN(id) && favoritItems.includes(id)) {
                 item.classList.add("favorit");
                 button.classList.add("favorit");
-                this.loadSvg("/images/favourites/redHeart.svg").then((image) => {
+                this.loadSvg("/TechnoPort/images/favourites/redHeart.svg").then((image) => {
                     button.innerHTML = "";
                     button.appendChild(image);
                 })

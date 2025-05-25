@@ -60,7 +60,7 @@ class HtmlBuilderView {
     }
 
     createBuyButton(className) {
-        return this.createButtonWithImage("/images/category/shoppingCartWhite.svg", className)
+        return this.createButtonWithImage("/TechnoPort/images/category/shoppingCartWhite.svg", className)
     }
 
     createFavoritButton(src, className) {
@@ -115,7 +115,7 @@ class HtmlBuilderView {
         const div = this.createBlock(blockName)
         const buttonBuy = this.createButton("", buyName);
         const buttonfFavorit = this.createButtonFavorit(favoritName);
-        const imageBuy = this.createImage("/images/category/shoppingCartWhite.svg", "image");
+        const imageBuy = this.createImage("/TechnoPort/images/category/shoppingCartWhite.svg", "image");
 
         buttonBuy.setAttribute(dataAttr, id);
 
