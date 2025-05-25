@@ -94,7 +94,7 @@ class Viewed {
         const id = product.id;
 
         const li = this.htmlBuilder.createListItem("main-viewed__item", "data-viewed-item-id", id);
-        const aLink = this.htmlBuilder.createNameLinkProduct(`/pages/product.html?id=${id}`, "", "main-viewed__link");
+        const aLink = this.htmlBuilder.createNameLinkProduct(`/TechnoPort/pages/product.html?id=${id}`, "", "main-viewed__link");
         const productElement = this.htmlBuilder.createBlock("viewed-product");
         const image = this.htmlBuilder.createImage(product.mainImage, "viewed-product__image");
         const name = this.htmlBuilder.createNameProduct(product.name, "viewed-product__name");

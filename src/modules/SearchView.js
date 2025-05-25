@@ -1,5 +1,5 @@
 class SearchView {
-    #SEARCH_URL = "/pages/catalog.html?type=search&search=";
+    #SEARCH_URL = "/TechnoPort/pages/catalog.html?type=search&search=";
 
     constructor(selectors) {
         this.inputElement = document.querySelector(selectors.input)

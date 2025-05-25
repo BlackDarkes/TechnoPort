@@ -136,7 +136,7 @@ class CatalogController {
         const id = product.id;
 
         const li = this.htmlBuilder.createListItem("main-products__item", "data-catalog-id", id);
-        const aLink = this.htmlBuilder.createLinkBlock(`../../pages/product.html?id=${id}`, "main-products__link");
+        const aLink = this.htmlBuilder.createLinkBlock(`/TechnoPort/pages/product.html?id=${id}`, "main-products__link");
         const infoBlockElement = this.htmlBuilder.createBlock("main-products__info");
         const imageElement = this.htmlBuilder.createImage(product.mainImage, "main-products__image");
         const blockTexts = this.htmlBuilder.createBlock("main-products__texts");

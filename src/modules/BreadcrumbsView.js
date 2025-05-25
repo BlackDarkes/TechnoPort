@@ -27,7 +27,7 @@ class BreadcrumbsView {
         const firstLetter = text.slice(0, 1).toUpperCase();
         const mostLetter = text.slice(1).toLowerCase();
 
-        this.breadcrumbsTypeElement.href = `./catalog.html?type=search&search=${text}`;
+        this.breadcrumbsTypeElement.href = ` /TechnoPort/pages/catalog.html?type=search&search=${text}`;
         return this.breadcrumbsTypeElement.textContent = firstLetter + mostLetter;
     }
 

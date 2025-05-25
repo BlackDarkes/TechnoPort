@@ -54,7 +54,7 @@ class FavouritesController {
         const infoBlockElement = this.htmlBuilder.createBlock("favourites-info");
         const blockTexts = this.htmlBuilder.createBlock("favourites-info__texts");
         const priceBlockElement = this.htmlBuilder.createBlock("favourites-price");
-        const aLink = this.htmlBuilder.createLinkBlock(`../../pages/product.html?id=${id}`, "main-favourites__link");
+        const aLink = this.htmlBuilder.createLinkBlock(`/TechnoPort/pages/product.html?id=${id}`, "main-favourites__link");
         const imageElement = this.htmlBuilder.createImage(product.mainImage, "favourites-info__image");
         const nameProduct = this.htmlBuilder.createNameProduct(product.name, "favourites-info__title");
         const feedbackElement = this.htmlBuilder.createFeedback(product.feedback, "favourites-info__feedback")

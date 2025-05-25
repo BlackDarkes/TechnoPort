@@ -46,7 +46,7 @@ class CreateComputerView {
                     buy.push(product.id);
                     
                     localStorage.setItem("buy", JSON.stringify(buy));
-                    location.href  = "/pages/basket.html";
+                    location.href  = "/TechnoPort/pages/basket.html";
                     return errorElement.innerHTML = "";
                 }
             })

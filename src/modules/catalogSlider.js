@@ -79,7 +79,7 @@ class CatalogSlider {
         const id = product.id;
 
         const li = this.htmlBuilder.createListItem("main-popular__item", "data-popular-item-id", id)
-        const aLink = this.htmlBuilder.createNameLinkProduct(`/pages/product.html?id=${id}`, "", "main-popular__link");
+        const aLink = this.htmlBuilder.createNameLinkProduct(`/TechnoPort/pages/product.html?id=${id}`, "", "main-popular__link");
         const productElement = this.htmlBuilder.createBlock("popular-product");
         const image = this.htmlBuilder.createImage(product.mainImage, "popular-product__image");
         const name = this.htmlBuilder.createNameProduct(product.name, "popular-product__name");

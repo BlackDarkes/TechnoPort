@@ -3,7 +3,7 @@ import Helpers from "./helpers";
 import HtmlBuilderView from "./HtmlBuilderView";
 
 class BasketController {
-    #PRODUCT_URL = "/pages/product.html?id=";
+    #PRODUCT_URL = " /TechnoPort/pages/product.html?id=";
     #basketSelector = {
         notPurchases: "[data-basket-not-purchases]",
         products: "[data-busket-products]",
@@ -60,8 +60,8 @@ class BasketController {
         const priceBlock = this.htmlBuilder.createBlock("cart-items__price");
         const cost = this.htmlBuilder.createPrice(product.price, "cart-items__cost");
         const buttonsBlock = this.htmlBuilder.createBlock("cart-items__buttons");
-        const buyButton = this.htmlBuilder.createButtonFavorit("/images/header/heart.svg");
-        const deleteButton = this.htmlBuilder.createButtonWithImage("/images/basket/Trash.png", "cart-items__button");
+        const buyButton = this.htmlBuilder.createButtonFavorit("/TechnoPort/images/header/heart.svg");
+        const deleteButton = this.htmlBuilder.createButtonWithImage("/TechnoPort/images/basket/Trash.png", "cart-items__button");
 
         deleteButton.addEventListener("click", () => {
             this.view.deleteProductFromStorage(id);
