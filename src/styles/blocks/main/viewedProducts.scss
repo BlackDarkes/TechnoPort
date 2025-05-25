@@ -130,6 +130,10 @@
         }
     }
 
+    &__notFound {
+        @include fluid-text(22, 16);
+    }
+
     &__buttons {
         @include abs-center();
         top: 60%;

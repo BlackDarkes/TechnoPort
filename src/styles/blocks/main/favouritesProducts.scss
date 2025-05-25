@@ -137,4 +137,8 @@
             width: 100%;
         }
     }
+
+    &__notFound {
+        @include fluid-text(22, 16);
+    }
 }

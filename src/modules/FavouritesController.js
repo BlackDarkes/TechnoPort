@@ -3,6 +3,9 @@ import HtmlBuilderView from "./HtmlBuilderView";
 
 class FavouritesController {
     #parent = "[data-favourites-list]";
+    #selectors = {
+        notFound: "[data-favourites-notFound]",
+    }
     #data;
     #favourites = JSON.parse(localStorage.getItem("favourites"));
 
@@ -10,6 +13,7 @@ class FavouritesController {
         this.helpers = new Helpers();
         this.htmlBuilder = new HtmlBuilderView();
         this.parentElement = document.querySelector(this.#parent);
+        this.notFoundElement = document.querySelector(this.#selectors.notFound);
         this.init();
     }
 
@@ -20,7 +24,14 @@ class FavouritesController {
         this.helpers.buttonStopPropagation("favourites-price__buy");
         this.helpers.addEventListenerToFavoritesButton("favourites-price", "favourites-price__favorit")
         this.helpers.buttonStopPropagation("favourites-price__favorit");
-        this.helpers.getCountBasket()
+        this.helpers.getCountBasket();
+        this.hideNotFound();
+    }
+
+    hideNotFound() {
+        if (this.#favourites.length) {
+            this.notFoundElement.style.display = "none";
+        } 
     }
 
     getProductHorizontal() {

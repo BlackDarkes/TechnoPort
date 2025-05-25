@@ -9,6 +9,7 @@ class Viewed {
         popularList: "[data-viewed-list]",
         previewButton: "[data-viewed-preview]",
         nextButton: "[data-viewed-next]",
+        notFound: "[data-viewed-notFound]",
     };
     #currentSlide = 0;
     #gap = 60;
@@ -20,6 +21,7 @@ class Viewed {
         this.sliderPopularElement = document.querySelector(this.#selectors.popularList);
         this.previewButtonElement = document.querySelector(this.#selectors.previewButton);
         this.nextButtonElement = document.querySelector(this.#selectors.nextButton);
+        this.notFoundElement = document.querySelector(this.#selectors.notFound);
         this.init();
     }
 
@@ -31,6 +33,16 @@ class Viewed {
         this.helpers.addEventListenerToFavoritesButton("main-viewed__item", "viewed-product__favorit");
         this.helpers.buttonStopPropagation("viewed-product__favorit");
         this.addEventistenerToSliderButtons();
+        this.hideNotFound();
+    }
+
+    hideNotFound() {
+        if (!this.#visited.length) {
+            this.previewButtonElement.style.display = "none";
+            this.nextButtonElement.style.display = "none";
+        } else {
+            this.notFoundElement.style.display = "none";
+        }
     }
 
     getProductViewed() {

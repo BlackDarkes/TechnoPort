@@ -141,8 +141,10 @@ class Helpers {
                     favouriteItems = favouriteItems.filter((itemId) => itemId !== id);
                     button.classList.remove("favorit");
 
-                    button.innerHTML = "";
-                    button.appendChild(image);
+                    this.loadSvg("/images/header/heart.svg").then((image) => {
+                        button.innerHTML = "";
+                        button.appendChild(image);
+                    })
                 }
 
                 localStorage.setItem("favourites", JSON.stringify(favouriteItems));
