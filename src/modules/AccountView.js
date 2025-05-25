@@ -74,12 +74,19 @@ class AccountView {
                 idProduct.forEach((id, index) => {
                     const product = data.find((product) => product.id == id);
                     if (product) {
+                        const nameBlock = this.htmlBuilder.createBlock("main-account__name-block");
+                        const image = this.htmlBuilder.createImage(product.mainImage, "main-account__image");
+
                         const productLink = this.htmlBuilder.createNameLinkProduct(
                             `${this.#PRODUCT_URL}${id}`,
                             product.name,
                             "main-account__product"
                         );
-                        productsList.appendChild(productLink);
+
+                        nameBlock.appendChild(image);
+                        nameBlock.appendChild(productLink);
+
+                        productsList.appendChild(nameBlock);
                         if (index !== idProduct.length - 1) {
                             productsList.appendChild(document.createTextNode(' '));
                         }

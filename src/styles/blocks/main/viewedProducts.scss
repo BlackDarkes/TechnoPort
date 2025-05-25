@@ -5,9 +5,10 @@
     width: 100vw;
 
     &__block {
+        position: relative;
         margin-inline: auto;
         padding-top: rem(75);
-        width: min(100% - rem(20), rem(1440));
+        width: min(100% - rem(40), rem(1440));
     }
 
     &__title {
@@ -17,11 +18,33 @@
     }
 
     &__list {
+        position: relative;
         display: flex;
         column-gap: rem(60);
         padding-bottom: rem(15);
-        width: 100%;
-        overflow-x: auto;
+        margin-inline: auto;
+        width: calc(100% - rem(120));
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: start;
+        z-index: var(--200);
+
+        &::-webkit-scrollbar {
+            height: rem(7);
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: var(--other);
+            border-radius: 50%;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--border);
+        }
+
+        @include tablet() {
+            width: 100%;
+        }
     }
 
     &__item {
@@ -30,6 +53,7 @@
         padding: rem(10);
         border: 1px solid transparent;
         transition: var(--transition);
+        scroll-snap-align: start;
 
         @include hover() {
             border-color: var(--border);
@@ -103,6 +127,32 @@
             @include hover() {
                 color: var(--redButton);
             }
+        }
+    }
+
+    &__buttons {
+        @include abs-center();
+        top: 60%;
+        display: flex;
+        justify-content: space-between;
+        width: min(100%, rem(1440));
+        z-index: var(--100);
+        
+        @include tablet() {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: relative;
+        width: rem(40);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        transition: var(--transition);
+        z-index: var(--300);
+
+        @include hover() {
+            background-color: var(--border);
         }
     }
 }

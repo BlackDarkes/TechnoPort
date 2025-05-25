@@ -60,9 +60,14 @@
     &__link  {
         display: block;
         margin-top: rem(15);
+        transition: var(--transition);
 
         &--company {
             margin-top: rem(25);
+        }
+
+        @include hover() {
+            color: var(--redButton);
         }
     }
 

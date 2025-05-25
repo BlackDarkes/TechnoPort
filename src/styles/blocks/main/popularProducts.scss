@@ -5,6 +5,7 @@
     width: 100vw;
 
     &__block {
+        position: relative;
         margin-inline: auto;
         width: min(100% - rem(40), rem(1440));
     }
@@ -16,29 +17,53 @@
     }
 
     &__list {
+        position: relative;
         display: flex;
         column-gap: rem(60);
         padding-bottom: rem(15);
-        width: 100%;
+        margin-inline: auto;
+        width: calc(100% - rem(120));
         overflow: auto;
-    }
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: start;
+        z-index: var(--200);
 
-    &__link {
-        position: relative;
-        z-index: var(--100);
-    }
+        &::-webkit-scrollbar {
+            height: rem(7);
+        }
 
+        &::-webkit-scrollbar-track {
+            background-color: var(--other);
+            border-radius: 50%;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--border);
+        }
+
+        @include tablet() {
+            width: 100%;
+        }
+    }
+    
     &__item {
         flex-shrink: 0;
         width: rem(220);
         padding: rem(10);
         border: 1px solid transparent;
+        scroll-snap-align: start;
         transition: var(--transition);
 
         @include hover() {
             border-color: var(--border);
             border-radius: rem(10);
         }
+    }
+
+    &__link {
+        position: relative;
+        
+        z-index: var(--100);
     }
 
     .popular-product {
@@ -109,6 +134,32 @@
             @include hover() {
                 color: var(--redButton);
             }
+        }
+    }
+
+    &__buttons {
+        @include abs-center();
+        top: 60%;
+        display: flex;
+        justify-content: space-between;
+        width: min(100%, rem(1440));
+        z-index: var(--100);
+        
+        @include tablet() {
+            display: none;
+        }
+    }
+
+    &__button {
+        position: relative;
+        width: rem(40);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        transition: var(--transition);
+        z-index: var(--300);
+
+        @include hover() {
+            background-color: var(--border);
         }
     }
 }

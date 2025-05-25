@@ -5,11 +5,21 @@ class Viewed {
     #visited = JSON.parse(localStorage.getItem("visited")) || [];
     #data;
     #parent = "[data-viewed-list]";
+    #selectors = {
+        popularList: "[data-viewed-list]",
+        previewButton: "[data-viewed-preview]",
+        nextButton: "[data-viewed-next]",
+    };
+    #currentSlide = 0;
+    #gap = 60;
 
     constructor() {
         this.helpers = new Helpers();
         this.htmlBuilder = new HtmlBuilderView();
         this.parentElement = document.querySelector(this.#parent);
+        this.sliderPopularElement = document.querySelector(this.#selectors.popularList);
+        this.previewButtonElement = document.querySelector(this.#selectors.previewButton);
+        this.nextButtonElement = document.querySelector(this.#selectors.nextButton);
         this.init();
     }
 
@@ -20,6 +30,7 @@ class Viewed {
         this.helpers.buttonStopPropagation("viewed-product__buy");
         this.helpers.addEventListenerToFavoritesButton("main-viewed__item", "viewed-product__favorit");
         this.helpers.buttonStopPropagation("viewed-product__favorit");
+        this.addEventistenerToSliderButtons();
     }
 
     getProductViewed() {
@@ -30,6 +41,40 @@ class Viewed {
                 const li = this.#createProductListItem(product);
                 this.parentElement.appendChild(li);
             }
+        })
+    }
+
+    addEventistenerToSliderButtons() {
+        const slider = this.sliderPopularElement;
+        const totalSlides = slider.querySelectorAll("li").length;
+
+        this.previewButtonElement.addEventListener("click", () => {
+            this.#currentSlide = Math.max(0, this.#currentSlide - 1);
+            this.#scrollToSlide(slider)
+        })
+
+        this.nextButtonElement.addEventListener("click", () => {
+            this.#currentSlide = Math.min(totalSlides - 1, this.#currentSlide + 1);
+            this.#scrollToSlide(slider)
+        })
+
+        slider.addEventListener("scroll", () => {
+            const scrollPos = slider.scrollLeft;
+            this.#currentSlide = Math.round(scrollPos / (218 + this.#gap))
+        })
+    }
+
+    #scrollToSlide(slider) {
+        const slides = slider.querySelectorAll("li");
+
+        if (slider.length === 0) return;
+
+        const sliderWidth = slides[0].clientWidth;
+        const gap = this.#gap || 0;
+
+        slider.scrollTo({
+            left: this.#currentSlide * (sliderWidth + gap),
+            behavior: "smooth"
         })
     }
 
