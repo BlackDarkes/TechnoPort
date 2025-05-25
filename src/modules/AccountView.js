@@ -1,7 +1,7 @@
 import HtmlBuilderView from "./HtmlBuilderView";
 
 class AccountView {
-    #PRODUCT_URL = "/pages/product.html?id=";
+    #PRODUCT_URL = "/TechnoPort/pages/product.html?id=";
 
     constructor(selectors) {
         this.loginBlockElement = document.querySelector(selectors.loginBlock);
