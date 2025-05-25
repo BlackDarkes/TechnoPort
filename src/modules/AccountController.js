@@ -34,6 +34,14 @@ class AccountController {
         this.view.buttonLoginElement.addEventListener("click", () => {
             this.view.loginUser();
         })
+
+        this.view.inputLoginElement.addEventListener("keypress", (e) => {
+            if (e.key !== "Enter") {
+                return;
+            }
+
+            this.view.loginUser();
+        })
     }
 }
 
