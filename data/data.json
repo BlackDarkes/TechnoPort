@@ -431,16 +431,16 @@
     {
         "id": 23,
         "category": "components",
-        "name": "Система охлаждения MSI MAG CORELIQUID E360",
+        "name": "Система охлаждения MSI MAG CORELIQUID E240",
         "price": 13499,
         "discount": true,
         "feedback": 4.8,
-        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/9d5c5a4b4941ed2793185c7200de793d/f9eafd379175eaaacb3b93b535792011292459ca1661ae59dd8c6cfa24e736b5.png.webp",
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/bea0f89364b267d7c75180dcd01e7e91/c788ca28e8ee286104f15fef175b3d696516994f2078ea1814f53b5a62f8b3d2.jpg.webp",
         "images": [
-            "https://c.dns-shop.ru/thumb/st1/fit/500/500/9d5c5a4b4941ed2793185c7200de793d/f9eafd379175eaaacb3b93b535792011292459ca1661ae59dd8c6cfa24e736b5.png.webp",
-            "https://c.dns-shop.ru/thumb/st1/fit/500/500/05193c9d1f9a1bc3030371752561c274/b25f12cf5718af0d5e3c192d3b89f90512781aee56b6a7bf028a741d1633101a.png.webp",
-            "https://c.dns-shop.ru/thumb/st1/fit/500/500/6a1d340b0cf5abda54209092c76a2a82/cb52b6058f47153e35db4a255e3e25d5e835c6e49518fb49bec1dac5cb8e6bca.png.webp",
-            "https://c.dns-shop.ru/thumb/st1/fit/500/500/74c8e5411976c863909923a45dbd65c3/341ae507b01ab9174d9c39bfd27b1cca1f331ac6a551c6c5b8f167a78a71cb6a.png.webp"
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/bea0f89364b267d7c75180dcd01e7e91/c788ca28e8ee286104f15fef175b3d696516994f2078ea1814f53b5a62f8b3d2.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/71383f483d10ff49cb379e527ae3a805/a1c516bde33ecf5564c8fe26a1bea01d16aea0e2c5ac685cefe6e41d9096461e.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/6cdd7988ae12f64e3196b8ed6263f78f/054e390c94ee6b011123f916114cf5b46ebdbbac2f3ff8fe4083af04102c6428.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/13febf56907ab7389bda6e8e5870e410/6157777dad404f88a49242b61829f0e4f650b4122d408d2e7fe642705fb26fe0.jpg.webp"
         ],
         "about": "120 мм - три секции, 4 pin, радиатор - алюминий, TDP 325 Вт",
         "description": "Компания MSI представляет серию MAG CORELIQUID E – высокопроизводительные системы водяного охлаждения с оригинальным дизайном, в котором прослеживается концепция течения не только воды, но и времени, примером чего является солнечное затмение. Верхняя часть водоблока вращается на 270°, поэтому ее легко можно выровнять в нужном положении, не переустанавливая всю систему охлаждения. Благодаря увеличенной зоне контакта медного основания водоблока улучшен отвод тепла от центрального процессора, а общая эффективность системы повышена за счет большой плотности микроканалов. При использовании системы водяного охлаждения MSI совместно с материнской платой MSI скорость вращения ее вентиляторов и работу помпы можно регулировать через приложение MSI CENTER. Гибкая настройка параметров аппаратных компонентов поможет оптимизировать компьютер под различные сценарии. Добавить ярких красок своей компьютерной системе можно с помощью подсветки Mystic Light, которая способна отображать 16,8 млн. различных оттенков и множество динамических визуальных эффектов. Управление ей осуществляется через соответствующее приложение MSI.",
@@ -464,5 +464,210 @@
         "about": "английская/русская раскладка, 1920x1200, IPS, Intel Core i5-12450H, ядра: 4 + 4, RAM 16 ГБ, SSD 512 ГБ, Intel UHD Graphics, без ОС",
         "description": "Ноутбук HUAWEI MateBook D 16 2024 MCLF-X диагональю 16 идет без ОС. Это позволяет подобрать систему, удобную для офисной работы или игр. В основе экрана лежит IPS-матрица с разрешением 1920x1200. Он точно передает цвета и уменьшает нагрузку на зрение благодаря технологиям DC-затемнения и защиты от синего свечения. Это делает устройство удобным для работы с графикой, веб-серфинга, просмотра видео. Видеочип Intel UHD Graphics без задержки обрабатывает графику и выводит ее на дисплей. Он ускоряет воспроизведение видео онлайн. За производительность HUAWEI MateBook D 16 2024 MCLF-X отвечает процессор Intel Core i5-12450H с 4 энергоэффективными и 4 производительными ядрами. Он поддерживает 12 потоков и рассчитан на решение профессиональных задач, подходит для поддержки ПО и редактирования видео. LPDDR4x-память объемом 16 ГБ отличается меньшим энергопотреблением. Это повышает быстродействие аппарата за счет разгрузки системы охлаждения. Благодаря SSD-диску объемом 512 ГБ не нужно долго ждать загрузки файлов.",
         "tags": ["ноутбук", "huawei"]
+    },
+    {
+        "id": 25,
+        "category": "components",
+        "name": "Оперативная память ADATA XPG Lancer Blade [AX5U5600C4616G-DTLABBK] 32 ГБ",
+        "price": 7999,
+        "discount": null,
+        "feedback": 4.8,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/ab062d7f62150cff3bfccb6114b1b20b/b2b4f5c4fbc9f3a8df9ac23f9f529542805f92701b7aed8e24f904922d7d4454.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ab062d7f62150cff3bfccb6114b1b20b/b2b4f5c4fbc9f3a8df9ac23f9f529542805f92701b7aed8e24f904922d7d4454.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/c127440b9e9bb10339ceae04cfcb33aa/36418b4e78cdd3c78f8a2335adad5c8ac8df898bab29847a6a4f4b75585c25a6.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/dff9728f9c4185fe1385e8ad0cec3875/aa7a502b7a21fd04a8e357dd63bca89d933e23ef532bcde094621aa5d2ccbc58.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/58ca823034091ef145cf3ba9abf39381/eeb5b03ef5a03f1a46ad07f9afbdf0f28aa5d4321fb413900b873056e0c7ccb5.jpg.webp"
+        ],
+        "about": "DDR5, 16 ГБx2 шт, 5600 МГц, 46(CL)-45-45",
+        "description": "Оперативная память ADATA XPG Lancer Blade [AX5U5600C4616G-DTLABBK] представлена комплектом из двух модулей стандарта DDR5. Благодаря объему по 16 ГБ каждый и тактовой частоте 5600 МГц они обеспечивают повышение быстродействия аппаратной платформы ПК и снижение времени выполнения компьютерных задач. Профили AMD EXPO и Intel XMP предусматривают разгон системы. На модулях ОЗУ ADATA XPG Lancer Blade установлены алюминиевые радиаторы, которые рассеивают тепло и поддерживают низкий нагрев печатных плат. Технология On-Die ECC способна распознавать и корректировать ошибки в работе оперативной памяти. Интегральная схема управления питания Power Management IC снижает вероятность сбоев.",
+        "tags": ["оперативная память", "adata", "32гб", "32gb"]
+    },
+    {
+        "id": 26,
+        "category": "components",
+        "name": "1 ТБ Жесткий диск WD Blue",
+        "price": 4899,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/53cd8c1b140bc17d006b36784fdf3540/531e1e880acf7fac191e35a5d616bb6b920d77fa31e8929909b1d7c5985e3b58.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/53cd8c1b140bc17d006b36784fdf3540/531e1e880acf7fac191e35a5d616bb6b920d77fa31e8929909b1d7c5985e3b58.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/9fa73c37874b44cd1f77223b3115a279/a7d3a88a660d967d935176e28925966e679792f3eed2e7791769ab93ea099a35.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/e547fc509de0b72529490d191096ca45/3a08287464a79b4874739929d09667d9b7cacb121fc911d402a87f2bcbf26467.jpg.webp"
+        ],
+        "about": "SATA III, 6 Гбит/с, 7200 об/мин, кэш память - 64 МБ",
+        "description": "Жесткий диск WD Blue [WD10EZEX] станет надежным дополнением в настольном компьютере, обеспечивая надежность хранения различного контента и быстрый доступ к данным. Высокая производительность запоминающего устройства достигается за счет скорости вращения шпинделя 7200 об/мин и технологии NCQ. Металлическая конструкция отличается стойкостью к повреждениям, при этом накопитель обладает низкими показателями шума и вибрации. Среди других особенностей WD Blue [WD10EZEX] отмечаются емкость 1 ТБ и востребованный интерфейс SATA III.",
+        "tags": ["накопитель", "жесткий диск", "wd blue", "1тб", "1tb"]
+    },
+    {
+        "id": 27,
+        "category": "accessories",
+        "name": "Клавиатура проводная Дарк Проджект KD87A",
+        "price": 4899,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/c39f071fb96267cdd4d7ffc3adb073d4/eb1420229e247b134b87beffcf77d21bc981b5abbf8b9012ecbbc778f675e083.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/c39f071fb96267cdd4d7ffc3adb073d4/eb1420229e247b134b87beffcf77d21bc981b5abbf8b9012ecbbc778f675e083.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ee9b8e0d1dd72db00cb9df85360fdbcf/679942d341099cd0fdd89ff6caa119e4b409cf19a270a03f21b9b7410dff4dda.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/8cc12cc0b71eb9de0c748160874a379b/52701c9bc52cb90f1d9803ee06caea85e4e7a1031a20c244c8b88dc8de6fb1b2.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/9f80e26d904c76883102db4aa1a734ba/673ef7de12eb5456b8ae858c50bd3a1f4afc6474c7b80d25db94e614d19e52dd.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ad63d89d555b3c80dfd927723b6138d0/482ce499037ef09361abd4e355892f5bca127d2426b32ab935234b2240f2013e.jpg.webp"
+        ],
+        "about": "механическая g3ms Moonstone, клавиш - 87, USB Type-A, черный",
+        "description": "Клавиатура проводная Дарк Проджект KD87A [DP-KD87A-000100-GMS] оборудована кейкапами из пластика усиленной жесткости, не подверженного истиранию символов. Жизненный цикл модели рассчитан на 50 млн кликов. Синхронизировать аксессуар можно с помощью 1.8-метрового кабеля. Конфигурацией Дарк Проджект KD87A [DP-KD87A-000100-GMS] предусмотрено 87 клавиш с RGB-подсветкой, предупреждающей ошибки ввода при недостаточном внешнем освещении. Компактное размещение на рабочем столе возможно благодаря отсутствию цифрового блока. Линейные переключатели g3ms Moonstone уменьшают нагрузку на пальцы и отличаются плавным ходом. Быстрый доступ к игровым действиям открывается через программируемые клавиши.",
+        "tags": ["клавиатура", "дарк проджект", "87%", "tkc", "ткл", "Дарк Проджект KD87A"]
+    },
+    {
+        "id": 28,
+        "category": "accessories",
+        "name": "27  Монитор MSI PRO MP273A черный",
+        "price": 10499,
+        "discount": true,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/ab4669f86486d6a3ad7764896253e264/82c2d43b630fc88f683bd089da354380cc6012ee2086ca208640025ac720b670.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ab4669f86486d6a3ad7764896253e264/82c2d43b630fc88f683bd089da354380cc6012ee2086ca208640025ac720b670.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/49079fbc0d107b470c9116a20fc434a6/16c17298f9db691947765b5ee55e0ff8869d925508950ee479b688e23357d37e.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/07f871e32139f4adc57e49f74dcb52e7/d69aec43a256c0b7d48b73ed83597381e17c6c2a2cb7aa3930865f71ac4908e1.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/a1f45992bfa7547602fca4f1f11805ef/5ba41564c3a3f315b6c671c6404a6d2453273dcb4e6eb79296508690d665d7c5.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/d580066d3e1231720e5fa35bcc7c2597/a4b3f41728e5e6e99e08dec73788bed5eb1343024b44c9692de3968a5cc97a66.jpg.webp"
+        ],
+        "about": "1920x1080@100 Гц, IPS, LED, 1000:1, 300 Кд/м², 178°/178°, DisplayPort 1.2a, HDMI 1.4b, VGA (D-Sub), Adaptive-Sync",
+        "description": "Монитор MSI PRO MP273A оборудован 27-дюймовым экраном IPS FullHD с безрамочным дизайном. Это обеспечивает реалистичность изображения и концентрацию на выполнении задач. Специальные технологии подавляют мерцание экрана и снижают интенсивность синего света, что уменьшает зрительную усталость при просмотре. Матовое покрытие устраняет световые блики. Монитор MSI PRO MP273A оснащен видеоразъемами DisplayPort, HDMI и VGA. Акустическая система с двумя динамиками мощностью по 3 Вт воспроизводит чистый звук. Конструкция настольной подставки обеспечивает простое крепление и снятие без инструментов. Крепление стандарта VESA предусматривает фиксацию мини-ПК и использование монитора в качестве моноблока. Слот в подставке может использоваться для размещения телефона и аксессуаров.",
+        "tags": ["монитор", "msi", "MSI PRO MP273A", "full hd", "ткл"]
+    },
+    {
+        "id": 29,
+        "category": "accessories",
+        "name": "Мышь беспроводная Logitech G PRO X SUPERLIGHT 2",
+        "price": 15699,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/2632ff9356175fe105dd945be783fb1d/911995d334a5a252ed5b5e0941333a6bfdfeecef206d7e2f2b54f885c1ea4578.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/2632ff9356175fe105dd945be783fb1d/911995d334a5a252ed5b5e0941333a6bfdfeecef206d7e2f2b54f885c1ea4578.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/313196bec4e38e16fef18338dd949c87/8e2c6fb2d832451758712b307d7f86de2ccd0de3a43fdf23fe2332a02628d3ab.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/9b9fcea5f30780b8332bc7bdaec9b8ed/0f2c04f2a87e5e3def55532c1dc9c98367213deb756d3c9d31adfa1483f0687c.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/c8fd2891a5adb6eda730ce1ce62d0e9b/d308f23523255357e5a26d38b6ba563e996cfa754393fd7c5ab937ff249234c3.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/b0c69676f234d83d9f978003506564e0/d261ddfb9cc7d8da9c0fd16b942024ad28a150f5f4a8c4b21830b644f78a2cad.jpg.webp"
+        ],
+        "about": "32000 dpi, светодиодный, USB Type-A, кнопки - 5",
+        "description": "Мышь беспроводная Logitech G PRO X SUPERLIGHT 2 стала обладателем оптического светодиодного сенсора HERO 2, который имеет настраиваемое разрешение в диапазоне от 100 до 32000 dpi. Вы сможете выбрать подходящий режим работы в зависимости от решаемых задач, типа монитора и поверхности под манипулятором. В конструкцию устройства входят пять кнопок с возможностью их программирования на выполнение определенных действий. Подходящие конфигурации кнопок и прочие настройки можно сохранять во встроенную память мыши. Беспроводная мышь Logitech G PRO X SUPERLIGHT 2 облачена в черный пластиковый корпус, форма которого подходит для использования правой рукой. Стабильную связь с компьютером обеспечивает радиоканал, который настраивается при помощи комплектного USB-ресивера. Для автономной работы манипулятора имеется встроенный аккумулятор, заряда которого хватает на 95 часов непрерывного функционирования.",
+        "tags": ["мышь", "мышка", "logitech", "Logitech G PRO X SUPERLIGHT 2", "Logitech G PRO X SUPERLIGHT"]
+    },
+    {
+        "id": 30,
+        "category": "accessories",
+        "name": "Микрофон Fifine AM8 черный",
+        "price": 5199,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st4/fit/500/500/d6d93f9c9535dd7d8c60c7e32e5beae9/fe153582c67276ebc87a6071547fc336d425c15a11203c1f937255ce041207e2.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/d6d93f9c9535dd7d8c60c7e32e5beae9/fe153582c67276ebc87a6071547fc336d425c15a11203c1f937255ce041207e2.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/b9b78a5916557d192e84d34e56cb0853/889e1853f7e6c04e83b462fec882b4894986afc76a3faef6ba62084dcc88375d.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/92da3fbe1b10d4cfbd77f46d97f1bfcb/5255bf332ad9da21c37c4beb529efcf3fad0a18323426b24e69192806b2b7047.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/77bd739bf21aa10706c90e9db94d1b04/5dce3b96ce67f2c8b45986dda745133220d7ba05ac667271b9c769b941b53540.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/b76464e910d7e543a2dc775afa69d16b/277dfdf4507c83fe8acf606109f5690af2bf4c04b3841a6992648313c5e86de4.jpg.webp"
+        ],
+        "about": "проводной, настольный, -50 дБ, от 50 Гц до 16000 Гц, jack 3.5 мм, USB Type-C, XLR",
+        "description": "Микрофон Fifine AM8 с кардиоидной диаграммой направленности четко передает голос во время стриминга, озвучки, проведения трансляций и игр. Он выполнен в металлическом корпусе с устойчивой съемной подставкой. Поп-фильтр устраняет появление посторонних звуков. Для управления устройством предусмотрены сенсорная кнопка и поворотные переключатели. В микрофоне Fifine AM8 реализована подсветка RGB, которая работает при подключении к компьютеру через интерфейсный разъем USB Type-C. Аудиоразъем 3.5 мм позволяет подключить наушники. Для соединения со звуковым пультом в нижней части микрофона расположен коннектор XLR.",
+        "tags": ["микрофон", "динамический миерофон", "Fifine AM8", "Fifine"]
+    },
+    {
+        "id": 31,
+        "category": "accessories",
+        "name": "Коврик ARDOR GAMING GM-XL Asia Dragon Black and White (XL) черный",
+        "price": 1199,
+        "discount": null,
+        "feedback": 4.8,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/904f875c8d8c383474824897d941e844/1f06805a6d204d41e65ba6e16ba407eada77961a8a5ac3213419126685ede751.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/904f875c8d8c383474824897d941e844/1f06805a6d204d41e65ba6e16ba407eada77961a8a5ac3213419126685ede751.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/e6e7a78393b3575e88a2bea0b66a4ec1/ae8269e39f348dea1aa54878120ee1be5374dd99629deb24f7f83409db5efc10.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/94497573ab5a05210bc82fab2ecbab76/4bb40fd73971737e0917c6f498d787836d748dd9b1ece5aa61aa442de98d91f3.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/74ca4b4c6fd952377e30265815190681/503c6e8eb4fd2b95beb79db039e5a87157c27afa814918fd994470b844c82e38.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/36c587e0d2646ba7c355aedaeca6c054/91b9818964ebc7f11a24cb6f50e9704a0c96b8e7b1e36c5402ebe08343fc2630.jpg.webp"
+        ],
+        "about": "проводной, настольный, -50 дБ, от 50 Гц до 16000 Гц, jack 3.5 мм, USB Type-C, XLR",
+        "description": "Микрофон Fifine AM8 с кардиоидной диаграммой направленности четко передает голос во время стриминга, озвучки, проведения трансляций и игр. Он выполнен в металлическом корпусе с устойчивой съемной подставкой. Поп-фильтр устраняет появление посторонних звуков. Для управления устройством предусмотрены сенсорная кнопка и поворотные переключатели. В микрофоне Fifine AM8 реализована подсветка RGB, которая работает при подключении к компьютеру через интерфейсный разъем USB Type-C. Аудиоразъем 3.5 мм позволяет подключить наушники. Для соединения со звуковым пультом в нижней части микрофона расположен коннектор XLR.",
+        "tags": ["микрофон", "динамический миерофон", "Fifine AM8", "Fifine"]
+    },
+    {
+        "id": 32,
+        "category": "accessories",
+        "name": "Wi-Fi роутер Keenetic GIGA KN-1012",
+        "price": 15999,
+        "discount": null,
+        "feedback": 4.9,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/e2488fdd0776ef9915d75c5f4e943dc0/8a128ec05b3d1772836976d714759ace716aed74b015b8273be53cd1c61b6bdf.png.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/e2488fdd0776ef9915d75c5f4e943dc0/8a128ec05b3d1772836976d714759ace716aed74b015b8273be53cd1c61b6bdf.png.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/24d0f5358fb6662645f237741de141bf/60cb49e737ee6f61fc7d32885cfb909add13df2b5f142c3b9522069755f2b801.png.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/53347ec6ce3ce36bd81422fdcb655b1f/f30dd9ca2f4781b0c5f43e961f63926cfe61e75325e34bdbd6edb22570bec896.png.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/8f5894dd1b87e9f6d1780b441497b7c6/f259320b15230e736e219042b3dc256054520c4cefcf7ee36587ac2159cc8540.png.webp"
+        ],
+        "about": "4 LAN, 2500 Мбит/с, 1000 Мбит/с, 4 (802.11n), 5 (802.11ac), 6 (802.11ax), 1 x USB 2.0, 1 x USB 3.0, 3G, 4G/LTE, IPv6",
+        "description": "Giga KN-1012 получила свежий 2-ядерный ARM-процессор MT7981 1,3 ГГц (Mediatek Filogic 820) с 512 Мбайт памяти DDR4, более быструю Wi-Fi-формулу AX3000 с пятью дискретными FEM-усилителями для лучшего покрытия, универсальный WAN/LAN-порт 2.5 Gigabit Ethernet и обновленный корпус с улучшенным охлаждением компонентов, сохранив важные для многих порты USB3.0+2.0 и SFP, который также ускорен до 2,5 Гбит/с. Благодаря оптимизациям KeeneticOS этот интернет-центр обеспечивает реальную суммарную скорость Wi-Fi-сети свыше 2 Гбит/с с минимальной загрузкой процессора, демонстрирует превосходную производительность маршрутизации до 3 Гбит/с с включенной приоритизацией приложений IntelliQoS, скорость 250-550 Мбит/с для ресурсоемких протоколов VPN, таких как OpenVPN, IPSec или Wireguard, и до 270 Мбайт/с при работе с USB-диском.",
+        "tags": ["роутер", "Keenetic", "Keenetic GIGA KN-1012"]
+    },
+    {
+        "id": 33,
+        "category": "accessories",
+        "name": "Веб-камера Razer Kiyo X",
+        "price": 5999,
+        "discount": null,
+        "feedback": 4.6,
+        "mainImage": "https://c.dns-shop.ru/thumb/st4/fit/500/500/fc1de34378f3a07ee8dd0cc1526b0811/3be595b26026806034da8007a8fbdab0cba3438792bc1e63b8b332e2d3f37812.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/fc1de34378f3a07ee8dd0cc1526b0811/3be595b26026806034da8007a8fbdab0cba3438792bc1e63b8b332e2d3f37812.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ceae3d05987569face0e71b9767cbea6/de138c1852087633121ccb31e30a393395800c3cf24739a671fec5ad9af2d1a0.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/5014cc34257f2cc3ded8fb28aa22d712/79f305fc63bf4a90d4c25039fa425b21b988479c96f5c6e08b24637a670daf06.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/0224f398f00814d79e2ea34185bdc173/5aa7e9dc2a0c21b9f4d4b8d3f0508201789888e51de61769bf3411f04ee24796.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/0767d67fe3c7eda8e5705ec20f284b76/73c50c6f265c72e900caf358eee9069249fe83d69291ba198c6da6b51374a7d7.jpg.webp"
+        ],
+        "about": "проводная, микрофон, 2 Мп, 1920x1080, USB Type-A",
+        "description": "Веб-камера Razer Kiyo X создана для трансляции игрового процесса и потоковой передачи видео. Матрица CMOS 2 Мп с разрешением FullHD обеспечивает изображение с высокой четкостью деталей и насыщенностью оттенков. Автоматическая фокусировка настраивает резкость видео в разных условиях освещенности. Для передачи голоса в процессе общения и трансляций в камеру интегрирован микрофон. Крепление обеспечивает прочную фиксацию на мониторе, а также позволяет регулировать угол наклона и снимается при необходимости установки на штатив. Razer Kiyo X подключается к ПК по кабелю с разъемом USB.",
+        "tags": ["веб-камера", "razer", "Razer Kiyo X"]
+    },
+    {
+        "id": 34,
+        "category": "other",
+        "name": "Микрофонная стойка Fifine BM88",
+        "price": 3699,
+        "discount": null,
+        "feedback": 4.7,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/d10ddd82cb6b866d80bf60467684d736/46e47919a275e6f93af2b8ec5bf2d1787615fcd2c5a053627b07575dfe71d072.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/d10ddd82cb6b866d80bf60467684d736/46e47919a275e6f93af2b8ec5bf2d1787615fcd2c5a053627b07575dfe71d072.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/1c2eadda0cd1cdd574f72400aaa59ec8/537e8f43b8c349159c6accc4984d0cd443c0bbb781b097cbff58a329a33fb17a.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/0bdeecfee7206782e1e4c72ae768ea47/1685d6dfeeead644daf979efcf1cf225d8bd535c95613b51c5bc65c4510e2463.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/7d0c21e7b24f1ebb2c5dd870338f8f0d/4fe4d48796f4671c0c937425c622eb5086a055273acab7632d33c3cbf196a13c.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st4/fit/500/500/2dfaa246e6fdb0174156895d0d388fee/3f7e9a65dbc24589f48fb16d42130443166546c6927c4eccd04fadc1710435ff.jpg.webp"
+        ],
+        "about": "конструкция пантограф, резьба 1/4, 3/8, 5/8, до 625 мм",
+        "description": "Fifine BM88 - микрофонная стойка-пантограф с кабельным каналом и поддержкой микрофонов до 1.5 кг.",
+        "tags": ["стойка под микрофон", "пантограф", "Fifine BM88", "Fifine"]
+    },
+    {
+        "id": 35,
+        "category": "other",
+        "name": "55 (140 см) Телевизор Xiaomi TV A Pro 55 2025 черный",
+        "price": 39999,
+        "discount": true,
+        "feedback": 4.5,
+        "mainImage": "https://c.dns-shop.ru/thumb/st1/fit/500/500/0ba0a5d3c7a4b55d59416bcb8339cb1c/5289e41b41daa2df0f0ce674a494ea63294c9ce2e61b20086738edd9779ac7d7.jpg.webp",
+        "images": [
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/0ba0a5d3c7a4b55d59416bcb8339cb1c/5289e41b41daa2df0f0ce674a494ea63294c9ce2e61b20086738edd9779ac7d7.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/ac546c462fb51ee00d2d6ec5411b5126/76905cceaecdf9f3e56eba5147f8635e844346077d5a0f1867896690ed547253.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/332eb34947954584afb46c0e4959e149/e01f1e7d54c2495759734783236323dbeb078e912f2d0b3b65268ee65c8749c7.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/e9fbeb81de4d4c2f862b18ac8549cc6c/95b28efac1f7866208c4cb33a3eeaa768a710d0eab6f197f3ba139c647ec0070.jpg.webp",
+            "https://c.dns-shop.ru/thumb/st1/fit/500/500/773aa6bc6f92f4772132eb14fc5df2e7/21b9b2d2381623cad7d5e848d9c6f006baab97ed63232a5f918ce11e7e11f1b4.jpg.webp"
+        ],
+        "about": "QLED, 4K UltraHD, Wi-Fi, 60 Гц, Android TV, HDMI х 3, USB х 1 шт",
+        "description": "LED-телевизор Xiaomi TV A Pro 55 2025 оснащен 55-дюймовым экраном с технологией квантовых точек QLED и разрешением 4K UltraHD. С любого положения на нем передается детализированная картинка. Расширенное цветовое пространство DCI-P3 и точная калибровка гарантируют натуральные глубокие оттенки во всех областях экрана. Технология MEMC устраняет разрывы кадров при воспроизведении динамичного видео с движущимися объектами. Акустическая система мощностью 20 Вт совместно с технологиями DTS Virtual:X и Dolby Audio формирует чистое звучание с пространственным эффектом. Платформа Smart TV на ОС Android предоставляет возможность просмотра контента с потоковых сервисов Окко, Rutube, Кинопоиск, Иви. Для беспроводного соединения с интернетом есть встроенный модуль Wi-Fi. Технологии Chromecast и Miracast предусматривают воспроизведение файлов с мобильных устройств. Для простого взаимодействия с телевизором Xiaomi TV A Pro 55 2025 и поиска контента голосом реализован помощник Google Assistant.",
+        "tags": ["телевизор", "смарт тв", "Xiaomi TV A Pro 55", "Xiaomi"]
     }
 ]
