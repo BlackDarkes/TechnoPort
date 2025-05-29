@@ -24,8 +24,6 @@ class CreateComputerView {
                     const product = data.find((product) => product.name === inputText);
 
                     this.addImage(product.mainImage, input)
-
-                    console.log(buyIndex)
                 } else {
                     buyIndex--;
                     this.addImage("", input)

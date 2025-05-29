@@ -50,9 +50,7 @@ class CatalogController {
         this.selectorElement.addEventListener("change", () => {
             this.getSelectedOption();
             this.parentElement.innerHTML = "";
-            this.getCatalogProduct()
-
-            console.log(this.#option);
+            this.getCatalogProduct();
         })
     }
 

@@ -127,8 +127,6 @@ class AccountView {
                 const orderArray = JSON.parse(localStorage.getItem("orders"));
                 orderArray.splice(index, 1);
 
-                console.log(orderArray);
-
                 localStorage.setItem("orders", JSON.stringify(orderArray));
 
                 location.reload();

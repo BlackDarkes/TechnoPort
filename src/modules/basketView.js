@@ -96,7 +96,6 @@ class BasketView {
 
                 alert("Ваш заказ вы можете увидеть у себя в аккаунте!")
                 localStorage.setItem("buy", JSON.stringify([]));
-                console.log(this.productListElement);
                 location.reload();
             } else {
                 alert("Сначало авторизуйтесь, чтобы оформить заказ!")
